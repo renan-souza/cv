@@ -1,13 +1,31 @@
 ~< extends "section.tex" >~
 
 ~< block body >~
-    ~< for item in items >~
+
+  \textbf{Teaching:}
+    ~< for item in items.courses >~      
         \cvlistitem{
-          << item.name >>
-          (<< item.short >>),
-          << item.position >>
+          << item.course >>, 
+          << item.level >>,
+          << item.university >>
           \hfill
-          << item.semester>>
+          << item.year >> \newline
+          << item.position >> 
         }
     ~< endfor >~
+
+  \textbf{Supervisions of final dissertations}
+    ~< for item in items.supervisions >~      
+        \cvlistitem{
+          << item.student >>, 
+          << item.level >>,
+          << item.university >>,
+          << item.description >>
+          \hfill
+          << item.year >> \newline
+          Thesis title: \textit{<< item.title >>}
+        }
+    ~< endfor >~
+
+
 ~< endblock body >~

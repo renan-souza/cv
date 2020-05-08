@@ -6,18 +6,25 @@ __author__ = [
     'Brandon Amos <http://bamos.github.io>',
     'Ellis Michael <http://ellismichael.com>',
 ]
+"""
+Adapted by Renan Souza <http://renan-souza.github.io>
+"""
+
 
 import argparse
 import copy
 import os
 import re
 import yaml
-
+import sys
 import bibtexparser.customization as bc
 from bibtexparser.bparser import BibTexParser
 from datetime import date
-from itertools import groupby
 from jinja2 import Environment, FileSystemLoader
+import codecs
+import functools
+
+open = functools.partial(codecs.open, encoding='utf-8')
 
 
 def get_pub_md(context, config):
@@ -49,16 +56,16 @@ def get_pub_md(context, config):
     # [First Initial]. [Last Name]
     def _format_author_list(immut_author_list):
         formatted_authors = []
+
         for author in immut_author_list:
-            if 'zico' in author.lower():
-                new_auth = 'J. Z. Kolter'
-                if '*' in author:
-                    new_auth += '*'
-            else:
-                new_auth = author.split(", ")
+            new_auth = author.split(", ")
+            try:
                 new_auth = new_auth[1][0] + ". " + new_auth[0]
-                if config['name'] in new_auth:
-                    new_auth = "<strong>" + new_auth + "</strong>"
+            except:
+                new_auth = new_auth[0]
+
+            if config['name'] in new_auth:
+                new_auth = "<strong>" + new_auth + "</strong>"
             formatted_authors.append(new_auth)
         return formatted_authors
 
@@ -74,15 +81,20 @@ def get_pub_md(context, config):
         #         pub['link'], title)
         title = title.replace("\n", " ")
 
-        assert('_venue' in pub and 'year' in pub)
-        yearVenue = "{} {}".format(pub['_venue'], pub['year'])
+
+        if 'journal' in pub:
+            yearVenue = "{} {}".format(pub['journal'], pub['year'])
+        elif 'booktitle' in pub:
+            yearVenue = "{} {}".format(pub['booktitle'], pub['year'])
+        else:
+            yearVenue = "{}".format(pub['year'])
 
         imgStr = '<img src="images/publications/{}.png"/>'.format(pub['ID'])
         links = ['[{}{}]'.format(prefix, gidx)]
         abstract = ''
         if 'abstract' in pub:
             links.append("""
-[<a href='javascript:;'
+[<a href='javascript: none'
     onclick=\'$(\"#abs_{}{}\").toggle()\'>abs</a>]""".format(pub['ID'], prefix))
             abstract = context.make_replacements(pub['abstract'])
         if 'link' in pub:
@@ -110,8 +122,8 @@ def get_pub_md(context, config):
         if includeImage:
             return '''
 <tr>
-<td class="col-md-3">{}</td>
-<td>
+<td class="col-md-3" style="vertical-align: middle;">{}</td>
+<td style="vertical-align: middle; text-align: justify;">
     <strong>{}</strong><br>
     {}<br>
     {}<br>
@@ -124,7 +136,7 @@ def get_pub_md(context, config):
         else:
             return '''
 <tr>
-<td>
+<td style="vertical-align: middle; text-align: justify;">
     <strong>{}</strong><br>
     {}<br>
     {}<br>
@@ -136,65 +148,53 @@ def get_pub_md(context, config):
 '''.format(title, author_str, yearVenue, note_str, links, abstract)
 
     def load_and_replace(bibtex_file):
-        with open(os.path.join('publications', bibtex_file), 'r') as f:
+        with open(os.path.join('publications', bibtex_file), 'r', encoding="utf-8") as f:
             p = BibTexParser(f.read(), bc.author).get_entry_list()
+        by_year = {}
+
         for pub in p:
             for field in pub:
                 pub[field] = context.make_replacements(pub[field])
             pub['author'] = _format_author_list(pub['author'])
-        return p
+            y = int(pub['year']) if 'year' in pub else 1970
+            if y not in by_year:
+                by_year[y] = []
+            by_year[y].append(pub)
 
-    # if 'categories' in config:
-    #     contents = []
-    #     for category in config['categories']:
-    #         type_content = {}
-    #         type_content['title'] = category['heading']
+        ret = []
+        for year, pubs in sorted(by_year.items(), reverse=True):
+            for pub in pubs:
+                ret.append(pub)
 
-    #         pubs = load_and_replace(category['file'])
 
-    #         details = ""
-    #         # sep = "<br><br>\n"
-    #         sep = "\n"
-    #         for i, pub in enumerate(pubs):
-    #             details += _get_pub_str(pub, category['prefix'],
-    #                                     i + 1, includeImage=False) + sep
-    #         type_content['details'] = details
-    #         type_content['file'] = category['file']
-    #         contents.append(type_content)
-    # else:
+        return ret
 
-    include_image = config['include_image']
-    sort_bib = config['sort_bib']
-    group_by_year = config['group_by_year']
+    if 'categories' in config:
+        contents = []
+        for category in config['categories']:
+            type_content = {}
+            type_content['title'] = category['heading']
 
-    contents = {}
-    pubs = load_and_replace(config['file'])
-    sep = "\n"
+            pubs = load_and_replace(category['file'])
 
-    if sort_bib:
-        pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
-
-    if group_by_year:
-        for pub in pubs:
-            m = re.search('(\d{4})', pub['year'])
-            assert m is not None
-            pub['year_int'] = int(m.group(1))
-            pub['ID'] += f"_{config['file'].replace('.', '_')}"
-
-        details = ''
-        for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
-            details += f'<h2>{year}</h2>\n'
-            details += '<table class="table table-hover">\n'
-            for i, pub in enumerate(year_pubs):
-                details += _get_pub_str(pub, '', i + 1, includeImage=include_image) + sep
-            details += '</table>\n'
+            details = ""
+            # sep = "<br><br>\n"
+            sep = "\n"
+            for i, pub in enumerate(pubs):
+                details += _get_pub_str(pub, category['prefix'],
+                                        i + 1, includeImage=False) + sep
+            type_content['details'] = details
+            type_content['file'] = category['file']
+            contents.append(type_content)
     else:
-        details = '<table class="table table-hover">'
+        contents = {}
+        pubs = load_and_replace(config['file'])
+        details = ""
+        sep = "\n"
         for i, pub in enumerate(pubs):
-            details += _get_pub_str(pub, '', i + 1, includeImage=include_image) + sep
-        details += '</table>'
-    contents['details'] = details
-    contents['file'] = config['file']
+            details += _get_pub_str(pub, '', i + 1, includeImage=True) + sep
+        contents['details'] = details
+        contents['file'] = config['file']
 
     return contents
 
@@ -206,14 +206,14 @@ class RenderContext(object):
     DEFAULT_SECTION = 'items'
     BASE_FILE_NAME = 'cv'
 
-    def __init__(self, context_name, file_ending, jinja_options, replacements):
+    def __init__(self, context_name, file_ending, jinja_options, replacements, file_name=None):
         self._file_ending = file_ending
         self._replacements = replacements
-
+        self.file_name = self.BASE_FILE_NAME if not file_name else file_name
         context_templates_dir = os.path.join(self.TEMPLATES_DIR, context_name)
 
         self._output_file = os.path.join(
-            self.BUILD_DIR, self.BASE_FILE_NAME + self._file_ending)
+            self.BUILD_DIR, self.file_name + self._file_ending)
         self._base_template = self.BASE_FILE_NAME + self._file_ending
 
         self._context_type_name = context_name + 'type'
@@ -257,118 +257,87 @@ class RenderContext(object):
             groups.append(group)
         return groups
 
-    def render_resume(self, yaml_data):
+    def render_resume(self, yaml_data, specified_tag=None):
         # Make the replacements first on the yaml_data
         yaml_data = self.make_replacements(yaml_data)
 
-        body = ''
-        for section_tag, section_title in yaml_data['order']:
-            print("  + Processing section: {}".format(section_tag))
+        if specified_tag:
+            for order_item in yaml_data['order']:
+                if order_item['tag'] == specified_tag:
+                    name = order_item['title']
 
-            section_data = {'name': section_title}
-            section_content = None if section_tag == "NEWPAGE" else yaml_data[section_tag]
-            if section_tag == 'about':
-                if self._file_ending == '.tex':
+            section_data = {
+                'name': name,
+                'googlescholar': yaml_data['personal']['social']['google_scholar'],
+                'src': yaml_data['personal']['src']
+            }
+            section_content = yaml_data[specified_tag]
+
+            if 'publications' in specified_tag and self._file_ending == ".md":
+                section_data['items'] = get_pub_md(self, section_content)
+            else:
+                section_data['items'] = section_content
+
+            section_template_name = os.path.join(self.SECTIONS_DIR,
+                specified_tag + self._file_ending)
+
+            rendered_section = self._render_template(
+                section_template_name, section_data)
+            body = rendered_section.rstrip() + '\n\n\n'
+
+            yaml_data['body'] = body
+            yaml_data['today'] = date.today().strftime("%B %d, %Y")
+            return self._render_template(
+                self._base_template, yaml_data).rstrip() + '\n'
+
+        else:
+            body = ''
+            for item in yaml_data['order']:
+                section_tag = item['tag']
+                section_title = item['title']
+                display_web = True if "true" in str(item['display-web']).lower() else False
+                display_pdf = item['display-pdf']
+                print("  + Processing section: {}".format(section_tag))
+                if self._file_ending == ".tex" and not display_pdf:
+                    print("We are not generating pdf for " + section_tag)
                     continue
-                section_template_name = "section" + self._file_ending
-                section_data['data'] = section_content
-            elif section_tag == 'news':
-                if self._file_ending == '.tex':
+                elif self._file_ending == ".md" and not display_web:
+                    print("We are not generating web for " + section_tag)
                     continue
-                section_template_name = os.path.join(self.SECTIONS_DIR, 'news.md')
-                section_data['items'] = section_content
-            elif section_tag == 'service':
-                section_data['items'] = section_content
-                section_template_name = os.path.join(
-                    self.SECTIONS_DIR, 'skills' + self._file_ending)
-            elif section_tag in ['coursework', 'education', 'honors',
-                                 'industry', 'research', 'skills', 'teaching']:
-                section_data['items'] = section_content
+
+                section_data = {
+                    'name': section_title,
+                    'googlescholar': yaml_data['personal']['social']['google_scholar'],
+                    'src': yaml_data['personal']['src']
+                }
+                section_content = yaml_data[section_tag]
+
+                if 'publications' in section_tag and self._file_ending == ".md":
+                    section_data['items'] = get_pub_md(self, section_content)
+                else:
+                    section_data['items'] = section_content
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
-            elif 'publications' in section_tag:
-                if self._file_ending == ".tex":
-                    section_data['content'] = section_content
-                elif self._file_ending == ".md":
-                    section_data['content'] = get_pub_md(self, section_content)
-                section_data['scholar_id'] = yaml_data['social']['google_scholar']
-                section_template_name = os.path.join(
-                    self.SECTIONS_DIR, section_tag + self._file_ending)
-            elif section_tag == 'NEWPAGE':
-                pass
-            else:
-                print("Error: Unrecognized section tag: {}".format(section_tag))
-                # sys.exit(-1) TODO
-                continue
 
-            if section_tag == 'NEWPAGE':
-                if self._file_ending == ".tex":
-                    body += "\n\n\\newpage\n"
-                elif self._file_ending == ".md":
-                    pass
-            else:
                 rendered_section = self._render_template(
                     section_template_name, section_data)
                 body += rendered_section.rstrip() + '\n\n\n'
 
-        yaml_data['body'] = body
-        yaml_data['today'] = date.today().strftime("%B %d, %Y")
-        return self._render_template(
-            self._base_template, yaml_data).rstrip() + '\n'
+            yaml_data['body'] = body
+            yaml_data['today'] = date.today().strftime("%B %d, %Y")
+            return self._render_template(
+                self._base_template, yaml_data).rstrip() + '\n'
 
     def write_to_outfile(self, output_data):
-        with open(self._output_file, 'wb') as out:
-            output_data = output_data.encode('utf-8')
+        with open(self._output_file, 'w', encoding='utf-8') as out:
+            #output_data = output_data.encode('utf-8')
             out.write(output_data)
 
 
-LATEX_CONTEXT = RenderContext(
-    'latex',
-    '.tex',
-    dict(
-        block_start_string='~<',
-        block_end_string='>~',
-        variable_start_string='<<',
-        variable_end_string='>>',
-        comment_start_string='<#',
-        comment_end_string='#>',
-        trim_blocks=True,
-        lstrip_blocks=True
-    ),
-    []
-)
-
-MARKDOWN_CONTEXT = RenderContext(
-    'markdown',
-    '.md',
-    dict(
-        trim_blocks=True,
-        lstrip_blocks=True
-    ),
-    [
-        (r'\\\\\[[^\]]*]', '\n'),  # newlines
-        (r'\\ ', ' '),  # spaces
-        (r'\\&', '&'),  # unescape &
-        (r'\\\$', '\$'),  # unescape $
-        (r'\\%', '%'),  # unescape %
-        (r'\\textbf{([^}]*)}', r'**\1**'),  # bold text
-        (r'\{ *\\bf *([^}]*)\}', r'**\1**'),
-        (r'\\textit{([^}]*)}', r'*\1*'),  # italic text
-        (r'\{ *\\it *([^}]*)\}', r'*\1*'),
-        (r'\\LaTeX', 'LaTeX'),  # \LaTeX to boring old LaTeX
-        (r'\\TeX', 'TeX'),  # \TeX to boring old TeX
-        ('---', '-'),  # em dash
-        ('--', '-'),  # en dash
-        (r'``([^\']*)\'\'', r'"\1"'),  # quotes
-        (r'\\url{([^}]*)}', r'[\1](\1)'),  # urls
-        (r'\\href{([^}]*)}{([^}]*)}', r'[\2](\1)'),  # urls
-        (r'\{([^}]*)\}', r'\1'),  # Brackets.
-    ]
-)
 
 
-def process_resume(context, yaml_data, preview):
-    rendered_resume = context.render_resume(yaml_data)
+def process_resume(context, yaml_data, preview, specified_tag=None):
+    rendered_resume = context.render_resume(yaml_data, specified_tag)
     if preview:
         print(rendered_resume)
     else:
@@ -383,26 +352,88 @@ def main():
                         'details, in order of increasing precedence')
     parser.add_argument('-p', '--preview', action='store_true',
                         help='prints generated content to stdout instead of writing to file')
+    parser.add_argument('-t', '--tag', help='Specify the tag to be generated in a separate file', default=None)
+
+    parser.add_argument('-o', '--output-yaml', help='Copy some data from the input yaml to an output yaml')
+
     group = parser.add_mutually_exclusive_group()
     group.add_argument('-l', '--latex', action='store_true',
                        help='only generate LaTeX resume/cv')
     group.add_argument('-m', '--markdown', action='store_true',
                        help='only generate Markdown resume/cv')
-    args = parser.parse_args()
 
+
+    args = parser.parse_args()
+    specified_tag = args.tag
     yaml_data = {}
     for yaml_file in args.yamls:
-        with open(yaml_file) as f:
+        with open(yaml_file, encoding="utf-8") as f:
             yaml_data.update(yaml.load(f))
+
+
+    if args.output_yaml:
+        personal_data = yaml_data['personal']
+        out_data = yaml.load(open(args.output_yaml))
+        out_data['personal'] = personal_data
+        yaml.dump(out_data, open(args.output_yaml, 'w'))
+        print("Copied yaml data to " + args.output_yaml)
+        sys.exit(0)
+
+    LATEX_CONTEXT = RenderContext(
+        'latex',
+        '.tex',
+        dict(
+            block_start_string='~<',
+            block_end_string='>~',
+            variable_start_string='<<',
+            variable_end_string='>>',
+            comment_start_string='<#',
+            comment_end_string='#>',
+            trim_blocks=True,
+            lstrip_blocks=True
+        ),
+        [],
+        specified_tag
+    )
+
+    MARKDOWN_CONTEXT = RenderContext(
+        'markdown',
+        '.md',
+        dict(
+            trim_blocks=True,
+            lstrip_blocks=True
+        ),
+        [
+            (r'\\\\\[[^\]]*]', '\n'),  # newlines
+            (r'\\ ', ' '),  # spaces
+            (r'\\&', '&'),  # unescape &
+            (r'\\\$', '\$'),  # unescape $
+            (r'\\%', '%'),  # unescape %
+            (r'\\textbf{([^}]*)}', r'**\1**'),  # bold text
+            (r'\{ *\\bf *([^}]*)\}', r'**\1**'),
+            (r'\\textit{([^}]*)}', r'*\1*'),  # italic text
+            (r'\{ *\\it *([^}]*)\}', r'*\1*'),
+            (r'\\LaTeX', 'LaTeX'),  # \LaTeX to boring old LaTeX
+            (r'\\TeX', 'TeX'),  # \TeX to boring old TeX
+            ('---', '-'),  # em dash
+            ('--', '-'),  # en dash
+            (r'``([^\']*)\'\'', r'"\1"'),  # quotes
+            (r'\\url{([^}]*)}', r'[\1](\1)'),  # urls
+            (r'\\href{([^}]*)}{([^}]*)}', r'[\2](\1)'),  # urls
+            (r'\{([^}]*)\}', r'\1'),  # Brackets.
+            (r'\\newline', r'<br/>'),
+        ],
+        specified_tag
+    )
 
     if args.latex or args.markdown:
         if args.latex:
-            process_resume(LATEX_CONTEXT, yaml_data, args.preview)
+            process_resume(LATEX_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag)
         elif args.markdown:
-            process_resume(MARKDOWN_CONTEXT, yaml_data, args.preview)
+            process_resume(MARKDOWN_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag)
     else:
-        process_resume(LATEX_CONTEXT, yaml_data, args.preview)
-        process_resume(MARKDOWN_CONTEXT, yaml_data, args.preview)
+        process_resume(LATEX_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag)
+        process_resume(MARKDOWN_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag)
 
 
 if __name__ == "__main__":

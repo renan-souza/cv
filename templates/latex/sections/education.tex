@@ -2,16 +2,31 @@
 
 ~< block body >~
 ~< for school in items >~
-\cvlistitem{
+\cvlistitem[1.1em]{
   ~< if school.degree >~
     << school.degree >>,
   ~< endif >~
   << school.school >>
-  ~< if school.overallGPA >~
-    (<< school.overallGPA >>)
-  ~< endif >~
   \hfill
   << school.dates >>
+  ~< if school.supervisor >~
+    \newline \begin{small} Supervised by << school.supervisor >> \end{small}
+  ~< endif >~
+  ~< if school.thesis >~
+    \newline
+    \begin{small}
+        ~< if school.thesis.link >~
+          Title: \href{<< school.thesis.link >>}{<< school.thesis.title >>}
+        ~< else >~
+          Title: << school.thesis.title >>
+        ~< endif >~
+    \end{small}
+    \hspace*{\fill}
+  ~< endif >~
+  % \hspace*{\fill}
+  % \hfill
+  %\,
+\hskip 0.0em
 }
 ~< endfor >~
 ~< endblock body >~

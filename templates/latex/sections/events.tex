@@ -1,0 +1,52 @@
+~< extends "section.tex" >~
+
+~< block body >~
+
+\begin{itemize}
+\setlength\itemsep{0.3em}
+~< for item in items >~
+    \item
+        \textbf{<< item.name >>} in << item.place >> \hfill << item.year >>
+        
+        ~< if item.subevents >~
+        \begin{small}    
+                ~< for subevent in item.subevents >~ 
+                    \textit{<< subevent.name >>}
+                    ~< if subevent.talks >~
+                        \begin{itemize}
+                            ~< for talk in subevent.talks >~
+
+                                \item
+                                {<< talk.title >>},
+                                << talk.kind >>
+                                ~< if talk.link >~
+                                    , \href{<< talk.link >>}{link}
+                                ~< endif >~
+
+                            ~< endfor >~
+                            
+                        \end{itemize}
+                    ~< endif >~
+                ~< endfor >~
+
+        \end{small}
+        ~< elif item.talks >~
+            \begin{small}   
+                \begin{itemize}
+                    ~< for talk in item.talks >~
+
+                        \item
+                        {<< talk.title >>},
+                        << talk.kind >>
+                        ~< if talk.link >~
+                            , \href{<< talk.link >>}{link}
+                        ~< endif >~
+
+                    ~< endfor >~
+                    
+                \end{itemize}
+            \end{small}
+        ~< endif >~
+~< endfor >~
+\end{itemize}
+~< endblock body >~

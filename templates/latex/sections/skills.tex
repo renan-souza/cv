@@ -1,9 +1,14 @@
 ~< extends "section.tex" >~
 
 ~< block body >~
-\begin{tabular}{p{1in}p{5in}}
+
+  \begin{itemize}
   ~< for item in items >~
-    << item.title >> & << item.details >> \\
+  
+     \item
+     \begin{small} \textbf{<< item.title >>} \end{small}:
+      << item.details >>
+    
   ~< endfor >~
-\end{tabular}
+  \end{itemize}
 ~< endblock body >~

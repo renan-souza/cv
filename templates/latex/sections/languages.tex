@@ -1,0 +1,23 @@
+~< extends "section.tex" >~
+
+~< block body >~
+
+~< for item in items >~
+\cvlistitem[0.3em]{
+      \textbf{<< item.title >>} - << item.proficiency >>
+      ~< if item.courses >~
+            ~< for course in item.courses >~
+                   \begin{itemize}
+                        \item << course.institution >>
+                        \hfill 
+                        << course.year >>
+                         ~< if course.description >~
+                              \newline
+                              << course.description >>
+                        ~< endif >~
+                  \end{itemize}
+            ~< endfor >~
+      ~< endif >~
+}
+~< endfor >~
+~< endblock body >~
