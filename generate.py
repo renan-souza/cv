@@ -268,7 +268,6 @@ class RenderContext(object):
 
             section_data = {
                 'name': name,
-                'googlescholar': yaml_data['personal']['social']['google_scholar'],
                 'src': yaml_data['personal']['src']
             }
             section_content = yaml_data[specified_tag]
@@ -307,7 +306,6 @@ class RenderContext(object):
 
                 section_data = {
                     'name': section_title,
-                    'googlescholar': yaml_data['personal']['social']['google_scholar'],
                     'src': yaml_data['personal']['src']
                 }
                 section_content = yaml_data[section_tag]
