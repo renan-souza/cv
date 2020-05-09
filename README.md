@@ -1,31 +1,69 @@
 
 # About
-This repo contains the source I use to automatically generate
-my curriculum vitae as a
-[webpage](http://bamos.github.io)
-and
-[PDF](http://bamos.github.io/data/cv.pdf)
+
+This repo is a fork from [Brandon Amos](http://bamos.github.io)'s [repo](https://github.com/bamos/cv) for building CV and personal webpage.
+
+Based on Brandon's code, I have made several changes here to customize for my own template. 
+
+Here you'll find the source code to automatically generate my [CV](https://renan-souza.github.io/data/cv.pdf) 
+and [Webpage](https://renan-souza.github.io)
 from YAML and BibTeX input.
 
-[generate.py](generate.py) reads from [cv.yaml](cv.yaml) and
+This repo is the main one, but it is intended to work together with the [website repo](https://github.com/renan-souza/renan-souza.github.io).
+So make sure you clone it as well and put it in the same parent directory of this repo. 
+That is, the directory structure looks like this:
+
+- `parent-dir`
+    - `cv`
+    - `renan-souza.github.io` 
+
+The script [generate.py](generate.py) reads from [cv.yaml](cv.yaml) and
 [publications](publications) and outputs LaTeX and Markdown
 by using Jinja templates.
 
-# Building and running
-This requires a Python 3 installation,
-and the hashbang of `generate.py` assumes an executable named
-`python3` is available on the path.
-Dependencies are included in `requirements.txt` and can be installed
-using `pip` with `pip3 install -r requirements.txt`.
-On Mac or Linux, `make` will call [generate.py](generate.py) and
-build the LaTeX documents with `latexmk` and `biber`.
+# Requirements
 
-The Makefile will also:
+- #### Python 3
+- #### Ruby and Bundler
+    ```bash
+    #On mac
+    brew install ruby
+    echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+    source ~/.bash_profile
+    gem install bundler
+    ```
+- #### Latexmk
+    See https://latextools.readthedocs.io/en/latest/install
 
-1. Stage to my website with `make stage`,
-2. Start a local jekyll server of my website with updated
-  documents with `make jekyll`, and
-3. Push updated documents to my website with `make push`.
+
+# Installing
+
+### [Website repo](https://github.com/renan-souza/renan-souza.github.io):
+ 
+ ```shell
+ cd renan-souza.github.io
+ bundle install
+ ```
+
+### [This repo](#):
+ 
+ ```shell
+ cd cv
+ pip install -r requirements.txt
+ ```
+ 
+# Building and Running
+
+The [Makefile](Makefile) contains the instructions to build both the pdf and the webpage. Take a look at it.
+
+On Mac or Linux, `make` will call [generate.py](generate.py) to
+build the LaTeX documents with `latexmk` and `biber`. 
+It will also generate the `_config.yml` of the Website repo.
+To build the webpage, run `make web`, which will also
+start the Jekyll server at [http://localhost:4444](http://localhost:4444) (port is specified in the `_config.yml`).
+
+The script [run.sh](run.sh) has the happy `make` workflow.
+
 
 # What to modify
 Change the content in `cv.yaml`.
@@ -33,8 +71,7 @@ You should also look through the template files to make sure there isn't any
 special-case code that needs to be modified.
 The `Makefile` can also start a Jekyll server and push the
 new documents to another repository.
-To use the Jekyll integration,
-review the `BLOG_DIR` variable and the `jekyll` and `push` targets.
+
 
 ## Warnings
 1. Strings in `cv.yaml` should be LaTeX (though, the actual LaTeX formatting
@@ -47,8 +84,7 @@ review the `BLOG_DIR` variable and the `jekyll` and `push` targets.
 ## Publications
 All publications are stored as BibTeX in [publications](publications).
 The entries can be obtained from Google Scholar.
-The order in the BibTeX file will be the order in
-the output files.
+
 
 BibTeX is built for integration with LaTeX, but producing
 Markdown is not traditionally done from BibTeX files.
@@ -59,62 +95,23 @@ IEEE bibliography style.
 
 [bibtexparser]: https://bibtexparser.readthedocs.org/en/latest/index.html
 
+# Useful info and docs
+
+The variables and code in the files under [templates](templates) 
+use [Jinja2](https://jinja.palletsprojects.com/en/2.11.x/)
+whose syntax, for the variables, is similar to python.
+
+The variables and code in the files under in the [website's repo](https://github.com/renan-souza/renan-souza.github.io) 
+use [Jekyll](https://jekyllrb.com/). This [doc](https://shopify.github.io/liquid/filters/) is handy if you need to 
+manipulate variables in the Jekyll's template.
+   
+
 # Licensing
-This work is distributed under the MIT license (`LICENSE-bamos.mit`)
-with portions copyright Ellis Michael from
-[emichael/resume](https://github.com/emichael/resume).
-Ellis' portions are also distributed under the MIT license
-(`LICENSE-emichael.mit`) and include
-a re-write of `generate.py` and template restructuring.
+This work is distributed under the [MIT license](LICENSE.mit)
+with portions copyright  
+[Brandon Amos](licenses/LICENSE-emichael.mit) and 
+[Ellis Michael](licenses/LICENSE-emichael.mit) 
+includes major refactorings
+done in the commit [685a7a7](https://github.com/renan-souza/cv/commit/685a7a73515c06ce3dbe3da8ccfdda0d0bcf19be)
+which is compliant to the website repo's commit [8cd893a](https://github.com/renan-souza/renan-souza.github.io/commit/8cd893a5149b244f9f8e13a82f7d7c4660ed4fca).
 
-# Similar Projects
-There are many approaches to managing a resume or CV in git,
-and this project uses unique Markdown and LaTeX templates.
-The following list shows a short sampling of projects,
-and I'm happy to merge pull requests of other projects.
-
-<!--
-To generate the following list, install https://github.com/jacquev6/PyGithub
-and download the `github-repo-summary.py` script from
-https://github.com/bamos/python-scripts/blob/master/python3/github-repo-summary.py.
-Please add projects to the list in the comment and in the table below.
-
-github-repo-summary.py \
-  ajn123/CV \
-  cies/resume \
-  divad12/resume \
-  emichael/resume \
-  icco/Resume \
-  jsonresume/resume-schema \
-  kaeluka/cv \
-  masasin/resume \
-  mwhite/resume \
-  prat0318/json_resume \
-  qutebits/resume_42 \
-  raphink/CV \
-  sc932/resume \
-  terro/CV \
-  there4/markdown-resume \
-  zellux/resume \
-  Maples7/barn
--->
-
-Name | Stargazers | Description
-----|----|----
-[ajn123/CV](https://github.com/ajn123/CV) | 13 | My resume in Latex
-[cies/resume](https://github.com/cies/resume) | 261 | My resume as a PDF including the well commented LaTeX source and build instructions.
-[divad12/resume](https://github.com/divad12/resume) | 40 | Yaml resume compiled into multiple formats (such as LaTeX, HTML (TODO), etc.)
-[emichael/resume](https://github.com/emichael/resume) | 2 | Generate LaTeX and Markdown resume from YAML with Python.
-[icco/Resume](https://github.com/icco/Resume) | 258 | A markdown port of my resume
-[jsonresume/resume-schema](https://github.com/jsonresume/resume-schema) | 644 | JSON-Schema is used here to define and validate our proposed resume json
-[kaeluka/cv](https://github.com/kaeluka/cv) | 68 | My CV.
-[masasin/resume](https://github.com/masasin/resume) | 2 | Automatically generate your résumé and various cover letters from YAML files.
-[mwhite/resume](https://github.com/mwhite/resume) | 707 | Markdown -> PDF/HTML resumé generator
-[prat0318/json_resume](https://github.com/prat0318/json_resume) | 1123 | Generates pretty HTML, LaTeX, markdown, with biodata feeded as input in JSON
-[QuteBits/resume_42](https://github.com/QuteBits/resume_42) | 14 | Python script that generates a beautiful resume from YAML data
-[raphink/CV](https://github.com/raphink/CV) | 77 | My CV
-[sc932/resume](https://github.com/sc932/resume) | 337 | My CV/resume in LaTeX.
-[terro/CV](https://github.com/terro/CV) | 27 | My cv template
-[there4/markdown-resume](https://github.com/there4/markdown-resume) | 749 | Generate a responsive CSS3 and HTML5 resume with Markdown, with optional PDF output.
-[zellux/resume](https://github.com/zellux/resume) | 134 | My resume, generated with moderncv
-[Maples7/barn](https://github.com/Maples7/barn) | 10 | A resume/CV generator, parsing information from YAML file to generate a static website which you can deploy on the Github Pages. Exactly like resume-version Hexo.

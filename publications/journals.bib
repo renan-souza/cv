@@ -1,28 +1,32 @@
 
 @article{Souza2017Data,
-	title = {Data Reduction in Scientific Workflows using Provenance Monitoring and User Steering},
+	title = {Data Reduction in Scientific Workflows Using Provenance Monitoring and User Steering},
 	volume = {online},
 	issn = {0167-739X},
-	url = {https://doi.org/10.1016/j.future.2017.11.028},
+	url = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-01679967/document},
 	doi = {10.1016/j.future.2017.11.028},
 	author = {Souza, Renan and Silva, Vítor and Coutinho, Alvaro L. G. A. and Valduriez, Patrick and Mattoso, Marta},
 	journal = {Future Generation Computer Systems},
 	pages = {1--34},
-	year = {2017}
+	keyword = {Scientific Workflows, Human in the Loop, Online Data Reduction, Provenance Data, Dynamic Workflows},
+	year = {2017},
+	abstract = {Scientific workflows need to be iteratively, and often interactively, executed for large input datasets. Reducing data from input datasets is a powerful way to reduce overall execution time in such workflows. When this is accomplished online (i.e., without requiring the user to stop execution to reduce the data, and then resume), it can save much time. However, determining which subsets of the input data should be removed becomes a major problem. A related problem is to guarantee that the workflow system will maintain execution and data consistent with the reduction. Keeping track of how users interact with the workflow is essential for data provenance purposes. In this paper, we adopt the “human-in-the-loop” approach, which enables users to steer the running workflow and reduce subsets from datasets online. We propose an adaptive workflow monitoring approach that combines provenance data monitoring and computational steering to support users in analyzing the evolution of key parameters and determining the subset of data to remove. We extend a provenance data model to keep track of users’ interactions when they reduce data at runtime. In our experimental validation, we develop a test case from the oil and gas domain, using a 936-cores cluster. The results on this test case show that the approach yields reductions of 32\% of execution time and 14\% of the data processed.}
 }
 
 @article{souza_keeping_2019,
 	title = {Keeping Track of User Steering Actions in Dynamic Workflows},
 	volume = {99},
 	issn = {0167-739X},
-	url = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-02127456/document},
+	url = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-02127456},
 	doi = {10.1016/j.future.2019.05.011},
 	pages = {624--643},
 	journal = {Future Generation Computer Systems},
 	author = {Souza, Renan and Silva, Vítor and Camata, Jose J. and Coutinho, Alvaro L. G. A. and Valduriez, Patrick and Mattoso, Marta},
 	year = {2019},
-	keywords = {Dynamic workflows, Computational steering, Provenance data, Parameter tuning}
+	keyword = {Dynamic workflows, Computational steering, Provenance data, Parameter tuning},
+	abstract = {In long-lasting scientific workflow executions in HPC machines, computational scientists (the users in this work) often need to fine-tune several workflow parameters. These tunings are done through user steering actions that may significantly improve performance (e.g., reduce execution time) or improve the overall results. However, in executions that last for weeks, users can lose track of what has been adapted if the tunings are not properly registered. In this work, we build on provenance data management to address the problem of tracking online parameter fine-tuning in dynamic workflows steered by users. We propose a lightweight solution to capture and manage provenance of the steering actions online with negligible overhead. The resulting provenance database relates tuning data with data for domain, dataflow provenance, execution, and performance, and is available for analysis at runtime. We show how users may get a detailed view of the execution, providing insights to determine when and how to tune. We discuss the applicability of our solution in different domains and validate its ability to allow for online capture and analyses of parameter fine-tunings in a real workflow in the Oil and Gas industry. In this experiment, the user could determine which tuned parameters influenced simulation accuracy and performance. The observed overhead for keeping track of user steering actions at runtime is less than 1\% of total execution time.}
 }
+
 
 
 @article{silva_adding_2018,

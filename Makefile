@@ -26,7 +26,7 @@ else
 	YAML_FILES = cv.yaml
 endif
 
-.PHONY: all public viewpdf stage jekyll push clean
+.PHONY: all public viewpdf stage web push clean
 
 all: $(PDF) $(MD)
 
@@ -57,9 +57,15 @@ stage: $(PDF) $(MD)
 	cp $(BUILD_DIR)/*.md $(WEBSITE_INCLUDES)
 	date +%Y-%m-%d > $(WEBSITE_DATE)
 
-jekyll: stage
+web: stage
 	./generate.py $(YAML_FILES) -o $(WEBSITE_DIR)/_config.yml
 	cd $(WEBSITE_DIR) && bundle exec jekyll server
+
+commit:
+	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_PDF)
+	git -C $(WEBSITE_DIR) status
+	git -C $(WEBSITE_DIR) commit -m "Update from Makefile in cv build repo."
+	git -C $(WEBSITE_DIR) push
 
 clean:
 	rm -rf $(BUILD_DIR)/*cv*

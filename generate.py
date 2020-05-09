@@ -95,13 +95,21 @@ def get_pub_md(context, config):
         if 'abstract' in pub:
             links.append("""
 [<a href='javascript: none'
-    onclick=\'$(\"#abs_{}{}\").toggle()\'>abs</a>]""".format(pub['ID'], prefix))
-            abstract = context.make_replacements(pub['abstract'])
+    onclick=\'$(\"#abs_{}{}\").toggle()\'>abstract</a>]""".format(pub['ID'], prefix))
+            abstract = "<strong>Abstract. </strong>"+context.make_replacements(pub['abstract'])
+            if 'keyword' in pub:
+                abstract += "<br/><strong>Keywords: </strong> " + pub['keyword']
+
         if 'link' in pub:
             imgStr = "<a href=\'{}\' target='_blank'>{}</a> ".format(
                 pub['link'], imgStr)
             links.append(
                 "[<a href=\'{}\' target='_blank'>pdf</a>] ".format(pub['link']))
+
+        if 'doi' in pub:
+            links.append(
+                    "[<a href=\'https://doi.org/{}\' target='_blank'>doi</a>] ".format(pub['doi']))
+
         if 'codeurl' in pub:
             links.append(
                 "[<a href=\'{}\' target='_blank'>code</a>] ".format(pub['codeurl']))
