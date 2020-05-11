@@ -130,7 +130,7 @@ def get_pub_md(context, config):
         if includeImage:
             return '''
 <tr>
-<td class="col-md-3" style="vertical-align: middle;">{}</td>
+<td class="col-md-3 hidden-xs" style="vertical-align: middle;">{}</td>
 <td style="vertical-align: middle; text-align: justify;">
     <strong>{}</strong><br>
     {}<br>

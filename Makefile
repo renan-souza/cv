@@ -28,7 +28,7 @@ endif
 
 .PHONY: all public viewpdf stage web push clean
 
-all: $(PDF) $(MD)
+all: $(PDF) $(MD) web
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)

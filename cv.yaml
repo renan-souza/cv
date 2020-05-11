@@ -48,6 +48,10 @@ order:
     title: Selected Publications
     display-web: true
     display-pdf: true
+  - tag: skills
+    title: Technical Knowledge
+    display-web: false
+    display-pdf: true
   - tag: languages
     title: Languages
     display-web: false
@@ -81,9 +85,9 @@ about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and a M.Sc. (2015) in 
 
 research_interests:
   - Large-scale Data Science and Engineering
-  - Parallel Execution of Workflows and Big Data Provenance
+  - Parallel Workflows and Big Data Provenance
   - Big Data Analytics
-  - Grid, Cluster, and Cloud Computing
+  - High Performance Computing in Clusters and Clouds
   - Machine Learning
 
 
