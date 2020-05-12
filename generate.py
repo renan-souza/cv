@@ -19,6 +19,10 @@ import yaml
 import sys
 import bibtexparser.customization as bc
 from bibtexparser.bparser import BibTexParser
+from bibtexparser.bwriter import BibTexWriter
+from bibtexparser.bibdatabase import BibDatabase
+
+import copy
 from datetime import date
 from jinja2 import Environment, FileSystemLoader
 import codecs
@@ -113,6 +117,12 @@ def get_pub_md(context, config):
         if 'codeurl' in pub:
             links.append(
                 "[<a href=\'{}\' target='_blank'>code</a>] ".format(pub['codeurl']))
+
+        links.append("""
+            [<a href='javascript: none'
+            onclick=\'$(\"#bib_{}{}\").toggle()\'>bibtex</a>]""".format(pub['ID'], prefix))
+
+
         links = ' '.join(links)
 
         if abstract:
@@ -122,46 +132,68 @@ def get_pub_md(context, config):
 </div>
 '''.format(pub['ID'], prefix, abstract)
 
+        bib = pub['BIB_ENTRY'].replace("{", "&#123;").replace("}", "&#125;").replace("\n","<br/>").replace("\t","&nbsp;&nbsp;")
+
+        bib = '''
+<div id="bib_{}{}" style="display: none; background-color: #eee; font-family:Courier; font-size: 0.8em; text-align: justify; border-color: gray; border: 1px solid lightgray;">
+{}
+</div>
+'''.format(pub['ID'], prefix, bib)
+
         if '_note' in pub:
             note_str = '<strong>{}</strong><br>'.format(pub['_note'])
         else:
             note_str = ''
 
         if includeImage:
-            return '''
+            return f"""
 <tr>
-<td class="col-md-3 hidden-xs" style="vertical-align: middle;">{}</td>
+<td class="col-md-3 hidden-xs" style="vertical-align: middle;">{imgStr}</td>
 <td style="vertical-align: middle; text-align: justify;">
-    <strong>{}</strong><br>
-    {}<br>
-    {}<br>
-    {}
-    {}<br>
-    {}
+    <strong>{title}</strong>
+    {author_str}<br>
+    {yearVenue}
+    {note_str}<br>
+    {links}
+    {abstract}
+    {bib}
 </td>
 </tr>
-'''.format(imgStr, title, author_str, yearVenue, note_str, links, abstract)
+"""
+
         else:
-            return '''
+            return f"""
 <tr>
 <td style="vertical-align: middle; text-align: justify;">
-    <strong>{}</strong><br>
-    {}<br>
-    {}<br>
-    {}
-    {}<br>
-    {}
+    <strong>{title}</strong><br>
+    {author_str}<br>
+    {yearVenue}<br>
+    {note_str}
+    {links}<br>
+    {abstract}
+    {bib}
 </td>
 </tr>
-'''.format(title, author_str, yearVenue, note_str, links, abstract)
+"""
 
     def load_and_replace(bibtex_file):
         with open(os.path.join('publications', bibtex_file), 'r', encoding="utf-8") as f:
-            p = BibTexParser(f.read(), bc.author).get_entry_list()
+            fdata = f.read()
+            pdict = BibTexParser(fdata).get_entry_dict()
+            plist = BibTexParser(fdata, bc.author).get_entry_list()
         by_year = {}
 
-        for pub in p:
+        for pub in plist:
+            pubd = pdict[pub['ID']]
+            db = BibDatabase()
+            db.entries = [pubd]
+            writer = BibTexWriter()
+            writer.indent = '\t'
+            bibentry = writer.write(db)
+            pub['BIB_ENTRY'] = bibentry
             for field in pub:
+                if field == 'BIB_ENTRY':
+                    continue
                 pub[field] = context.make_replacements(pub[field])
             pub['author'] = _format_author_list(pub['author'])
             y = int(pub['year']) if 'year' in pub else 1970
@@ -173,7 +205,6 @@ def get_pub_md(context, config):
         for year, pubs in sorted(by_year.items(), reverse=True):
             for pub in pubs:
                 ret.append(pub)
-
 
         return ret
 
