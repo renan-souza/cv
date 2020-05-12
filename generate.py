@@ -87,13 +87,13 @@ def get_pub_md(context, config):
 
 
         if 'journal' in pub:
-            yearVenue = "{} {}".format(pub['journal'], pub['year'])
+            yearVenue = "{}, {}.".format(pub['journal'], pub['year'])
         elif 'booktitle' in pub:
-            yearVenue = "{} {}".format(pub['booktitle'], pub['year'])
+            yearVenue = "{}, {}.".format(pub['booktitle'], pub['year'])
         else:
             yearVenue = "{}".format(pub['year'])
 
-        imgStr = '<img src="images/publications/{}.png"/>'.format(pub['ID'])
+        imgStr = '<img src="images/publications/{}.png" style="border:0"/>'.format(pub['ID'])
         links = ['[{}{}]'.format(prefix, gidx)]
         abstract = ''
         if 'abstract' in pub:
