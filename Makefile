@@ -2,20 +2,25 @@
 #
 # Brandon Amos <http://bamos.github.io> and
 # Ellis Michael <http://ellismichael.com>
-# Modified by Renan Souza <https://renan-souza.github.io>
+# Modified by Renan Souza <https://renansouza.org>
 
+
+TODAY := $(shell date +%Y-%m-%d)
 
 # Assuming that both the cv and github.io directories are in same parent directory `..` so the following line can work
 WEBSITE_DIR=$(shell find $(shell pwd)/../*github* | head -n 1)
-WEBSITE_PDF=$(WEBSITE_DIR)/data/cv.pdf
+WEBSITE_PDF=$(WEBSITE_DIR)/data/Renan-Souza-CV-$(TODAY).pdf
+WEBSITE_PDF_SHORT=$(WEBSITE_DIR)/data/Renan-Souza-CV-short-$(TODAY).pdf
 WEBSITE_INCLUDES=$(WEBSITE_DIR)/_includes
 WEBSITE_DATE=$(WEBSITE_DIR)/_includes/last-updated.txt
+
 
 TEMPLATES=$(shell find templates -type f)
 
 BUILD_DIR=build
 TEX=$(BUILD_DIR)/cv.tex
 PDF=$(BUILD_DIR)/cv.pdf
+PDF_SHORT=$(BUILD_DIR)/cv-short.pdf
 MD=$(BUILD_DIR)/cv.md
 
 
@@ -38,8 +43,10 @@ public: $(BUILD_DIR) $(TEMPLATES) $(YAML_FILES) generate.py
 
 $(TEX) $(MD): $(TEMPLATES) $(YAML_FILES) generate.py
 	./generate.py $(YAML_FILES)
-	./generate.py $(YAML_FILES) -t all_publications -m
+	./generate.py $(YAML_FILES) -s
+	./generate.py $(YAML_FILES) -t publications -m
 	./generate.py $(YAML_FILES) -t events -m
+
 
 $(PDF): $(TEX) publications/*.bib
 	# TODO: Hack for biber on OSX.
@@ -47,22 +54,29 @@ $(PDF): $(TEX) publications/*.bib
 
 	latexmk -pdf -cd- -jobname=$(BUILD_DIR)/cv $(BUILD_DIR)/cv
 	latexmk -c -cd $(BUILD_DIR)/cv
+
+
+	latexmk -pdf -cd- -jobname=$(BUILD_DIR)/cv-short $(BUILD_DIR)/cv-short
+	latexmk -c -cd $(BUILD_DIR)/cv-short
+
 	open  $(BUILD_DIR)/cv.pdf
+	open  $(BUILD_DIR)/cv-short.pdf
 
 viewpdf: $(PDF)
 	gnome-open $(PDF)
 
 stage: $(PDF) $(MD)
 	cp $(PDF) $(WEBSITE_PDF)
+	cp $(PDF_SHORT) $(WEBSITE_PDF_SHORT)
 	cp $(BUILD_DIR)/*.md $(WEBSITE_INCLUDES)
-	date +%Y-%m-%d > $(WEBSITE_DATE)
+	echo $(TODAY) > $(WEBSITE_DATE)
 
 web: stage
-	./generate.py $(YAML_FILES) -o $(WEBSITE_DIR)/_config.yml
+	./generate.py $(YAML_FILES) -d $(TODAY) -o $(WEBSITE_DIR)/_config.yml
 	cd $(WEBSITE_DIR) && bundle exec jekyll server
 
 commit:
-	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_PDF)
+	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_PDF) $(WEBSITE_PDF_SHORT)
 	git -C $(WEBSITE_DIR) status
 	git -C $(WEBSITE_DIR) commit -m "Update from Makefile in cv build repo."
 	git -C $(WEBSITE_DIR) push

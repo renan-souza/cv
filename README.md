@@ -1,10 +1,6 @@
 
 # About
 
-This repo is a fork from [Brandon Amos](http://bamos.github.io)'s [repo](https://github.com/bamos/cv) for building CV and personal webpage.
-
-Based on Brandon's code, I have made several changes here to customize for my own template. 
-
 Here you'll find the source code to automatically generate my [CV](https://renan-souza.github.io/data/cv.pdf) 
 and [Webpage](https://renan-souza.github.io)
 from YAML and BibTeX input.
@@ -107,8 +103,12 @@ manipulate variables in the Jekyll's template.
    
 
 # Licensing
+
+This repo is a fork from [Brandon Amos](http://bamos.github.io)'s [repo](https://github.com/bamos/cv) for building CV and personal webpage.
+Based on Brandon's code, I have made several changes here to customize for my own template.
+
 This work is distributed under the [MIT license](LICENSE.mit)
-with portions copyright [Brandon Amos](licenses/LICENSE-emichael.mit) and [Ellis Michael](licenses/LICENSE-emichael.mit) 
-includes major refactorings done in the commit [685a7a7](https://github.com/renan-souza/cv/commit/685a7a73515c06ce3dbe3da8ccfdda0d0bcf19be)
+with portions copyright [Brandon Amos](licenses/LICENSE-emichael.mit) and [Ellis Michael](licenses/LICENSE-emichael.mit).
+This work includes major refactorings done in the commit [685a7a7](https://github.com/renan-souza/cv/commit/685a7a73515c06ce3dbe3da8ccfdda0d0bcf19be)
 which is compliant to the website repo's commit [8cd893a](https://github.com/renan-souza/renan-souza.github.io/commit/8cd893a5149b244f9f8e13a82f7d7c4660ed4fca).
 

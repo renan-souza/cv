@@ -214,10 +214,12 @@ class RenderContext(object):
     DEFAULT_SECTION = 'items'
     BASE_FILE_NAME = 'cv'
 
-    def __init__(self, context_name, file_ending, jinja_options, replacements, file_name=None):
+    def __init__(self, context_name, file_ending, jinja_options, replacements, file_name=None, short=False):
         self._file_ending = file_ending
         self._replacements = replacements
         self.file_name = self.BASE_FILE_NAME if not file_name else file_name
+        if short:
+            self.file_name += "-short"
         context_templates_dir = os.path.join(self.TEMPLATES_DIR, context_name)
 
         self._output_file = os.path.join(
@@ -265,7 +267,7 @@ class RenderContext(object):
             groups.append(group)
         return groups
 
-    def render_resume(self, yaml_data, specified_tag=None):
+    def render_resume(self, yaml_data, specified_tag=None, short=False):
         # Make the replacements first on the yaml_data
         yaml_data = self.make_replacements(yaml_data)
 
@@ -300,6 +302,14 @@ class RenderContext(object):
         else:
             body = ''
             for item in yaml_data['order']:
+                if short:
+                    display_short = False
+                    if 'display-short' in item:
+                        display_short = True if "true" in str(item['display-short']).lower() else False
+
+                    if not display_short:
+                        continue
+
                 section_tag = item['tag']
                 section_title = item['title']
                 display_web = True if "true" in str(item['display-web']).lower() else False
@@ -342,8 +352,8 @@ class RenderContext(object):
 
 
 
-def process_resume(context, yaml_data, preview, specified_tag=None):
-    rendered_resume = context.render_resume(yaml_data, specified_tag)
+def process_resume(context, yaml_data, preview, specified_tag=None, short=False):
+    rendered_resume = context.render_resume(yaml_data, specified_tag, short=short)
     if preview:
         print(rendered_resume)
     else:
@@ -359,6 +369,8 @@ def main():
     parser.add_argument('-p', '--preview', action='store_true',
                         help='prints generated content to stdout instead of writing to file')
     parser.add_argument('-t', '--tag', help='Specify the tag to be generated in a separate file', default=None)
+    parser.add_argument('-d', '--date', help='Today string', default=None)
+    parser.add_argument('-s', '--short', help='Indicate that the short version will be generated', action='store_true')
 
     parser.add_argument('-o', '--output-yaml', help='Copy some data from the input yaml to an output yaml')
 
@@ -380,11 +392,13 @@ def main():
     if args.output_yaml:
         personal_data = yaml_data['personal']
         out_data = yaml.load(open(args.output_yaml))
+        out_data['date'] = args.date
         out_data['personal'] = personal_data
         yaml.dump(out_data, open(args.output_yaml, 'w'))
         print("Copied yaml data to " + args.output_yaml)
         sys.exit(0)
 
+    short = args.short
     LATEX_CONTEXT = RenderContext(
         'latex',
         '.tex',
@@ -399,7 +413,8 @@ def main():
             lstrip_blocks=True
         ),
         [],
-        specified_tag
+        specified_tag,
+        short
     )
 
     MARKDOWN_CONTEXT = RenderContext(
@@ -429,17 +444,19 @@ def main():
             (r'\{([^}]*)\}', r'\1'),  # Brackets.
             (r'\\newline', r'<br/>'),
         ],
-        specified_tag
+        specified_tag,
+        short
     )
+
 
     if args.latex or args.markdown:
         if args.latex:
-            process_resume(LATEX_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag)
+            process_resume(LATEX_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag, short=short)
         elif args.markdown:
-            process_resume(MARKDOWN_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag)
+            process_resume(MARKDOWN_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag, short=short)
     else:
-        process_resume(LATEX_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag)
-        process_resume(MARKDOWN_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag)
+        process_resume(LATEX_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag, short=short)
+        process_resume(MARKDOWN_CONTEXT, yaml_data, args.preview, specified_tag=specified_tag, short=short)
 
 
 if __name__ == "__main__":

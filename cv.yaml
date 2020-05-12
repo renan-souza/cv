@@ -4,9 +4,8 @@ personal:
     last: Souza
   email: rfsouza@br.ibm.com
   site_h1: Renan Souza, Ph.D.
-  pdf: /data/cv.pdf
   src: https://github.com/renan-souza/cv
-  url: renan-souza.github.io
+  url: RenanSouza.org
   description: Renan Souza's Website and CV
   status: Data Science and Engineering Researcher at IBM Research
   social:
@@ -32,22 +31,27 @@ order:
     title: Bio
     display-web: true
     display-pdf: true
+    display-short: true
   - tag: research_interests
     title: Research Interests
     display-web: true
     display-pdf: true
+    display-short: true
   - tag: education
     title: Education
     display-web: false
     display-pdf: true
+    display-short: true
   - tag: experience
     title: Experience
     display-web: false
     display-pdf: true
+    display-short: true
   - tag: selected_publications
     title: Selected Publications
     display-web: true
     display-pdf: true
+    display-short: true
   - tag: skills
     title: Technical Knowledge
     display-web: false
@@ -56,36 +60,46 @@ order:
     title: Languages
     display-web: false
     display-pdf: true
+    display-short: false
   - tag: honors
     title: "Grants \\& Awards"
     display-web: false
     display-pdf: true
+    display-short: false
   - tag: teaching
     title: Teaching and Supervisions
     display-web: false
     display-pdf: true
+    display-short: false
   - tag: events
     title: Talks and Events Participation
     display-web: false
     display-pdf: true
-  - tag: all_publications
+    display-short: false
+  - tag: publications
     title: All Publications and Patents
     display-web: false
     display-pdf: true
+    display-short: false
 
 
-about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and a M.Sc. (2015) in Computer Science from \href{https://www.cos.ufrj.br}{COPPE/Federal University of Rio de Janeiro} (UFRJ), and a \href{https://dcc.ufrj.br}{B.Sc. in Computer Science} from UFRJ (2009-2013).
-  Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research Brazil}, where he is a Research Scientist in the \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Industrial Cloud Technologies} group.
+about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and a M.Sc. (2015) in Computer Science from
+  \href{https://www.cos.ufrj.br}{COPPE/Federal University of Rio de Janeiro} (UFRJ), and a
+  \href{https://dcc.ufrj.br}{B.Sc. in Computer Science} from UFRJ (2009-2013).
+  Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research Brazil}, where he is
+  a Research Scientist in the \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Industrial Cloud Technologies} group.
   He has been working both as a software engineer and a researcher in several projects since 2010 and has been actively publishing
   scientific papers in international conferences and referred journals since 2014.
-  During his B.Sc., he spent a school year at \href{https://www.missouristate.edu/}{Missouri State University} and did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
+  During his B.Sc., he spent a school year at \href{https://www.missouristate.edu/}{Missouri State University} and
+  did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
   During his Ph.D., he was a visiting researcher at \href{https://team.inria.fr/zenith/}{Inria/Univ. Montpellier} in France in 2019.
   In 2017, he won the best M.Sc. thesis award from SBBD, the main conference on data management in Latin America.
-  He does research on data science and engineering for the support of Artificial Intelligence systems for large-scale industrial problems.'
+  He does research on large-scale data science and engineering for the support of Artificial Intelligence systems.'
 
 research_interests:
   - Large-scale Data Science and Engineering
-  - Parallel Workflows and Big Data Provenance
+  - Parallel Workflows
+  - Data Provenance
   - Big Data Analytics
   - High Performance Computing in Clusters and Clouds
   - Machine Learning
@@ -129,7 +143,7 @@ education:
     supervisor: \href{https://scholar.google.com/citations?user=wH2oMLgAAAAJ&hl=en}{Maria Luiza Machado Campos}
     thesis:
       title: "Linked Open Data Publication Strategies: An Application in Network Performance Data (in pt)"
-      link: https://renan-souza.github.io/papers/souza-bsc-thesis.pdf
+      link: https://renan-souza.github.io/data/papers/souza-bsc-thesis.pdf
 
   - school: Lemos de Castro
     location: Rio de Janeiro, Brazil
@@ -143,7 +157,7 @@ experience:
     location: Brazil
     title: Research Scientist
     dates: Aug 2019 -- present
-    area: Scientific Data Management for Large-scale AI Applications
+    area: Large-scale Data Science and Engineering
     details: ''
   - place: IBM Research
     location: Brazil
@@ -189,7 +203,7 @@ selected_publications:
   name: "R. Souza"
   file: selected.bib
 
-all_publications:
+publications:
   name: "R. Souza"
   categories:
     - heading: Theses

@@ -1,4 +1,4 @@
-# Publications and Patents
+# {{ name }}
 
 Please, feel free to reach me if you need a preprint of a paper not available here.
 
