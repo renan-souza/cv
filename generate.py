@@ -399,7 +399,6 @@ def main():
     parser.add_argument('-p', '--preview', action='store_true',
                         help='prints generated content to stdout instead of writing to file')
     parser.add_argument('-t', '--tag', help='Specify the tag to be generated in a separate file', default=None)
-    parser.add_argument('-d', '--date', help='Today string in the format yyyy-mm-dd', default=None, nargs='+')
     parser.add_argument('-s', '--short', help='Indicate that the short version will be generated', action='store_true')
 
     parser.add_argument('-o', '--output-yaml', help='Copy some data from the input yaml to an output yaml')
@@ -422,7 +421,7 @@ def main():
     if args.output_yaml:
         personal_data = yaml_data['personal']
         out_data = yaml.load(open(args.output_yaml))
-        out_data['date'] = args.date
+        out_data['today'] = date.today().strftime("%Y-%m-%d")
         out_data['personal'] = personal_data
         yaml.dump(out_data, open(args.output_yaml, 'w'))
         print("Copied yaml data to " + args.output_yaml)

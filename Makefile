@@ -12,7 +12,6 @@ WEBSITE_DIR=$(shell find $(shell pwd)/../*github* | head -n 1)
 WEBSITE_PDF=$(WEBSITE_DIR)/data/Renan-Souza-CV-$(TODAY).pdf
 WEBSITE_PDF_SHORT=$(WEBSITE_DIR)/data/Renan-Souza-CV-short-$(TODAY).pdf
 WEBSITE_INCLUDES=$(WEBSITE_DIR)/_includes
-WEBSITE_DATE=$(WEBSITE_DIR)/_includes/last-updated.txt
 
 
 TEMPLATES=$(shell find templates -type f)
@@ -69,14 +68,13 @@ stage: $(PDF) $(MD)
 	cp $(PDF) $(WEBSITE_PDF)
 	cp $(PDF_SHORT) $(WEBSITE_PDF_SHORT)
 	cp $(BUILD_DIR)/*.md $(WEBSITE_INCLUDES)
-	echo $(TODAY) > $(WEBSITE_DATE)
 
 web: stage
-	./generate.py $(YAML_FILES) -d $(TODAY) -o $(WEBSITE_DIR)/_config.yml
+	./generate.py $(YAML_FILES) -o $(WEBSITE_DIR)/_config.yml
 	cd $(WEBSITE_DIR) && bundle exec jekyll server
 
 commit:
-	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_PDF) $(WEBSITE_PDF_SHORT)
+	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_PDF) $(WEBSITE_PDF_SHORT) $(WEBSITE_DIR)/_config.yml
 	git -C $(WEBSITE_DIR) status
 	git -C $(WEBSITE_DIR) commit -m "Update from Makefile in cv build repo."
 	git -C $(WEBSITE_DIR) push
