@@ -12,7 +12,6 @@ Adapted by Renan Souza <http://renan-souza.github.io>
 
 
 import argparse
-import copy
 import os
 import re
 import yaml
@@ -301,16 +300,19 @@ class RenderContext(object):
     def render_resume(self, yaml_data, specified_tag=None, short=False):
         # Make the replacements first on the yaml_data
         yaml_data = self.make_replacements(yaml_data)
+        yaml_data['today'] = date.today().strftime("%Y-%m-%d")
+        section_data = {
+            'src': yaml_data['personal']['src'],
+            'today': yaml_data['today'],
+            'personal': yaml_data['personal']
+        }
 
         if specified_tag:
             for order_item in yaml_data['order']:
                 if order_item['tag'] == specified_tag:
                     name = order_item['title']
 
-            section_data = {
-                'name': name,
-                'src': yaml_data['personal']['src']
-            }
+            section_data['name'] = name
             section_content = yaml_data[specified_tag]
 
             if 'publications' in specified_tag and self._file_ending == ".md":
@@ -318,19 +320,19 @@ class RenderContext(object):
             else:
                 section_data['items'] = section_content
 
-            section_template_name = os.path.join(self.SECTIONS_DIR,
-                specified_tag + self._file_ending)
+            section_template_name = os.path.join(self.SECTIONS_DIR, specified_tag + self._file_ending)
 
             rendered_section = self._render_template(
                 section_template_name, section_data)
             body = rendered_section.rstrip() + '\n\n\n'
 
             yaml_data['body'] = body
-            yaml_data['today'] = date.today().strftime("%B %d, %Y")
+
             return self._render_template(
                 self._base_template, yaml_data).rstrip() + '\n'
 
         else:
+
             body = ''
             for item in yaml_data['order']:
                 if short:
@@ -343,6 +345,7 @@ class RenderContext(object):
 
                 section_tag = item['tag']
                 section_title = item['title']
+                section_data['name'] = section_title
                 display_web = True if "true" in str(item['display-web']).lower() else False
                 display_pdf = item['display-pdf']
                 print("  + Processing section: {}".format(section_tag))
@@ -353,10 +356,6 @@ class RenderContext(object):
                     print("We are not generating web for " + section_tag)
                     continue
 
-                section_data = {
-                    'name': section_title,
-                    'src': yaml_data['personal']['src']
-                }
                 section_content = yaml_data[section_tag]
 
                 if 'publications' in section_tag and self._file_ending == ".md":
@@ -400,7 +399,7 @@ def main():
     parser.add_argument('-p', '--preview', action='store_true',
                         help='prints generated content to stdout instead of writing to file')
     parser.add_argument('-t', '--tag', help='Specify the tag to be generated in a separate file', default=None)
-    parser.add_argument('-d', '--date', help='Today string', default=None)
+    parser.add_argument('-d', '--date', help='Today string in the format yyyy-mm-dd', default=None, nargs='+')
     parser.add_argument('-s', '--short', help='Indicate that the short version will be generated', action='store_true')
 
     parser.add_argument('-o', '--output-yaml', help='Copy some data from the input yaml to an output yaml')

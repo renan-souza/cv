@@ -2,7 +2,7 @@ personal:
   name:
     first: Renan
     last: Souza
-  email: rfsouza@br.ibm.com
+  email: renan@renansouza.org
   site_h1: Renan Souza, Ph.D.
   src: https://github.com/renan-souza/cv
   url: RenanSouza.org
@@ -83,18 +83,18 @@ order:
     display-short: false
 
 
-about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and a M.Sc. (2015) in Computer Science from
+about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and an M.Sc. (2015) in Computer Science from
   \href{https://www.cos.ufrj.br}{COPPE/Federal University of Rio de Janeiro} (UFRJ), and a
   \href{https://dcc.ufrj.br}{B.Sc. in Computer Science} from UFRJ (2009-2013).
   Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research Brazil}, where he is
   a Research Scientist in the \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Industrial Cloud Technologies} group.
   He has been working both as a software engineer and a researcher in several projects since 2010 and has been actively publishing
-  scientific papers in international conferences and referred journals since 2014.
+  scientific papers in refereed international conferences and journals since 2014.
   During his B.Sc., he spent a school year at \href{https://www.missouristate.edu/}{Missouri State University} and
   did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
   During his Ph.D., he was a visiting researcher at \href{https://team.inria.fr/zenith/}{Inria/Univ. Montpellier} in France in 2019.
   In 2017, he won the best M.Sc. thesis award from SBBD, the main conference on data management in Latin America.
-  He does research on large-scale data science and engineering for the support of Artificial Intelligence systems.'
+  He researches large-scale data science and engineering techniques for the support of Artificial Intelligence systems.'
 
 research_interests:
   - Large-scale Data Science and Engineering

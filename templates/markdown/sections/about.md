@@ -7,11 +7,11 @@
 </p>
 
 
-See my 
-<a href="data/cv.pdf" target='_blank' class="fa fa-download">
+See 
+<a href="data/{{personal.name.first}}-{{personal.name.last}}-CV-{{today}}.pdf" target='_blank' class="fa fa-download">
     Full CV
 </a>
-for complete information on education, professional experience, and technical skills.
+for complete information about education, professional experience, and technical skills.
 
 
 
