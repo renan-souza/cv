@@ -1,8 +1,8 @@
 
 # About
 
-Here you'll find the source code to automatically generate my [CV](https://renan-souza.github.io/data/cv.pdf) 
-and [Webpage](https://renan-souza.github.io)
+Here you'll find the source code to automatically generate my CV
+and [Webpage](https://renansouza.org)
 from YAML and BibTeX input.
 
 This repo is the main one, but it is intended to work together with the [website repo](https://github.com/renan-souza/renan-souza.github.io).
