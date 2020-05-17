@@ -147,9 +147,9 @@ def get_pub_md(context, config):
         if includeImage:
             return f"""
 <tr>
-<td class="col-md-3 hidden-xs" style="vertical-align: middle;">{imgStr}</td>
+<td class="col-md-3 hidden-xs hidden-sm" style="vertical-align: middle;">{imgStr}</td>
 <td style="vertical-align: middle; text-align: justify;">
-    <strong>{title}</strong>
+    <strong>{title}</strong><br>
     {author_str}<br>
     {yearVenue}
     {note_str}<br>
