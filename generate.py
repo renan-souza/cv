@@ -72,6 +72,7 @@ def get_pub_md(context, config):
             formatted_authors.append(new_auth)
         return formatted_authors
 
+
     def _get_pub_str(pub, prefix, gidx, includeImage):
         author_str = _get_author_str(pub['author'])
         # prefix = category['prefix']
@@ -84,13 +85,21 @@ def get_pub_md(context, config):
         #         pub['link'], title)
         title = title.replace("\n", " ")
 
-
+        venue = ""
         if 'journal' in pub:
-            yearVenue = "{}, {}.".format(pub['journal'], pub['year'])
+            venue = f"{pub['journal']}"
         elif 'booktitle' in pub:
-            yearVenue = "{}, {}.".format(pub['booktitle'], pub['year'])
+            venue = f"{pub['booktitle']}"
+
+        if 'year' in pub:
+            year = f"{pub['year']}"
         else:
-            yearVenue = "{}".format(pub['year'])
+            #TODO try to get from the pub['date']
+            print("FATAL ERROR: Can't generate for the following bibentry because it does not have an year. "
+                  "Make sure it has an year\n" + str(pub['ID']))
+            sys.exit(-1)
+
+
 
         imgStr = '<img src="images/publications/{}.png" style="border:0"/>'.format(pub['ID'])
         links = ['[{}{}]'.format(prefix, gidx)]
@@ -103,15 +112,23 @@ def get_pub_md(context, config):
             if 'keyword' in pub:
                 abstract += "<br/><strong>Keywords: </strong> " + pub['keyword']
 
-        if 'link' in pub:
-            imgStr = "<a href=\'{}\' target='_blank'>{}</a> ".format(
-                pub['link'], imgStr)
-            links.append(
-                "[<a href=\'{}\' target='_blank'>pdf</a>] ".format(pub['link']))
-
         if 'doi' in pub:
             links.append(
-                    "[<a href=\'https://doi.org/{}\' target='_blank'>doi</a>] ".format(pub['doi']))
+                "[<a href=\'https://doi.org/{}\' target='_blank'>doi</a>] ".format(pub['doi']))
+            imgStr = "<a href=\'https://doi.org/{}\' target='_blank'>{}</a> ".format(pub['doi'], imgStr)
+
+        if 'link' in pub or 'url' in pub:
+            if 'link' in pub:
+                k = 'link'
+            else:
+                k = 'url'
+
+            links.append(
+                "[<a href=\'{}\' target='_blank'>online</a>] ".format(pub[k]))
+
+        if 'pdf' in pub:
+            links.append(
+                "[<a href=\'{}\' target='_blank'>pdf</a>] ".format(pub['pdf']))
 
         if 'codeurl' in pub:
             links.append(
@@ -144,18 +161,29 @@ def get_pub_md(context, config):
         else:
             note_str = ''
 
+        if venue:
+            yearVenue = f"<br><i>{venue}</i>, {year}."
+        else:
+            yearVenue = f", {year}."
+
+        div_content = f"""
+            <strong>{title}</strong><br>
+            {author_str}{yearVenue}<br>
+            {note_str}
+            {links}<br>
+            {abstract}
+            {bib}
+        """
+
+
+
+
         if includeImage:
             return f"""
 <tr>
 <td class="col-md-3 hidden-xs hidden-sm" style="vertical-align: middle;">{imgStr}</td>
 <td style="vertical-align: middle; text-align: justify;">
-    <strong>{title}</strong><br>
-    {author_str}<br>
-    {yearVenue}
-    {note_str}<br>
-    {links}
-    {abstract}
-    {bib}
+    {div_content}
 </td>
 </tr>
 """
@@ -164,13 +192,7 @@ def get_pub_md(context, config):
             return f"""
 <tr>
 <td style="vertical-align: middle; text-align: justify;">
-    <strong>{title}</strong><br>
-    {author_str}<br>
-    {yearVenue}<br>
-    {note_str}
-    {links}<br>
-    {abstract}
-    {bib}
+    {div_content}
 </td>
 </tr>
 """
