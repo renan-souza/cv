@@ -65,6 +65,7 @@ viewpdf: $(PDF)
 	gnome-open $(PDF)
 
 stage: $(PDF) $(MD)
+	rm $(WEBSITE_DIR)/data/*pdf
 	cp $(PDF) $(WEBSITE_PDF)
 	cp $(PDF_SHORT) $(WEBSITE_PDF_SHORT)
 	cp $(BUILD_DIR)/*.md $(WEBSITE_INCLUDES)
@@ -74,7 +75,7 @@ web: stage
 	cd $(WEBSITE_DIR) && bundle exec jekyll server
 
 commit:
-	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_PDF) $(WEBSITE_PDF_SHORT) $(WEBSITE_DIR)/_config.yml
+	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_DIR)/data $(WEBSITE_DIR)/_config.yml
 	git -C $(WEBSITE_DIR) status
 	git -C $(WEBSITE_DIR) commit -m "Update from Makefile in cv build repo."
 	git -C $(WEBSITE_DIR) push

@@ -14,7 +14,7 @@ Please, feel free to reach me if you need a presentation not available here.
     {% if event.page %}
         <a href="{{event.page}}" target="_blank"><img src="/images/external-link.png" style="width: 1.2em; border: 0" /></a>
     {% endif %} in 
-    in {{event.place}}
+    {{event.place}}
     <br/>
     {% if event.subevents %}
         {% for subevent in event.subevents %} 
