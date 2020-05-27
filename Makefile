@@ -57,6 +57,7 @@ $(PDF): $(TEX) publications/*.bib
 
 	latexmk -pdf -cd- -jobname=$(BUILD_DIR)/cv-short $(BUILD_DIR)/cv-short
 	latexmk -c -cd $(BUILD_DIR)/cv-short
+	rm $(BUILD_DIR)/cv-short*md
 
 	open  $(BUILD_DIR)/cv.pdf
 	open  $(BUILD_DIR)/cv-short.pdf

@@ -379,11 +379,13 @@ class RenderContext(object):
                     continue
 
                 section_content = yaml_data[section_tag]
-
+                if 'experience' in section_tag:
+                    print()
                 if 'publications' in section_tag and self._file_ending == ".md":
                     section_data['items'] = get_pub_md(self, section_content)
                 else:
                     section_data['items'] = section_content
+                    section_data['short'] = short
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
 

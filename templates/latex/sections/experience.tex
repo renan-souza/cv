@@ -3,14 +3,21 @@
 ~< block body >~
   \begin{itemize}
     ~< for item in items >~
-      \item  << item.place >>, << item.title >>\hfill << item.dates >>
-        \iffalse
-        \begin{itemize}
-          ~< for detail in item.details ->~
-            \item <<detail>>
-          ~<- endfor ->~
-        \end{itemize}
-        \fi
+      \item
+         ~< if not short >~
+            \textbf{
+         ~< endif >~
+            << item.place >>, << item.title >>\hfill << item.dates >>
+         ~< if not short >~
+                   }
+         ~< endif >~
+
+      ~< if item.details and not short >~
+        \begin{small}
+            << item.details >>
+        \end{small}
+      ~< endif >~
+
     ~< endfor >~
   \end{itemize}
 ~< endblock body >~

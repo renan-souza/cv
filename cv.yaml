@@ -90,9 +90,9 @@ about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and an M.Sc. (2015) in
   a Research Scientist in the \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Industrial Cloud Technologies} group.
   He has been working both as a software engineer and a researcher in several projects since 2010 and has been actively publishing
   scientific papers in refereed international conferences and journals since 2014.
-  During his B.Sc., he spent a school year at \href{https://www.missouristate.edu/}{Missouri State University} and
+  During his B.Sc., he spent a school year at the computer science department at \href{https://www.missouristate.edu/}{Missouri State University} and
   did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
-  During his Ph.D., he was a visiting researcher at \href{https://team.inria.fr/zenith/}{Inria/Univ. Montpellier} in France in 2019.
+  During his Ph.D., he was a visiting researcher with the \href{https://team.inria.fr/zenith/}{Scientific Data Management} team at \href{https://inria.fr/}{Inria/Univ. Montpellier} in France in 2019.
   In 2017, he won the best M.Sc. thesis award from SBBD, the main conference on data management in Latin America.
   He researches large-scale data science and engineering techniques for the support of Artificial Intelligence systems.'
 
@@ -157,47 +157,63 @@ experience:
     location: Brazil
     title: Research Scientist
     dates: Aug 2019 -- present
-    area: Large-scale Data Science and Engineering
-    details: ''
+    details: "Leading research and development projects in large-scale data science and engineering for the support of
+    Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous
+    applications, data, data management systems, and people. My work is often applied to solving
+    scientific computing problems with clients in the Oil and Gas industry."
   - place: IBM Research
     location: Brazil
     title: Research Engineer
     dates: Sep 2015 -- Aug 2019
-    area: ''
-    details: ''
+    details: "Participated in several research and development projects with clients in the Oil and Gas industry.
+    Developed techniques and implemented systems for large-scale data integration of AI systems running on clusters and clouds.
+    Also, led Cloud DevOps initiatives to support the design and development of conversational Artificial Intelligence systems."
   - place: IBM Research
     location: Brazil
     title: Software Engineer Intern
     dates: Apr 2015 -- Sep 2015
-    area: ''
-  - place: Stanford Univeristy, SLAC
+    details: "Designed and implemented big data and machine learning solutions to analyze streaming social data."
+  - place: Stanford University, SLAC
     location: Remote
     title: Research Collaborator
-    advisor: Les Cottrell
     dates: Aug 2013 -- Dec 2014
-  - place: Stanford Univeristy, SLAC
+    details: "Research collaboration of systems for big data processing, data management, semantic web, and
+    data visualization of PingER project, which contains data about internet performance worldwide."
+  - place: Stanford University, SLAC
     location: Menlo Park, California
     title: Research Intern
-    advisor: Les Cottrell
     dates: May 2013 -- Aug 2013
-  - place: CAPGov - Government Technologies
+    details: "Led a project to design and develop a cloud platform that uses semantic web, big data, and data warehousing
+      techniques to store, retrieve, visualize, and publish structured data about internet performance worldwide,
+      giving information and comparison of internet quality."
+  - place: CAPGov COPPE/UFRJ
     location: Rio de Janeiro, Brazil
-    title: Leading Software Engineer
+    title: Software Eng. Lead
     dates: Dec 2013 -- Sep 2014
-  - place: CAPGov - Government Technologies
+    details: "Led the development of a system that helped the Brazilian population to have easy access to information
+    about public services provided by the Federal Government."
+  - place: CAPGov COPPE/UFRJ
     location: Rio de Janeiro, Brazil
-    title: Software Engineer
+    title: Software Eng.
     dates: Sep 2013 -- Jan 2014
-  - place: CAPGov - Government Technologies
+    details: "Development of projects to publish linked open data of the Brazilian Federal Register (\"Diário Oficial da União\")
+    on the semantic web using agile methodology, ontology data modeling, and natural language processing."
+  - place: CAPGov COPPE/UFRJ
     location: Rio de Janeiro, Brazil
-    title: Software Engineer Intern
+    title: Software Eng. Intern
     dates: Jan 2011 -- Jun 2012
+    details: "Development of a web content management system to facilitate business e-negotiations."
   - place: Federal Univ. of Rio de Janeiro
     location: Rio de Janeiro, Brazil
-    title: Software Engineer Intern
+    title: Software Eng. Intern
     dates: Jan 2010 -- Jul 2011
-    details:
-      - a
+    details: "Developed a system to integrate data warehouse environments with structured and unstructured data to
+    enable more intelligent and flexible information reports."
+  - place: Petrobras
+    location: Rio de Janeiro, Brazil
+    title: IT Intern
+    dates: May 2007 -- May 2008
+    details: "Helped to implement features and provided maintenance for web systems to support Petrobras employees."
 
 selected_publications:
   name: "R. Souza"
@@ -246,8 +262,6 @@ skills:
     details: VMs, Dockers, Kubernetes, HPC Clusters
   - title: DevOps
     details: Containers, Kubernetes, OpenShift, CI/CD Pipelines, GitHub, Travis, Jenkins
-  - title: Domain-specific knowledge
-    details: Techniques to analyze large amounts of geological data (SEG-Y, Well logs), OpendTect
   - title: Web Development
     details: "Python Flask/UWSGI, Java EE: JSP, JSF, JPA, Hibernate, Tomcat/JBoss"
 
@@ -293,7 +307,7 @@ events:
           - title: Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering
             kind: Oral presentation
             #link: http://ni.com
-  - name: SciDISC Workhsop
+  - name: SciDISC Workshop
     year: 2019
     place: Rio de Janeiro, Brazil
     talks:
@@ -346,7 +360,7 @@ events:
     page: http://vldb2018.lncc.br/
     subevents:
       - name: Latin American Data Science Workshop
-        pabe: https://eic.cefet-rj.br/ladas2018/
+        page: https://eic.cefet-rj.br/ladas2018/
         talks:
           - title: Tracking Hyperparameter Tuning in Deep Learning Training
             kind: Oral presentation
