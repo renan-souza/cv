@@ -10,7 +10,7 @@ TODAY := $(shell date +%Y-%m-%d)
 # Assuming that both the cv and github.io directories are in same parent directory `..` so the following line can work
 WEBSITE_DIR=$(shell find $(shell pwd)/../*github* | head -n 1)
 WEBSITE_PDF=$(WEBSITE_DIR)/data/Renan-Souza-CV.pdf
-WEBSITE_PDF_SHORT=$(WEBSITE_DIR)/data/Renan-Souza-CV-short-$(TODAY).pdf
+WEBSITE_PDF_SHORT=$(WEBSITE_DIR)/data/Renan-Souza-CV-short.pdf
 WEBSITE_INCLUDES=$(WEBSITE_DIR)/_includes
 
 
@@ -57,7 +57,7 @@ $(PDF): $(TEX) publications/*.bib
 
 	latexmk -pdf -cd- -jobname=$(BUILD_DIR)/cv-short $(BUILD_DIR)/cv-short
 	latexmk -c -cd $(BUILD_DIR)/cv-short
-	rm $(BUILD_DIR)/cv-short*md
+	rm -f $(BUILD_DIR)/cv-short*md
 
 	open  $(BUILD_DIR)/cv.pdf
 	open  $(BUILD_DIR)/cv-short.pdf
