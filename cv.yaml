@@ -6,6 +6,7 @@ personal:
   site_h1: Renan Souza, Ph.D.
   src: https://github.com/renan-souza/cv
   url: RenanSouza.org
+  cv_url: https://renansouza.org/cv
   description: Renan Souza's Website and CV
   status: Data Science and Engineering Researcher at IBM Research
   social:
@@ -18,7 +19,24 @@ personal:
     dblp: Souza:Renan
     ibm: br-rfsouza
     facebook: renan.francisco.souza
-
+  keywords: "renan, renan francisco, renan souza, renan francisco santos souza, renan coppe, renan ibm, renan souza ibm,
+    ibm research, ibm, renan ibm research, renan souza ibm research,
+    renan ufrj, renan coppe, renan souza ufrj, renan souza coppe, renan scholar, renan souza scholar, souza ibm, souza ufrj,
+    renan universidade federal do rio de janeiro, renan souza universidade federal do rio de janeiro,
+    renan federal university of rio de janeiro, renan souza federal university of rio de janeiro,
+    ufrj, universidade federal do rio de janeiro, federal university of rio de janeiro,
+    souza coppe, renan databases, renan data management, renan workflows, renan provenance, renan souza provenance,
+    renan slac, renan stanford, renan souza slac, renan souza stanford, renan msu, renan souza msu,
+    renan phd, renan doctorate, renan souza phd, renan souza doctorate, renan dsc, renan souza dsc,
+    renan brazil, renan souza brazil, renan rio, renan souza rio, renan rio de janeiro, renan souza rio de janeiro,
+    renan missouri, renan souza missouri, renan souza workflows, renan souza databases, renan scientific,
+    renan computer science, renan data science, renan souza data science, renan steering,
+    renan engineering, renan souza engineering, renan souza data, renan data, renan souza data engineering,
+    renan data engineering, renan knowledge engineering, renan souza knowledge engineering, renan scientist,
+    renan research, renan researcher, renan souza researcher, renan souza research, renan souza scientist, renan distributed,
+    renan souza distributed, renan souza distributed systems, renan systems, renan distributed systems,
+    renan distributed database, renan parallel, renan souza parallel, renan linked open data, renan souza linked data,
+    renan semantic web, renan souza semantic web, renan ontologies, renan ontology"
 
 # LaTeX formatting.
 style: banking # casual, classic, oldstyle, or banking
@@ -36,12 +54,12 @@ order:
     title: Research Interests
     display-web: true
     display-pdf: true
-    display-short: true
+    display-short: false
   - tag: education
     title: Education
     display-web: false
     display-pdf: true
-    display-short: true
+    display-short: false
   - tag: experience
     title: Experience
     display-web: false
@@ -87,12 +105,17 @@ about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and an M.Sc. (2015) in
   \href{https://www.cos.ufrj.br}{COPPE/Federal University of Rio de Janeiro} (UFRJ), and a
   \href{https://dcc.ufrj.br}{B.Sc. in Computer Science} from UFRJ (2009-2013).
   Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research Brazil}, where he is
-  a Research Scientist in the \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Industrial Cloud Technologies} group.
+  a Research Scientist in the
+   \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Industrial Cloud Technologies} group.
   He has been working both as a software engineer and a researcher in several projects since 2010 and has been actively publishing
   scientific papers in refereed international conferences and journals since 2014.
-  During his B.Sc., he spent a school year at the computer science department at \href{https://www.missouristate.edu/}{Missouri State University} and
-  did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
-  During his Ph.D., he was a visiting researcher with the \href{https://team.inria.fr/zenith/}{Scientific Data Management} team at \href{https://inria.fr/}{Inria/Univ. Montpellier} in France in 2019.
+  During his B.Sc., he spent a school year at the computer science department
+  at \href{https://www.missouristate.edu/}{Missouri State University} and
+  did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in
+  the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
+  During his Ph.D., he was a visiting researcher with the
+  \href{https://team.inria.fr/zenith/}{Scientific Data Management} team
+  at \href{https://inria.fr/}{Inria/Univ. Montpellier} in France in 2019.
   In 2017, he won the best M.Sc. thesis award from SBBD, the main conference on data management in Latin America.
   He researches large-scale data science and engineering techniques for the support of Artificial Intelligence systems.'
 
@@ -401,7 +424,7 @@ events:
     talks:
       - title: Graph Analytics with Spark
         kind: Tutorial
-        link: https://cin.ufpe.br/~bracis2016/tutorials-kdmile.html
+        #link: https://cin.ufpe.br/~bracis2016/tutorials-kdmile.html
   - name: IEEE/ACM Supercomputing (SC)
     year: 2016
     place: Salt Lake City, UT
@@ -419,9 +442,6 @@ events:
         kind: poster presentation
         #link: http://ni.com
 
-
-
-
 teaching:
   courses:
     - course: Databases Laboratory
@@ -436,14 +456,20 @@ teaching:
       year: 2012--2013
   supervisions:
     - student: Pedro Paiva Miranda
-      title: A Mechanism for Fault Tolerance in Parallel Executions of Workflows supported by a Database
+      title: \href{http://monografias.poli.ufrj.br/monografias/monopoli10015215.pdf}{A Mechanism for Fault Tolerance in Parallel Executions of Workflows supported by a Database}
       level: undergraduate
       year: 2015
       university: UFRJ
       description: Co-supervision with Prof. Marta Mattoso
-    - student: Pedro Paiva Miranda
-      title: Publication of Workflows Provenance Data in the Semantic Web
+    - student: Rachel Gonçalves de Castro
+      title: \href{http://monografias.poli.ufrj.br/monografias/monopoli10014228.pdf}{Publication of Workflow Provenance Data in the Semantic Web}
       level: undergraduate
       year: 2015
       university: UFRJ
       description: Co-supervision with Prof. Marta Mattoso
+
+
+service:
+  - Concurrency Computation Practice and Experience
+  - Computer Physics Communications
+  - IEEE Transactions on Big Data

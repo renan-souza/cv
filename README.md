@@ -6,12 +6,12 @@ and [Webpage](https://renansouza.org)
 from YAML and BibTeX input.
 
 This repo is the main one, but it is intended to work together with the [website repo](https://github.com/renan-souza/renan-souza.github.io).
-So make sure you clone it as well and put it in the same parent directory of this repo. 
+So make sure you clone it as well and put it in the same parent directory of this repo.
 That is, the directory structure looks like this:
 
 - `parent-dir`
     - `cv`
-    - `renan-souza.github.io` 
+    - `renan-souza.github.io`
 
 The script [generate.py](generate.py) reads from [cv.yaml](cv.yaml) and
 [publications](publications) and outputs LaTeX and Markdown
@@ -35,31 +35,27 @@ by using Jinja templates.
 # Installing
 
 ### [Website repo](https://github.com/renan-souza/renan-souza.github.io):
- 
+
  ```shell
  cd renan-souza.github.io
  bundle install
  ```
 
 ### [This repo](#):
- 
+
  ```shell
  cd cv
  pip install -r requirements.txt
  ```
- 
+
 # Building and Running
 
 The [Makefile](Makefile) contains the instructions to build both the pdf and the webpage. Take a look at it.
 
 On Mac or Linux, `make` will call [generate.py](generate.py) to
-build the LaTeX documents with `latexmk` and `biber`. 
-It will also generate the `_config.yml` of the Website repo.
-To build the webpage, run `make web`, which will also
-start the Jekyll server at [http://localhost:4444](http://localhost:4444) (port is specified in the `_config.yml`).
-
-The script [run.sh](run.sh) has the happy `make` workflow.
-
+build the LaTeX documents with `latexmk` and `biber`.
+`make` will then generate the `_config.yml` of the Website repo and call the
+target `web` to start the server at [http://localhost:4444](http://localhost:4444) (port is specified in the `_config.yml`).
 
 # What to modify
 Change the content in `cv.yaml`.
@@ -93,14 +89,14 @@ IEEE bibliography style.
 
 # Useful info and docs
 
-The variables and code in the files under [templates](templates) 
+The variables and code in the files under [templates](templates)
 use [Jinja2](https://jinja.palletsprojects.com/en/2.11.x/)
 whose syntax, for the variables, is similar to python.
 
-The variables and code in the files under in the [website's repo](https://github.com/renan-souza/renan-souza.github.io) 
-use [Jekyll](https://jekyllrb.com/). This [doc](https://shopify.github.io/liquid/filters/) is handy if you need to 
+The variables and code in the files under in the [website's repo](https://github.com/renan-souza/renan-souza.github.io)
+use [Jekyll](https://jekyllrb.com/). This [doc](https://shopify.github.io/liquid/filters/) is handy if you need to
 manipulate variables in the Jekyll's template.
-   
+
 
 # Licensing
 
@@ -111,4 +107,3 @@ This work is distributed under the [MIT license](LICENSE.mit)
 with portions copyright [Brandon Amos](licenses/LICENSE-emichael.mit) and [Ellis Michael](licenses/LICENSE-emichael.mit).
 This work includes major refactorings done in and after the commit [685a7a7](https://github.com/renan-souza/cv/commit/685a7a73515c06ce3dbe3da8ccfdda0d0bcf19be)
 which is compliant to the website repo's commit [8cd893a](https://github.com/renan-souza/renan-souza.github.io/commit/8cd893a5149b244f9f8e13a82f7d7c4660ed4fca).
-
