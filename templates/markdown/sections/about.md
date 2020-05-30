@@ -8,7 +8,7 @@
 
 
 See 
-<a href="data/{{personal.name.first}}-{{personal.name.last}}-CV.pdf" target='_blank' class="fa fa-download">
+<a href="/cv" target='_blank' class="fa fa-download">
     Full CV
 </a>
 for complete information about education, professional experience, and technical skills.
