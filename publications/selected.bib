@@ -1,15 +1,17 @@
-@inproceedings{souza_provenancedata_2019,
-	title={Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering},
-	author={Souza, Renan and Azevedo, Leonardo and Lourenço, Vítor and Soares, Elton and Thiago, Raphael and Brandão, Rafael and Civitarese, Daniel and Vital Brazil, Emilio and  Moreno, Marcio and  Valduriez, Patrick and  Mattoso, Marta and Cerqueira, Renato and A. S. Netto, Marco},
-	year={2019},
-	pages = {1--10},
-	booktitle = {Workflows in Support of Large-Scale Science ({WORKS}) co-located with the {ACM}/{IEEE} International Conference for High Performance Computing, Networking, Storage, and Analysis ({SC})},
-	pdf = {https://arxiv.org/pdf/1910.04223},
-	doi = {10.1109/WORKS49585.2019.00006},
-	keyword = {Machine Learning Lifecycle, Workflow Provenance, Computational Science and Engineering},
-	abstract = {Machine Learning (ML) has become essential in several industries. In Computational Science and Engineering (CSE), the complexity of the ML lifecycle comes from the large variety of data, scientists' expertise, tools, and workflows. If data are not tracked properly during the lifecycle, it becomes unfeasible to recreate a ML model from scratch or to explain to stakeholders how it was created. The main limitation of provenance tracking solutions is that they cannot cope with provenance capture and integration of domain and ML data processed in the multiple workflows in the lifecycle while keeping the provenance capture overhead low. To handle this problem, in this paper we contribute with a detailed characterization of provenance data in the ML lifecycle in CSE; a new provenance data representation, called PROV-ML, built on top of W3C PROV and ML Schema; and extensions to a system that tracks provenance from multiple workflows to address the characteristics of ML and CSE, and to allow for provenance queries with a standard vocabulary. We show a practical use in a real case in the Oil and Gas industry, along with its evaluation using 48 GPUs in parallel.}
-}
 
+
+@article{asouza2020workflow,
+      title={Workflow Provenance in the Lifecycle of Scientific Machine Learning},
+      author={Renan Souza and Leonardo G. Azevedo and Vítor Lourenço and Elton Soares and Raphael Thiago and Rafael Brandão and Daniel Civitarese and Emilio Vital Brazil and Marcio Moreno and Patrick Valduriez and Marta Mattoso and Renato Cerqueira and Marco A. S. Netto},
+      year={2020},
+      abstract={Machine Learning (ML) has already fundamentally changed several businesses. More recently, it has also been profoundly impacting the computational science and engineering domains, like geoscience, climate science, and health science. In these domains, users need to perform comprehensive data analyses combining scientific data and ML models to provide for critical requirements, such as reproducibility, model explainability, and experiment data understanding.  However, scientific ML is multidisciplinary, heterogeneous, and affected by the physical constraints of the domain, making such analyses even more challenging. In this work, we leverage workflow provenance techniques to build a holistic view to support the lifecycle of scientific ML.
+      We contribute with (i) characterization of the lifecycle and taxonomy for data analyses; (ii) design principles to build this view, with a W3C PROV compliant data representation and a reference system architecture; and (iii) lessons learned after an evaluation in an Oil \& Gas case using an HPC cluster with 393 nodes and 946 GPUs.
+      The experiments show that the principles enable queries that integrate domain semantics with ML models while keeping low overhead (<1\%), high scalability, and an order of magnitude of query acceleration under certain workloads against without our representation.},
+      url={https://arxiv.org/abs/2010.00330},
+      pdf={https://arxiv.org/pdf/2010.00330.pdf},
+      journal={arXiv preprint Databases (cs.DB)},
+      pages={1--21}
+}
 
 
 @inproceedings{souza_efficient_2019,
@@ -52,6 +54,3 @@
 	keyword = {Dynamic workflows, Computational steering, Provenance data, Parameter tuning},
 	abstract = {In long-lasting scientific workflow executions in HPC machines, computational scientists (the users in this work) often need to fine-tune several workflow parameters. These tunings are done through user steering actions that may significantly improve performance (e.g., reduce execution time) or improve the overall results. However, in executions that last for weeks, users can lose track of what has been adapted if the tunings are not properly registered. In this work, we build on provenance data management to address the problem of tracking online parameter fine-tuning in dynamic workflows steered by users. We propose a lightweight solution to capture and manage provenance of the steering actions online with negligible overhead. The resulting provenance database relates tuning data with data for domain, dataflow provenance, execution, and performance, and is available for analysis at runtime. We show how users may get a detailed view of the execution, providing insights to determine when and how to tune. We discuss the applicability of our solution in different domains and validate its ability to allow for online capture and analyses of parameter fine-tunings in a real workflow in the Oil and Gas industry. In this experiment, the user could determine which tuned parameters influenced simulation accuracy and performance. The observed overhead for keeping track of user steering actions at runtime is less than 1\% of total execution time.}
 }
-
-
-

@@ -258,7 +258,7 @@ publications:
       file: patents.bib
 
 skills:
-  - title: Languagess
+  - title: Languages
     details: Python, Java, C, C++, Shell scripting, NodeJS, Scala, Lua
   - title: Relational DBMS
     details: PostgreSQL/PostGIS, DB2, DashDB, MySQL, MySQL Cluster, MS SQL Server
@@ -281,11 +281,11 @@ skills:
   - title: Distributed and Concurrent Programming
     details: MPI, OpenMP, CUDA, Data-centric distributed and parallel programming
   - title: Cloud and Cluster computing
-    details: VMs, Dockers, Kubernetes, HPC Clusters
+    details: VMs, Dockers, Kubernetes, OpenShift, HPC Clusters
   - title: DevOps
     details: Containers, Kubernetes, OpenShift, CI/CD Pipelines, GitHub, Travis, Jenkins
   - title: Web Development
-    details: "Python Flask/UWSGI, Java EE: JSP, JSF, JPA, Hibernate, Tomcat/JBoss"
+    details: "Python Flask/UWSGI, Java EE: JSP, JSF, JPA, Hibernate, Tomcat/JBoss, Spring Boot"
 
 honors:
   - title: SBBD Best M.Sc. Thesis Award
@@ -315,6 +315,21 @@ languages:
 
 
 events:
+  - name: International Conference on Management of Data (SIGMOD)
+    year: 2020
+    place: Portland, OR (virtual)
+  - name: Brazilian Symposium on Databases (SBBD)
+    year: 2020
+    place: Rio (virtual)
+  - name: High-Performance Data Science workshop
+    year: 2020
+    place: Rio (virtual)
+  - name: Seminarios de Engenharia e Ciencia Computacional
+    year: 2020
+    place: Rio (virtual)
+    talks:
+      - title: Workflow Provenance in the Lifecycle of Scientific Machine Learning
+        kind: Oral presentation
   - name: Open Subsurface Data Universe Development Workshop
     year: 2020
     place: Houston, TX
@@ -469,6 +484,10 @@ teaching:
 
 
 service:
-  - Concurrency Computation Practice and Experience
-  - Computer Physics Communications
-  - IEEE Transactions on Big Data
+  - Workflows in Support of Large-Scale Science (WORKS'20) - PC
+  - Brazilian Symposium on Databases (SBBD'20) - Technical session coordinator
+  - Concurrency Computation Practice and Experience - Reviewer
+  - Computer Physics Communications - Reviewer
+  - IEEE Transactions on Big Data - Reviewer
+  - Journal of Cloud Computing - Reviewer
+  - Encontro de Inovação em SI (EISI'19) - Reviewer
