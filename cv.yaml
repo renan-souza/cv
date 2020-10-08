@@ -317,7 +317,7 @@ languages:
 events:
   - name: International Conference on Management of Data (SIGMOD)
     year: 2020
-    place: Portland, OR (virtual)
+    place: Portland, OR. (virtual)
   - name: Brazilian Symposium on Databases (SBBD)
     year: 2020
     place: Rio (virtual)
