@@ -19,6 +19,7 @@ personal:
     ibm: br-rfsouza
     facebook: renan.francisco.souza
   keywords: "renan, renan francisco, renan souza, renan francisco santos souza, renan coppe, renan ibm, renan souza ibm,
+    data engineering, data science, provenance, scientific workflows, databases, data management,
     ibm research, ibm, renan ibm research, renan souza ibm research,
     renan ufrj, renan coppe, renan souza ufrj, renan souza coppe, renan scholar, renan souza scholar, souza ibm, souza ufrj,
     renan universidade federal do rio de janeiro, renan souza universidade federal do rio de janeiro,
@@ -30,6 +31,7 @@ personal:
     renan brazil, renan souza brazil, renan rio, renan souza rio, renan rio de janeiro, renan souza rio de janeiro,
     renan missouri, renan souza missouri, renan souza workflows, renan souza databases, renan scientific,
     renan computer science, renan data science, renan souza data science, renan steering,
+    
     renan engineering, renan souza engineering, renan souza data, renan data, renan souza data engineering,
     renan data engineering, renan knowledge engineering, renan souza knowledge engineering, renan scientist,
     renan research, renan researcher, renan souza researcher, renan souza research, renan souza scientist, renan distributed,
@@ -182,7 +184,7 @@ experience:
     details: "Leading research and development projects in large-scale data science and engineering for the support of
     Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous
     applications, data, data management systems, and people. My work is often applied to solving
-    scientific computing problems with clients in the Oil and Gas industry."
+    industrial data and AI problems."
   - place: IBM Research
     location: Brazil
     title: Research Engineer
