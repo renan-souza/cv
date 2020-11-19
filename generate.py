@@ -53,6 +53,18 @@ def get_pub_md(context, config):
 
         # Hacky fix for special characters.
         authors = authors.replace('\\"o', '&ouml;')
+        authors = authors.replace('\\~a', '&atilde;')
+        authors = authors.replace('\\c{c}', '&ccedil;')
+
+        accent_map = [
+            {'accent': '~', 'html': 'tilde'},
+            {'accent': '´', 'html': 'acute'},
+            {'accent': '^', 'html': 'circ'}
+        ]
+        for vowel in ['a','e','i','o','u']:
+            for accent_kv in accent_map:
+                authors = authors.replace('\\' + accent_kv['accent'] + '{' + vowel + '}', '&'+vowel+accent_kv['html']+';')
+
 
         return authors
 
