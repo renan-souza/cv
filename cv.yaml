@@ -7,7 +7,7 @@ personal:
   src: https://github.com/renan-souza/cv
   url: RenanSouza.org
   description: Renan Souza's Website and CV
-  status: Data Science and Engineering Researcher at IBM Research
+  status: Data Science and Data Engineering Researcher at IBM Research
   social:
     github: renan-souza
     #twitter:
@@ -107,7 +107,7 @@ about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and an M.Sc. (2015) in
   \href{https://dcc.ufrj.br}{B.Sc. in Computer Science} from UFRJ (2009-2013).
   Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research Brazil}, where he is
   a Research Scientist in the
-   \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Industrial Cloud Technologies} group.
+   \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Intelligent Cloud Technologies} group.
   He has been working both as a software engineer and a researcher in several projects since 2010 and has been actively publishing
   scientific papers in refereed international conferences and journals since 2014.
   During his B.Sc., he spent a school year at the computer science department
@@ -118,10 +118,10 @@ about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and an M.Sc. (2015) in
   \href{https://team.inria.fr/zenith/}{Scientific Data Management} team
   at \href{https://inria.fr/}{Inria/Univ. Montpellier} in France in 2019.
   In 2017, he won the best M.Sc. thesis award from SBBD, the main conference on data management in Latin America.
-  He researches large-scale data science and engineering techniques for the support of Artificial Intelligence systems.'
+  He researches large-scale data science and data engineering techniques for the support of Artificial Intelligence systems.'
 
 research_interests:
-  - Large-scale Data Science and Engineering
+  - Large-scale Data Science and Data Engineering
   - Parallel Workflows
   - Data Provenance
   - Big Data Analytics
@@ -181,9 +181,9 @@ experience:
     location: Brazil
     title: Research Scientist
     dates: Aug 2019 -- present
-    details: "Leading research and development projects in large-scale data science and engineering for the support of
+    details: "Leading research and development projects in large-scale data science and data engineering for the support of
     Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous
-    applications, data, data management systems, and people. My work is often applied to solving
+    applications, data, data management systems, and users. My work is often applied to solving
     industrial data and AI problems."
   - place: IBM Research
     location: Brazil
@@ -273,7 +273,7 @@ skills:
   - title: Message Brokers
     details: Kafka, RabbitMQ
   - title: Data Science/ML Technologies
-    details: Pandas DataFrames, Jupyter, Numpy, SciPy, Tensorflow, and PyTorch
+    details: Pandas DataFrames, Jupyter Notebooks, Numpy, SciPy, Tensorflow, and PyTorch
   - title: Big Data Cluster Deployment
     details: YARN, Mesos, Standalone deployment
   - title: Business Intelligence
@@ -317,6 +317,18 @@ languages:
 
 
 events:
+  - name: SIAM Conference on Computational Science and Engineering
+    year: 2021
+    place: Forth Worth, TX (virtual)
+    page: https://www.siam.org/conferences/cm/conference/cse21
+    talks:
+      - title: "AI4Seismic: An AI-Driven Platform to Accelerate Geological Discoveries"  
+        kind: Oral presentation
+        link: https://sinews.siam.org/Details-Page/ai4seismic-platform-combines-artificial-intelligence-and-seismic-data-analysis
+      - title: Workflow Provenance in the Lifecycle of Scientific Machine Learning
+        kind: Oral presentation
+        link: https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=70197
+  - name: Open Subsurface Data Universe Development Workshop
   - name: International Conference on Management of Data (SIGMOD)
     year: 2020
     place: Portland, OR. (virtual)

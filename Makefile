@@ -73,7 +73,7 @@ stage: $(PDF) $(MD)
 
 web: stage
 	./generate.py $(YAML_FILES) -o $(WEBSITE_DIR)/_config.yml
-	cd $(WEBSITE_DIR) && bundle exec jekyll server
+	docker run -v $(WEBSITE_DIR):/website -p 4444:4444 -it website
 
 commit:
 	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_DIR)/data $(WEBSITE_DIR)/_config.yml

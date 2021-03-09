@@ -17,34 +17,33 @@ The script [generate.py](generate.py) reads from [cv.yaml](cv.yaml) and
 [publications](publications) and outputs LaTeX and Markdown
 by using Jinja templates.
 
-# Requirements
+## Requirements
 
 - #### Python 3
-- #### Ruby and Bundler
-    ```bash
-    #On mac
-    brew install ruby
-    echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
-    source ~/.bash_profile
-    gem install bundler
-    ```
+
+- #### Docker
 - #### Latexmk
     See https://latextools.readthedocs.io/en/latest/install
-
-
-# Installing
+# Installation
 
 ### [Website repo](https://github.com/renan-souza/renan-souza.github.io):
 
- ```shell
- cd renan-souza.github.io
- bundle install
- ```
+Ruby is used to generate the website and we use a Docker image to use the right Ruby (and dependencies) versions that work for this website.
+
+- Build the Docker image for the website:
+```bash
+cd renan-souza.github.io
+docker build -t website .
+```
+
 
 ### [This repo](#):
 
  ```shell
  cd cv
+ # Assuming you use conda
+ conda create -n cv
+ conda activate cv
  pip install -r requirements.txt
  ```
 
@@ -52,10 +51,11 @@ by using Jinja templates.
 
 The [Makefile](Makefile) contains the instructions to build both the pdf and the webpage. Take a look at it.
 
-On Mac or Linux, `make` will call [generate.py](generate.py) to
+On Mac or Linux, `make` command will call [generate.py](generate.py) to
 build the LaTeX documents with `latexmk` and `biber`.
 `make` will then generate the `_config.yml` of the Website repo and call the
-target `web` to start the server at [http://localhost:4444](http://localhost:4444) (port is specified in the `_config.yml`).
+target `web` to start the server using Docker (`docker run -p 4444:4444 -it website`) so that the server will start at [localhost:4444](http://localhost:4444) (port is specified in the `_config.yml`).
+
 
 # What to modify
 Change the content in `cv.yaml`.
