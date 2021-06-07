@@ -42,7 +42,7 @@ docker build -t website .
  ```shell
  cd cv
  # Assuming you use conda
- conda create -n cv
+ conda create -n cv python=3.6
  conda activate cv
  pip install -r requirements.txt
  ```

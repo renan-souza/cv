@@ -1,3 +1,16 @@
+ @article{souza_distributed_2021,
+  author={Souza, R. and Silva, V. and Lima, A. A. B. and Oliveira, D. and Valduriez, P. and Mattoso, M.},
+  journal={PeerJ Computer Science}, 
+  title={Distributed In-memory Data Management for Workflow Executions},
+  year={2021},
+  pdf={https://arxiv.org/ftp/arxiv/papers/2105/2105.04720.pdf},
+  url={https://peerj.com/articles/cs-527/},
+  doi={10.7717/peerj-cs.527},
+  pages={1--30},
+  volume={7},
+  abstract={Complex scientific experiments from various domains are typically modeled as workflows and executed on large-scale machines using a Parallel Workflow Management System (WMS). Since such executions usually last for hours or days, some WMSs provide user steering support, i.e., they allow users to run data analyses and, depending on the results, adapt the workflows at runtime. A challenge in the parallel execution control design is to manage workflow data for efficient executions while enabling user steering support. Data access for high scalability is typically transaction-oriented, while for data analysis, it is online analytical-oriented so that managing such hybrid workloads makes the challenge even harder. In this work, we present SchalaDB, an architecture with a set of design principles and techniques based on distributed in-memory data management for efficient workflow execution control and user steering. We propose a distributed data design for scalable workflow task scheduling and high availability driven by a parallel and distributed in-memory DBMS. To evaluate our proposal, we develop d-Chiron, a WMS designed according to SchalaDB's principles. We carry out an extensive experimental evaluation on an HPC cluster with up to 960 computing cores. Among other analyses, we show that even when running data analyses for user steering, SchalaDB's overhead is negligible for workloads composed of hundreds of concurrent tasks on shared data. Our results encourage workflow engine developers to follow a parallel and distributed data-oriented approach not only for scheduling and monitoring but also for user steering.}
+ }
+
 @article{asouza2020workflow,
       title={Workflow Provenance in the Lifecycle of Scientific Machine Learning},
       author={Renan Souza and Leonardo G. Azevedo and Vítor Lourenço and Elton Soares and Raphael Thiago and Rafael Brandão and Daniel Civitarese and Emilio Vital Brazil and Marcio Moreno and Patrick Valduriez and Marta Mattoso and Renato Cerqueira and Marco A. S. Netto},
@@ -24,17 +37,15 @@
 }
 
 
-
-
 @article{Souza2017Data,
 	title = {Data Reduction in Scientific Workflows Using Provenance Monitoring and User Steering},
-	volume = {online},
+	volume = {110},
 	pdf = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-01679967/document},
 	issn = {0167-739X},
 	doi = {10.1016/j.future.2017.11.028},
 	author = {Souza, Renan and Silva, Vítor and Coutinho, Alvaro L. G. A. and Valduriez, Patrick and Mattoso, Marta},
 	journal = {Future Generation Computer Systems},
-	pages = {1--34},
+	pages = {481--501},
 	keyword = {Scientific Workflows, Human in the Loop, Online Data Reduction, Provenance Data, Dynamic Workflows},
 	year = {2017},
 	abstract = {Scientific workflows need to be iteratively, and often interactively, executed for large input datasets. Reducing data from input datasets is a powerful way to reduce overall execution time in such workflows. When this is accomplished online (i.e., without requiring the user to stop execution to reduce the data, and then resume), it can save much time. However, determining which subsets of the input data should be removed becomes a major problem. A related problem is to guarantee that the workflow system will maintain execution and data consistent with the reduction. Keeping track of how users interact with the workflow is essential for data provenance purposes. In this paper, we adopt the “human-in-the-loop” approach, which enables users to steer the running workflow and reduce subsets from datasets online. We propose an adaptive workflow monitoring approach that combines provenance data monitoring and computational steering to support users in analyzing the evolution of key parameters and determining the subset of data to remove. We extend a provenance data model to keep track of users’ interactions when they reduce data at runtime. In our experimental validation, we develop a test case from the oil and gas domain, using a 936-cores cluster. The results on this test case show that the approach yields reductions of 32\% of execution time and 14\% of the data processed.}
