@@ -1,3 +1,16 @@
+@article{asouza2020workflow,
+      title={Workflow Provenance in the Lifecycle of Scientific Machine Learning},
+      author={Renan Souza and Leonardo G. Azevedo and Vítor Lourenço and Elton Soares and Raphael Thiago and Rafael Brandão and Daniel Civitarese and Emilio Vital Brazil and Marcio Moreno and Patrick Valduriez and Marta Mattoso and Renato Cerqueira and Marco A. S. Netto},
+      year={2020},
+      abstract={Machine Learning (ML) has already fundamentally changed several businesses. More recently, it has also been profoundly impacting the computational science and engineering domains, like geoscience, climate science, and health science. In these domains, users need to perform comprehensive data analyses combining scientific data and ML models to provide for critical requirements, such as reproducibility, model explainability, and experiment data understanding.  However, scientific ML is multidisciplinary, heterogeneous, and affected by the physical constraints of the domain, making such analyses even more challenging. In this work, we leverage workflow provenance techniques to build a holistic view to support the lifecycle of scientific ML.
+      We contribute with (i) characterization of the lifecycle and taxonomy for data analyses; (ii) design principles to build this view, with a W3C PROV compliant data representation and a reference system architecture; and (iii) lessons learned after an evaluation in an Oil \& Gas case using an HPC cluster with 393 nodes and 946 GPUs.
+      The experiments show that the principles enable queries that integrate domain semantics with ML models while keeping low overhead (<1\%), high scalability, and an order of magnitude of query acceleration under certain workloads against without our representation.},
+      url={https://arxiv.org/abs/2010.00330},
+      pdf={https://arxiv.org/pdf/2010.00330.pdf},
+      journal={accepted at Concurrency and Computation: Practice and Experience},
+      pages={1--21}
+}
+
  @article{souza_distributed_2021,
   author={Souza, R. and Silva, V. and Lima, A. A. B. and Oliveira, D. and Valduriez, P. and Mattoso, M.},
   journal={PeerJ Computer Science}, 
@@ -10,19 +23,6 @@
   volume={7},
   abstract={Complex scientific experiments from various domains are typically modeled as workflows and executed on large-scale machines using a Parallel Workflow Management System (WMS). Since such executions usually last for hours or days, some WMSs provide user steering support, i.e., they allow users to run data analyses and, depending on the results, adapt the workflows at runtime. A challenge in the parallel execution control design is to manage workflow data for efficient executions while enabling user steering support. Data access for high scalability is typically transaction-oriented, while for data analysis, it is online analytical-oriented so that managing such hybrid workloads makes the challenge even harder. In this work, we present SchalaDB, an architecture with a set of design principles and techniques based on distributed in-memory data management for efficient workflow execution control and user steering. We propose a distributed data design for scalable workflow task scheduling and high availability driven by a parallel and distributed in-memory DBMS. To evaluate our proposal, we develop d-Chiron, a WMS designed according to SchalaDB's principles. We carry out an extensive experimental evaluation on an HPC cluster with up to 960 computing cores. Among other analyses, we show that even when running data analyses for user steering, SchalaDB's overhead is negligible for workloads composed of hundreds of concurrent tasks on shared data. Our results encourage workflow engine developers to follow a parallel and distributed data-oriented approach not only for scheduling and monitoring but also for user steering.}
  }
-
-@article{asouza2020workflow,
-      title={Workflow Provenance in the Lifecycle of Scientific Machine Learning},
-      author={Renan Souza and Leonardo G. Azevedo and Vítor Lourenço and Elton Soares and Raphael Thiago and Rafael Brandão and Daniel Civitarese and Emilio Vital Brazil and Marcio Moreno and Patrick Valduriez and Marta Mattoso and Renato Cerqueira and Marco A. S. Netto},
-      year={2020},
-      abstract={Machine Learning (ML) has already fundamentally changed several businesses. More recently, it has also been profoundly impacting the computational science and engineering domains, like geoscience, climate science, and health science. In these domains, users need to perform comprehensive data analyses combining scientific data and ML models to provide for critical requirements, such as reproducibility, model explainability, and experiment data understanding.  However, scientific ML is multidisciplinary, heterogeneous, and affected by the physical constraints of the domain, making such analyses even more challenging. In this work, we leverage workflow provenance techniques to build a holistic view to support the lifecycle of scientific ML.
-      We contribute with (i) characterization of the lifecycle and taxonomy for data analyses; (ii) design principles to build this view, with a W3C PROV compliant data representation and a reference system architecture; and (iii) lessons learned after an evaluation in an Oil \& Gas case using an HPC cluster with 393 nodes and 946 GPUs.
-      The experiments show that the principles enable queries that integrate domain semantics with ML models while keeping low overhead (<1\%), high scalability, and an order of magnitude of query acceleration under certain workloads against without our representation.},
-      url={https://arxiv.org/abs/2010.00330},
-      pdf={https://arxiv.org/pdf/2010.00330.pdf},
-      journal={arXiv preprint Databases (cs.DB)},
-      pages={1--21}
-}
 
 @article{azevedo2020adding,
   title={Adding Hyperknowledge-enabled data lineage to a machine learning workflow management system for oil and gas},
