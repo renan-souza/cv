@@ -81,7 +81,7 @@ web_build: stage
 	docker run -p 4444:4444 -it website
 
 commit:
-	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_DIR)/data $(WEBSITE_DIR)/_config.yml
+	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_DIR)/data $(WEBSITE_DIR)/images $(WEBSITE_DIR)/_config.yml
 	git -C $(WEBSITE_DIR) status
 	git -C $(WEBSITE_DIR) commit -m "Update from Makefile in cv build repo."
 	git -C $(WEBSITE_DIR) push
