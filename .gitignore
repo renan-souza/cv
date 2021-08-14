@@ -11,3 +11,6 @@
 venv
 *pdf*
 **/*.DS_Store
+templates/latex/cv.fdb_latexmk
+templates/latex/cv.fls
+
