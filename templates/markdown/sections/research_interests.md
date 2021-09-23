@@ -4,8 +4,10 @@
 
 <p style="text-align: justfy">
     {% for interest in items %}
-        {{ interest }} &bull;
+        {{ interest }}{% if loop.index < loop.length %} &bull;{%  endif %} 
     {% endfor %}
 </p>
+
+
 
 {% endblock body %}

@@ -9,9 +9,9 @@
 
 See 
 <a href="/cv" target='_blank' class="fa fa-download">
-    Full CV
+    CV
 </a>
-for complete information about education, professional experience, and technical skills.
+for more information about education, professional experience, and technical skills.
 
 
 

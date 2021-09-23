@@ -65,13 +65,19 @@ The `Makefile` can also start a Jekyll server and push the
 new documents to another repository.
 
 
-## Warnings
+## Warnings and further instructions
 1. Strings in `cv.yaml` should be LaTeX (though, the actual LaTeX formatting
    should be in the left in the templates as much as possible).
 2. If you do include any new LaTeX commands, make sure that one of the
    `REPLACEMENTS` in `generate.py` converts them properly.
 3. The LaTeX templates use modified Jinja delimiters to avoid overlaps with
    normal LaTeX. See `generate.py` for details.
+4. If you see errors like:
+   ```
+   Could not find unf_ext-0.0.7.7 in any of the sources
+   Run `bundle install` to install missing gems.
+   ```
+   Or if you change the structure of the website like CSS styles, you might need to run `make web_build` to rebuild the Docker image for the website.
 
 ## Publications
 All publications are stored as BibTeX in [publications](publications).

@@ -282,8 +282,11 @@ class RenderContext(object):
         self._file_ending = file_ending
         self._replacements = replacements
         self.file_name = self.BASE_FILE_NAME if not file_name else file_name
-        if short:
-            self.file_name += "-short"
+        if "tex" in file_ending:
+            if short:
+                self.file_name += ""
+            else:
+                self.file_name += "-full"
         context_templates_dir = os.path.join(self.TEMPLATES_DIR, context_name)
 
         self._output_file = os.path.join(

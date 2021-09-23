@@ -55,14 +55,19 @@ order:
     title: Research Interests
     display-web: true
     display-pdf: true
-    display-short: false
+    display-short: true
   - tag: education
     title: Education
     display-web: false
     display-pdf: true
-    display-short: false
+    display-short: true
   - tag: experience
     title: Experience
+    display-web: false
+    display-pdf: true
+    display-short: true
+  - tag: skills
+    title: Technical Knowledge
     display-web: false
     display-pdf: true
     display-short: true
@@ -70,21 +75,17 @@ order:
     title: Selected Publications
     display-web: true
     display-pdf: true
-    display-short: true
-  - tag: skills
-    title: Technical Knowledge
-    display-web: false
-    display-pdf: true
+    display-short: true    
   - tag: languages
     title: Languages
     display-web: false
     display-pdf: true
-    display-short: false
+    display-short: true
   - tag: honors
-    title: "Grants \\& Awards"
+    title: "Grants and Awards"
     display-web: false
     display-pdf: true
-    display-short: false
+    display-short: true
   - tag: teaching
     title: Teaching and Supervisions
     display-web: false
@@ -108,17 +109,16 @@ about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and an M.Sc. (2015) in
   Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research Brazil}, where he is
   a Research Scientist in the
    \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Intelligent Cloud Technologies} group.
-  He has been working both as a software engineer and a researcher in several projects since 2010 and has been actively publishing
-  scientific papers in refereed international conferences and journals since 2014.
-  During his B.Sc., he spent a school year at the computer science department
+  He has been working both as a software engineer and a researcher in several projects since 2010.
+  During his B.Sc., he spent a year at the computer science department
   at \href{https://www.missouristate.edu/}{Missouri State University} and
   did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in
   the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
   During his Ph.D., he was a visiting researcher with the
   \href{https://team.inria.fr/zenith/}{Scientific Data Management} team
-  at \href{https://inria.fr/}{Inria/Univ. Montpellier} in France in 2019.
-  In 2017, he won the best M.Sc. thesis award from SBBD, the main conference on data management in Latin America.
-  He researches large-scale data science and data engineering techniques for the support of Artificial Intelligence systems.'
+  at \href{https://inria.fr/}{Inria}, Univ. Montpellier, France in 2019.
+  In 2017, he won the best M.Sc. thesis award from SBBD, the main conference on data science in Latin America.
+  He researches large-scale data science and data engineering techniques to support Artificial Intelligence systems.'
 
 research_interests:
   - Large-scale Data Science and Data Engineering
@@ -132,7 +132,7 @@ research_interests:
 education:
   - school: Federal Univ. of Rio de Janeiro, Brazil
     location: Rio de Janeiro, Brazil
-    degree: Ph.D. in Computer Science
+    degree: \textbf{Ph.D. in Computer Science}
     dates: Sep 2015 -- Dec 2019
     thesis:
       title: Supporting User Steering in Large-scale Workflows with Provenance Data
@@ -147,7 +147,7 @@ education:
 
   - school: Federal Univ. of Rio de Janeiro, Brazil
     location: Rio de Janeiro, Brazil
-    degree: M.Sc. in Computer Science
+    degree: \textbf{M.Sc. in Computer Science}
     dates: Jan 2013 -- Jul 2015
     thesis:
       title: Controlling the Parallel Execution of Workflows Relying on a Distributed Database
@@ -162,7 +162,7 @@ education:
 
   - school: Federal Univ. of Rio de Janeiro, Brazil
     location: Rio de Janeiro, Brazil
-    degree: B.Sc. in Computer Science
+    degree: \textbf{B.Sc. in Computer Science}
     dates: Jan 2009 -- Dec 2012
     supervisor: \href{https://scholar.google.com/citations?user=wH2oMLgAAAAJ&hl=en}{Maria Luiza Machado Campos}
     thesis:
@@ -171,65 +171,36 @@ education:
 
   - school: Lemos de Castro
     location: Rio de Janeiro, Brazil
-    degree: Technical Degree in Information Systems
+    degree: \textbf{Technical Degree in Information Systems}
     dates: Jan 2005 -- Dec 2007
-
-
 
 experience:
   - place: IBM Research
-    location: Brazil
-    title: Research Scientist
-    dates: Aug 2019 -- present
-    details: "Leading research and development projects in large-scale data science and data engineering for the support of
-    Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous
-    applications, data, data management systems, and users. My work is often applied to solving
-    industrial data and AI problems."
-  - place: IBM Research
-    location: Brazil
-    title: Research Engineer
-    dates: Sep 2015 -- Aug 2019
-    details: "Participated in several research and development projects with clients in the Oil and Gas industry.
-    Developed techniques and implemented systems for large-scale data integration of AI systems running on clusters and clouds.
-    Also, led Cloud DevOps initiatives to support the design and development of conversational Artificial Intelligence systems."
-  - place: IBM Research
-    location: Brazil
-    title: Software Engineer Intern
-    dates: Apr 2015 -- Sep 2015
-    details: "Designed and implemented big data and machine learning solutions to analyze streaming social data."
-  - place: Stanford University, SLAC
-    location: Remote
-    title: Research Collaborator
-    dates: Aug 2013 -- Dec 2014
-    details: "Research collaboration of systems for big data processing, data management, semantic web, and
-    data visualization of PingER project, which contains data about internet performance worldwide."
-  - place: Stanford University, SLAC
-    location: Menlo Park, California
-    title: Research Intern
-    dates: May 2013 -- Aug 2013
-    details: "Led a project to design and develop a cloud platform that uses semantic web, big data, and data warehousing
+    location: Rio de Janeiro, Brazil
+    dates: Apr 2015 -- present
+    title: Research Scientist, Data Science and Engineering
+    details: "As a Research Scientist (since 2019), he leads R\\&D projects in large-scale data science and data engineering to support Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous applications, data, and users. My work is applied to solving data- and AI-related problems in different industries, such as energy, financial, and cheminformatics.\\newline
+    As a Research Software Engineer (2015--2019), he participated in several R\\&D projects with clients in the energy field by developing techniques and systems for large-scale data integration of AI systems running on clusters and clouds. He also led the Cloud DevOps team to develop conversational AI systems.\\newline
+    As a Software Engineering intern (2015), he designed and implemented big data and machine learning solutions to analyze streaming social data."
+  - place: SLAC National Linear Accelerator Laboratory, Stanford Univ.
+    location: Menlo Park, CA
+    title: Research Software Engineering intern
+    dates: May 2013 -- Dec 2014
+    details: "Developed a project to build a cloud platform that uses semantic web, big data, and data warehousing
       techniques to store, retrieve, visualize, and publish structured data about internet performance worldwide,
-      giving information and comparison of internet quality."
+      enabling a rich understanding of information about the Internet quality around the world."
   - place: CAPGov COPPE/UFRJ
     location: Rio de Janeiro, Brazil
-    title: Software Eng. Lead
-    dates: Dec 2013 -- Sep 2014
-    details: "Led the development of a system that helped the Brazilian population to have easy access to information
-    about public services provided by the Federal Government."
-  - place: CAPGov COPPE/UFRJ
-    location: Rio de Janeiro, Brazil
-    title: Software Eng.
-    dates: Sep 2013 -- Jan 2014
-    details: "Development of projects to publish linked open data of the Brazilian Federal Register (\"Diário Oficial da União\")
-    on the semantic web using agile methodology, ontology data modeling, and natural language processing."
-  - place: CAPGov COPPE/UFRJ
-    location: Rio de Janeiro, Brazil
-    title: Software Eng. Intern
-    dates: Jan 2011 -- Jun 2012
-    details: "Development of a web content management system to facilitate business e-negotiations."
+    title: Software Engineer
+    dates: Dec 2011 -- Sep 2014
+    details: "As a software engineer (2013--2014), he led the development of a system that helped the Brazilian population to have easy access to information
+    about public services provided by the Federal Government.
+    He also participated in the development of a system to publish linked open data of the Brazilian Federal Register (\"Diário Oficial da União\")
+    on the semantic web using agile methodology, ontology data modeling, and natural language processing.\\newline 
+    As a Software Engineering intern (2011--2013), he participated in several R\\&D web systems for the Brazilian Federal Government."
   - place: Federal Univ. of Rio de Janeiro
     location: Rio de Janeiro, Brazil
-    title: Software Eng. Intern
+    title: Software Engineering intern
     dates: Jan 2010 -- Jul 2011
     details: "Developed a system to integrate data warehouse environments with structured and unstructured data to
     enable more intelligent and flexible information reports."
@@ -287,7 +258,7 @@ skills:
   - title: DevOps
     details: Containers, Kubernetes, OpenShift, CI/CD Pipelines, GitHub, Travis, Jenkins
   - title: Web Development
-    details: "Python Flask/UWSGI, Java EE: JSP, JSF, JPA, Hibernate, Tomcat/JBoss, Spring Boot"
+    details: "Python Flask/UWSGI, Java EE, Tomcat/JBoss, Spring Boot"
 
 honors:
   - title: SBBD Best M.Sc. Thesis Award
@@ -466,9 +437,8 @@ events:
     year: 2014
     place: Stanford University, Menlo Park, CA
     talks:
-      - title: Revise name
-        kind: poster presentation
-        #link: http://ni.com
+      - title: "Linked open data publication strategies: Application in networking performance measurement data"
+        kind: poster presentation    
 
 teaching:
   courses:

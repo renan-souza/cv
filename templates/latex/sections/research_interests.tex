@@ -2,10 +2,9 @@
 
 ~< block body >~
 
+
     ~< for interest in items >~
-        << interest >> \textbullet \
+        << interest >> ~< if loop.index < loop.length >~ \textbullet \ ~< endif >~       
     ~< endfor >~
-
-
-    
+ 
 ~< endblock body >~

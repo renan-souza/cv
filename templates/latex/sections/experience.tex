@@ -1,23 +1,22 @@
 ~< extends "section.tex" >~
 
 ~< block body >~
-  \begin{itemize}
-    ~< for item in items >~
-      \item
-         ~< if not short >~
-            \textbf{
-         ~< endif >~
-            << item.place >>, << item.title >>\hfill << item.dates >>
-         ~< if not short >~
-                   }
-         ~< endif >~
 
-      ~< if item.details and not short >~
-        \begin{small}
-            << item.details >>
-        \end{small}
-      ~< endif >~
 
-    ~< endfor >~
-  \end{itemize}
+  ~< for item in items >~
+  \cvlistitem[0em]{
+     \textbf{<< item.place >> \hfill << item.dates >>}
+     \newline
+     \textbf{<< item.title >> \hfill  << item.location >>}
+      \newline
+     ~< if item.details  >~
+     \begin{small}
+        << item.details >>
+     \end{small}
+    ~< endif >~
+  }
+  ~< endfor >~
+
+
 ~< endblock body >~
+

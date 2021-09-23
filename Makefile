@@ -7,19 +7,18 @@
 
 TODAY := $(shell date +%Y-%m-%d)
 
-# Assuming that both the cv and github.io directories are in same parent directory `..` so the following line can work
+# Assuming that both the cv and github.io directories are in same parent directory `..`
 WEBSITE_DIR=$(shell find $(shell pwd)/../*github* | head -n 1)
-WEBSITE_PDF=$(WEBSITE_DIR)/data/Renan-Souza-CV.pdf
-WEBSITE_PDF_SHORT=$(WEBSITE_DIR)/data/Renan-Souza-CV-short.pdf
+WEBSITE_PDF=$(WEBSITE_DIR)/data/Renan-Souza-CV-full.pdf
+WEBSITE_PDF_SHORT=$(WEBSITE_DIR)/data/Renan-Souza-CV.pdf
 WEBSITE_INCLUDES=$(WEBSITE_DIR)/_includes
-
 
 TEMPLATES=$(shell find templates -type f)
 
 BUILD_DIR=build
 TEX=$(BUILD_DIR)/cv.tex
-PDF=$(BUILD_DIR)/cv.pdf
-PDF_SHORT=$(BUILD_DIR)/cv-short.pdf
+PDF=$(BUILD_DIR)/cv-full.pdf
+PDF_SHORT=$(BUILD_DIR)/cv.pdf
 MD=$(BUILD_DIR)/cv.md
 
 
@@ -34,6 +33,8 @@ endif
 
 all: $(PDF) $(MD) web
 
+pdf: $(PDF)
+
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
@@ -46,7 +47,6 @@ $(TEX) $(MD): $(TEMPLATES) $(YAML_FILES) generate.py
 	./generate.py $(YAML_FILES) -t publications -m
 	./generate.py $(YAML_FILES) -t events -m
 
-
 $(PDF): $(TEX) publications/*.bib
 	# TODO: Hack for biber on OSX.
 	rm -rf /var/folders/8p/lzk2wkqj47g5wf8g8lfpsk4w0000gn/T/par-62616d6f73
@@ -54,16 +54,14 @@ $(PDF): $(TEX) publications/*.bib
 	latexmk -pdf -cd- -jobname=$(BUILD_DIR)/cv $(BUILD_DIR)/cv
 	latexmk -c -cd $(BUILD_DIR)/cv
 
+	latexmk -pdf -cd- -jobname=$(BUILD_DIR)/cv-full $(BUILD_DIR)/cv-full
+	latexmk -c -cd $(BUILD_DIR)/cv-full
 
-	latexmk -pdf -cd- -jobname=$(BUILD_DIR)/cv-short $(BUILD_DIR)/cv-short
-	latexmk -c -cd $(BUILD_DIR)/cv-short
-	rm -f $(BUILD_DIR)/cv-short*md
+	# rm -f $(BUILD_DIR)/cv*md
 
-	open  $(BUILD_DIR)/cv.pdf
-	open  $(BUILD_DIR)/cv-short.pdf
+	open $(PDF)
+	open $(PDF_SHORT)
 
-viewpdf: $(PDF)
-	gnome-open $(PDF)
 
 stage: $(PDF) $(MD)
 	rm $(WEBSITE_DIR)/data/*pdf
@@ -73,12 +71,12 @@ stage: $(PDF) $(MD)
 
 web: stage
 	./generate.py $(YAML_FILES) -o $(WEBSITE_DIR)/_config.yml
-	docker run -v $(WEBSITE_DIR):/website -p 4444:4444 -it website
+	docker run -v $(WEBSITE_INCLUDES):/website/_includes -v $(WEBSITE_DIR)/data:/website/data  -p 4444:4444 -it website
 
 web_build: stage
 	./generate.py $(YAML_FILES) -o $(WEBSITE_DIR)/_config.yml
 	cd $(WEBSITE_DIR) && docker build -t website .
-	docker run -p 4444:4444 -it website
+	docker run -v $(WEBSITE_INCLUDES):/website/_includes -v $(WEBSITE_DIR)/data:/website/data  -p 4444:4444 -it website
 
 commit:
 	git -C $(WEBSITE_DIR) add $(WEBSITE_INCLUDES)/*md $(WEBSITE_DATE) $(WEBSITE_DIR)/data $(WEBSITE_DIR)/images $(WEBSITE_DIR)/_config.yml
