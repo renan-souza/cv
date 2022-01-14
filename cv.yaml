@@ -103,22 +103,18 @@ order:
     display-short: false
 
 
-about: 'Renan Francisco Santos Souza holds a Ph.D. (2019) and an M.Sc. (2015) in Computer Science from
-  \href{https://www.cos.ufrj.br}{COPPE/Federal University of Rio de Janeiro} (UFRJ), and a
-  \href{https://dcc.ufrj.br}{B.Sc. in Computer Science} from UFRJ (2009-2013).
-  Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research Brazil}, where he is
-  a Research Scientist in the
+about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019) in Computer Science from \href{https://www.cos.ufrj.br}{Federal University of Rio de Janeiro (UFRJ)}.
+  Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research}, where he is
+  a Sr. Research Software Engineer in the
    \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Intelligent Cloud Technologies} group.
-  He has been working both as a software engineer and a researcher in several projects since 2010.
-  During his B.Sc., he spent a year at the computer science department
+  He has been working both as a software engineer and a research scientist in several projects since 2010.
+  During his B.Sc., he spent a year at the Computer Science department
   at \href{https://www.missouristate.edu/}{Missouri State University} and
   did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in
   the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
-  During his Ph.D., he was a visiting researcher with the
-  \href{https://team.inria.fr/zenith/}{Scientific Data Management} team
-  at \href{https://inria.fr/}{Inria}, Univ. Montpellier, France in 2019.
-  In 2017, he won the best M.Sc. thesis award from SBBD, the main conference on data science in Latin America.
-  He researches large-scale data science and data engineering techniques to support Artificial Intelligence systems.'
+  During his Ph.D., he was a visiting researcher at \href{https://inria.fr/}{Inria}, France.
+  He won the best M.Sc. thesis and Top 3 Ph.D. thesis awards from SBBD, the main conference on data science in Latin America.
+  He researches large-scale data management techniques to support Artificial Intelligence systems in the cloud.'
 
 research_interests:
   - Large-scale Data Science and Data Engineering
@@ -137,13 +133,13 @@ education:
     thesis:
       title: Supporting User Steering in Large-scale Workflows with Provenance Data
       link: https://www.cos.ufrj.br/index.php/en/publicacoes-pesquisa/details/20/2940
-    supervisor: \href{https://www.cos.ufrj.br/~marta/}{Marta Mattoso} and \href{https://www-sop.inria.fr/members/Patrick.Valduriez/}{Patrick Valduriez}
+    supervisor: \href{https://www.cos.ufrj.br/~marta/}{Marta Mattoso} \href{https://www.cos.ufrj.br}{(COPPE/UFRJ)} and \href{https://www-sop.inria.fr/members/Patrick.Valduriez/}{Patrick Valduriez} \href{https://team.inria.fr/zenith/}{(Inria)}.
 
   - school: Inria/Univ. Montpellier, France
     location: Montpellier, France
     degree: Visiting Ph.D. Student
     dates: Jan 2019 -- Mar 2019
-    supervisor: \href{https://www-sop.inria.fr/members/Patrick.Valduriez/}{Patrick Valduriez}
+    supervisor: \href{https://www-sop.inria.fr/members/Patrick.Valduriez/}{Patrick Valduriez} \href{https://team.inria.fr/zenith/}{(Inria)}.
 
   - school: Federal Univ. of Rio de Janeiro, Brazil
     location: Rio de Janeiro, Brazil
@@ -152,7 +148,7 @@ education:
     thesis:
       title: Controlling the Parallel Execution of Workflows Relying on a Distributed Database
       link: https://www.cos.ufrj.br/index.php/pt-BR/publicacoes-pesquisa/details/15/2562
-    supervisor: \href{https://www.cos.ufrj.br/~marta/}{Marta Mattoso}
+    supervisor:  \href{https://www.cos.ufrj.br/~marta/}{Marta Mattoso} \href{https://www.cos.ufrj.br}{(COPPE/UFRJ)}.
 
   - school: Missouri State University, U.S.
     location: Missouri, U.S.
@@ -164,9 +160,9 @@ education:
     location: Rio de Janeiro, Brazil
     degree: \textbf{B.Sc. in Computer Science}
     dates: Jan 2009 -- Dec 2012
-    supervisor: \href{https://scholar.google.com/citations?user=wH2oMLgAAAAJ&hl=en}{Maria Luiza Machado Campos}
+    supervisor: \href{https://scholar.google.com/citations?user=wH2oMLgAAAAJ&hl=en}{Maria Luiza Machado Campos} \href{https://dcc.ufrj.br}{(DCC/UFRJ)}.
     thesis:
-      title: "Linked Open Data Publication Strategies: An Application in Network Performance Data (in pt)"
+      title: "Linked Open Data Publication Strategies: An Application in Network Performance Data"
       link: https://renan-souza.github.io/data/papers/souza-bsc-thesis.pdf
 
   - school: Lemos de Castro
@@ -178,9 +174,9 @@ experience:
   - place: IBM Research
     location: Rio de Janeiro, Brazil
     dates: Apr 2015 -- present
-    title: Research Scientist, Data Science and Engineering
-    details: "As a Research Scientist (since 2019), he leads R\\&D projects in large-scale data science and data engineering to support Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous applications, data, and users. My work is applied to solving data- and AI-related problems in different industries, such as energy, financial, and cheminformatics.\\newline
-    As a Research Software Engineer (2015--2019), he participated in several R\\&D projects with clients in the energy field by developing techniques and systems for large-scale data integration of AI systems running on clusters and clouds. He also led the Cloud DevOps team to develop conversational AI systems.\\newline
+    title: Sr. Research Software Engineer, Cloud Data Management
+    details: "As a Sr. Research Software Engineer (since 2021), he leads R\\&D projects in large-scale data science and data engineering to support Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous applications, data, and users. He develops software and do applied research to solve problems in different industries, such as energy, financial, and cheminformatics.\\newline
+    As a Research Software Engineer (2015--2021), he participated in several R\\&D projects with clients in the energy field by developing techniques and systems for large-scale data integration of AI systems running on clusters and clouds. He also led the Cloud DevOps team to develop conversational AI systems.\\newline
     As a Software Engineering intern (2015), he designed and implemented big data and machine learning solutions to analyze streaming social data."
   - place: SLAC National Accelerator Laboratory, Stanford Univ.
     location: Menlo Park, CA
@@ -261,6 +257,12 @@ skills:
     details: "Python Flask/UWSGI, Java EE, Tomcat/JBoss, Spring Boot"
 
 honors:
+  - title: 2nd IBM Patent Plateau (>8 patents submitted to USPTO)
+    year: 2021
+  - title: SBBD Top 3 Best Ph.D. Thesis Award
+    year: 2021
+  - title: 1st IBM Patent Plateau (>4 patents submitted to USPTO)
+    year: 2020
   - title: SBBD Best M.Sc. Thesis Award
     year: 2017
   - title: Honored Mention at SBBD on the paper\newline \textit{Spark Scalability Analysis in a Scientific Workflow}
@@ -288,13 +290,28 @@ languages:
 
 
 events:
+  - name: Brazilian Symposium on Databases (SBBD)
+    year: 2021
+    place: Rio de Janeiro, RJ (virtual)
+    page: https://sbbd.org.br/2021/ctdbd/
+    talks:
+      - title: "User Steering Support in Large-Scale Workflows"
+        kind: Oral presentation
+        link: https://www.youtube.com/watch?v=Kbnyt-T0EIs
+  - name: Federal Fluminense University (UFF) Computer Science Seminars
+    year: 2021
+    place: Rio de Janeiro, RJ (virtual)
+    talks:
+      - title: "A Knowledge-centric Approach to Support Large-scale AI Systems (in PT)"
+        kind: Oral presentation
+        link: https://www.youtube.com/watch?v=9U4qtwcQAZU
   - name: SIAM Conference on Computational Science and Engineering
     year: 2021
     place: Forth Worth, TX (virtual)
     page: https://www.siam.org/conferences/cm/conference/cse21
     talks:
       - title: "AI4Seismic: An AI-Driven Platform to Accelerate Geological Discoveries"  
-        kind: Oral presentation
+        kind: Oral presentation, Highlighted by the SIAM press
         link: https://sinews.siam.org/Details-Page/ai4seismic-platform-combines-artificial-intelligence-and-seismic-data-analysis
       - title: Workflow Provenance in the Lifecycle of Scientific Machine Learning
         kind: Oral presentation
@@ -468,10 +485,11 @@ teaching:
 
 
 service:
-  - Workflows in Support of Large-Scale Science (WORKS'20) - PC
+  - Workflows in Support of Large-Scale Science (WORKS'20, 21) - PC
   - Brazilian Symposium on Databases (SBBD'20) - Technical session coordinator
   - Concurrency Computation Practice and Experience - Reviewer
   - Computer Physics Communications - Reviewer
+  - Future Generation Computer Systems (SBBD) - Reviewer
   - IEEE Transactions on Big Data - Reviewer
   - Journal of Cloud Computing - Reviewer
   - Encontro de Inovação em SI (EISI'19) - Reviewer
