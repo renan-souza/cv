@@ -3,7 +3,7 @@
 ~< block body >~
 \begin{itemize}
   ~< for award in items >~
-    \item << award.title >> \hfill << award['year'] >>
+    \item << award.title >> \hfill << award.year >>
     ~< if award.descr >~
       \begin{itemize}
       \item << award.descr >>

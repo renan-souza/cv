@@ -20,7 +20,10 @@ personal:
     facebook: renan.francisco.souza
   keywords: "renan, renan francisco, renan souza, renan francisco santos souza, renan coppe, renan ibm, renan souza ibm,
     data engineering, data science, provenance, scientific workflows, databases, data management,
+    ciencia da computacao, computer science, computer engineering, machine learning, artificial intelligence,
     ibm research, ibm, renan ibm research, renan souza ibm research,
+    ufrj, universidade federal do rio de janeiro, federal university of rio de janeiro, coppe,
+    slac, missouri state university, stanford university, 
     renan ufrj, renan coppe, renan souza ufrj, renan souza coppe, renan scholar, renan souza scholar, souza ibm, souza ufrj,
     renan universidade federal do rio de janeiro, renan souza universidade federal do rio de janeiro,
     renan federal university of rio de janeiro, renan souza federal university of rio de janeiro,
@@ -30,8 +33,7 @@ personal:
     renan phd, renan doctorate, renan souza phd, renan souza doctorate, renan dsc, renan souza dsc,
     renan brazil, renan souza brazil, renan rio, renan souza rio, renan rio de janeiro, renan souza rio de janeiro,
     renan missouri, renan souza missouri, renan souza workflows, renan souza databases, renan scientific,
-    renan computer science, renan data science, renan souza data science, renan steering,
-    
+    renan computer science, renan data science, renan souza data science, renan steering,    
     renan engineering, renan souza engineering, renan souza data, renan data, renan souza data engineering,
     renan data engineering, renan knowledge engineering, renan souza knowledge engineering, renan scientist,
     renan research, renan researcher, renan souza researcher, renan souza research, renan souza scientist, renan distributed,
@@ -76,11 +78,6 @@ order:
     display-web: true
     display-pdf: true
     display-short: true    
-  - tag: languages
-    title: Languages
-    display-web: false
-    display-pdf: true
-    display-short: true
   - tag: honors
     title: "Grants and Awards"
     display-web: false
@@ -101,20 +98,29 @@ order:
     display-web: false
     display-pdf: true
     display-short: false
+  - tag: badges
+    title: "Badges and Certifications"
+    display-web: false
+    display-pdf: true
+    display-short: true
+  - tag: languages
+    title: Languages
+    display-web: false
+    display-pdf: true
+    display-short: true    
 
 
-about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019) in Computer Science from \href{https://www.cos.ufrj.br}{Federal University of Rio de Janeiro (UFRJ)}.
-  Since 2015, he works at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research}, where he is
-  a Sr. Research Software Engineer in the
+about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019) in Computer Science from the \href{https://www.cos.ufrj.br}{Federal University of Rio de Janeiro (UFRJ)}.
+  Since 2015, he has been at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research}, where he is
+  a Research Scientist in the
    \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Intelligent Cloud Technologies} group.
-  He has been working both as a software engineer and a research scientist in several projects since 2010.
-  During his B.Sc., he spent a year at the Computer Science department
-  at \href{https://www.missouristate.edu/}{Missouri State University} and
-  did a summer internship at \href{https://www.stanford.edu/}{Stanford University} in
+  He has been working both as a software engineer and a researcher on several projects since 2010.
+  During his B.Sc., he spent a year at \href{https://www.missouristate.edu/}{Missouri State University} and
+  was an intern at \href{https://www.stanford.edu/}{Stanford University} in
   the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
   During his Ph.D., he was a visiting researcher at \href{https://inria.fr/}{Inria}, France.
-  He won the best M.Sc. thesis and Top 3 Ph.D. thesis awards from SBBD, the main conference on data science in Latin America.
-  He researches large-scale data management techniques to support Artificial Intelligence systems in the cloud.'
+  He received the best M.Sc. thesis and an honored mention for the best Ph.D. thesis awards from SBBD, the main conference on data science in Latin America.
+  He researches large-scale data management techniques to support the evolution of Artificial Intelligence systems in the cloud.'
 
 research_interests:
   - Large-scale Data Science and Data Engineering
@@ -174,8 +180,8 @@ experience:
   - place: IBM Research
     location: Rio de Janeiro, Brazil
     dates: Apr 2015 -- present
-    title: Sr. Research Software Engineer, Cloud Data Management
-    details: "As a Sr. Research Software Engineer (since 2021), he leads R\\&D projects in large-scale data science and data engineering to support Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous applications, data, and users. He develops software and do applied research to solve problems in different industries, such as energy, financial, and cheminformatics.\\newline
+    title: Research Scientist, Cloud \& AI Data Management
+    details: "As a Research Scientist (since 2021), he leads R\\&D projects in large-scale data science and data engineering to support Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous applications, data, and users. He develops software and do applied research to solve problems in different industries, such as energy, financial, and cheminformatics.\\newline
     As a Research Software Engineer (2015--2021), he participated in several R\\&D projects with clients in the energy field by developing techniques and systems for large-scale data integration of AI systems running on clusters and clouds. He also led the Cloud DevOps team to develop conversational AI systems.\\newline
     As a Software Engineering intern (2015), he designed and implemented big data and machine learning solutions to analyze streaming social data."
   - place: SLAC National Accelerator Laboratory, Stanford Univ.
@@ -232,7 +238,7 @@ skills:
   - title: Relational DBMS
     details: PostgreSQL/PostGIS, DB2, DashDB, MySQL, MySQL Cluster, MS SQL Server
   - title: NoSQL DBMS
-    details: MongoDB, AllegroGraph, Jena, Virtuoso, Sesame, Cloudant, CouchBase, Redis, Impala, Elasticsearch, HBase, Hive, Apache Ignite
+    details: MongoDB, AllegroGraph, Jena, Blazegraph, Virtuoso, Sesame, Cloudant, CouchBase, Redis, Impala, Elasticsearch, HBase, Hive, Apache Ignite
   - title: Heterogeneous Data Management
     details: Data Integration, Multi-database Queries, Polystores, Foreign Data Wrappers
   - title: Big Data Frameworks
@@ -240,7 +246,7 @@ skills:
   - title: Message Brokers
     details: Kafka, RabbitMQ
   - title: Data Science/ML Technologies
-    details: Pandas DataFrames, Jupyter Notebooks, Numpy, SciPy, Tensorflow, and PyTorch
+    details: Pandas, Jupyter Notebooks, Numpy, Matplotlib, Tensorflow, ScikitLearn, Keras, PyTorch
   - title: Big Data Cluster Deployment
     details: YARN, Mesos, Standalone deployment
   - title: Business Intelligence
@@ -259,13 +265,13 @@ skills:
 honors:
   - title: 2nd IBM Patent Plateau (>8 patents submitted to USPTO)
     year: 2021
-  - title: SBBD Top 3 Best Ph.D. Thesis Award
+  - title: SBBD Honored Mention for the Best Ph.D. Thesis Award
     year: 2021
   - title: 1st IBM Patent Plateau (>4 patents submitted to USPTO)
     year: 2020
   - title: SBBD Best M.Sc. Thesis Award
     year: 2017
-  - title: Honored Mention at SBBD on the paper\newline \textit{Spark Scalability Analysis in a Scientific Workflow}
+  - title: SBBD Honored Mention on the paper\newline \textit{Spark Scalability Analysis in a Scientific Workflow}
     year: 2017
   - title: CAPES M.Sc. Grant
     year: 2013 -- 2014
@@ -274,12 +280,26 @@ honors:
   - title: "Scientific Initiation Grant - Federal Univ. of Rio de Janeiro"
     year: 2010
 
+badges:
+  - title: Machine Learning Specialist Professional
+    link: https://www.credly.com/badges/be00b8c8-6a19-4b28-b3d9-0f4daadcd3bc
+    description: Exploratory Data Analysis, Regression, Classification, Deep Learning, Reinforcement Learning, Unsupervised Learning, Time Series and Survival Analysis, AI Ethics and Explainability
+    course_hours: 73
+    year: 2022
+  - title: Trustworthy AI and AI Ethics
+    link: https://www.credly.com/badges/583d9aff-aec5-48c3-8c05-22cb9e995f49
+    course_hours: 3.5
+    year: 2022
+  - title: 'LinkedIn Skill Assessment: Python, MySQL, Linux, T-SQL, NoSQL'
+    
+
+
 languages:
   - title: English
     proficiency: Full proficiency
     courses:
       - institution: Missouri State University, U.S.
-        year: Jun 2012 -- Aug 2012 (150h)
+        year: 'Duration: 150h --- Jun 2012 -- Aug 2012'
         description: Scientific English for Graduate Students
       - institution: Cultura Inglesa (English Culture), Rio de Janeiro, Brazil
         year: 2001 -- 2009
@@ -482,6 +502,7 @@ teaching:
       year: 2015
       university: UFRJ
       description: Co-supervision with Prof. Marta Mattoso
+
 
 
 service:

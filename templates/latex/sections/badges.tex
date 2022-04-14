@@ -1,0 +1,26 @@
+~< extends "section.tex" >~
+
+~< block body >~
+
+\begin{itemize}
+  ~< for item in items >~
+    \item 
+      ~< if item.link >~
+            \href{<< item.link >>}{\textbf{<< item.title >>}}
+      ~< else >~
+            \textbf{<< item.title >>}
+      ~< endif >~
+      \hfill
+      ~< if item.course_hours >~
+            Course duration: << item.course_hours >>h --- 
+      ~< endif >~
+      << item.year >>
+      ~< if item.description >~
+            \\ \begin{small}
+                  << item.description >>
+            \end{small}
+      ~< endif >~  
+      
+  ~< endfor >~
+\end{itemize}
+~< endblock body >~
