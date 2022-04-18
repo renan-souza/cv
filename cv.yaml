@@ -195,7 +195,7 @@ experience:
     location: Rio de Janeiro, Brazil
     title: Software Engineer
     dates: Dec 2011 -- Sep 2014
-    details: "As a software engineer (2013--2014), he led the development of a system that helped the Brazilian population to have easy access to information
+    details: "As a lead software engineer (2013--2014), he led the development of a system that helped the Brazilian population to have easy access to information
     about public services provided by the Federal Government.
     He also participated in the development of a system to publish linked open data of the Brazilian Federal Register (\"Diário Oficial da União\")
     on the semantic web using agile methodology, ontology data modeling, and natural language processing.\\newline 
@@ -290,6 +290,9 @@ badges:
     link: https://www.credly.com/badges/583d9aff-aec5-48c3-8c05-22cb9e995f49
     course_hours: 3.5
     year: 2022
+  - title: Enterprise Design Thinking Practitioner
+    year: 2022 
+    link: https://www.credly.com/earner/earned/badge/cb71569c-ba67-4c1b-8d1a-229c491335dd
   - title: 'LinkedIn Skill Assessment: Python, MySQL, Linux, T-SQL, NoSQL'
     
 
