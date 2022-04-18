@@ -73,11 +73,18 @@ def get_pub_md(context, config):
         formatted_authors = []
 
         for author in immut_author_list:
+            
             new_auth = author.split(", ")
-            try:
-                new_auth = new_auth[1][0] + ". " + new_auth[0]
-            except:
-                new_auth = new_auth[0]
+            # et al.
+            if "et" in new_auth[1] and "al." in new_auth[0]:
+                new_auth = "<i>" + new_auth[1].replace("{","") + " " + new_auth[0].replace("}","") + "</i>"
+                print(new_auth)
+            else:
+                new_auth = author.split(", ")
+                try:
+                    new_auth = new_auth[1][0] + ". " + new_auth[0]
+                except:
+                    new_auth = new_auth[0]
 
             if config['name'] in new_auth:
                 new_auth = "<strong>" + new_auth + "</strong>"
