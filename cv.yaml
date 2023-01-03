@@ -7,7 +7,7 @@ personal:
   src: https://github.com/renan-souza/cv
   url: RenanSouza.org
   description: Renan Souza's Website and CV
-  status: Large-scale Data Science and Engineering Researcher at Oak Ridge National Laboratory
+  status: Data Science and Engineering Researcher at Oak Ridge National Laboratory
   social:
     github: renan-souza
     #twitter:
@@ -16,12 +16,16 @@ personal:
     research_gate: Renan_Souza9
     lattes: 4414741541160361
     dblp: Souza:Renan
-    ibm: br-rfsouza
+    #ibm: br-rfsouza
     facebook: renan.francisco.souza
   keywords: "renan, renan francisco, renan souza, renan francisco santos souza, renan coppe, renan ibm, renan souza ibm,
     data engineering, data science, provenance, scientific workflows, databases, data management,
     ciencia da computacao, computer science, computer engineering, machine learning, artificial intelligence,
     ibm research, ibm, renan ibm research, renan souza ibm research,
+    oak ridge, oak ridge national lab, oak ridge national laboratory, ornl,
+    renan oak ridge, renan oak ridge national lab, renan oak ridge national laboratory, renan ornl,
+    renan souza oak ridge, renan souza oak ridge national lab, renan souza oak ridge national laboratory, renan souza ornl,
+    souza oak ridge, souza oak ridge national lab, souza oak ridge national laboratory, souza ornl,
     ufrj, universidade federal do rio de janeiro, federal university of rio de janeiro, coppe,
     slac, missouri state university, stanford university, 
     renan ufrj, renan coppe, renan souza ufrj, renan souza coppe, renan scholar, renan souza scholar, souza ibm, souza ufrj,
@@ -38,6 +42,7 @@ personal:
     renan data engineering, renan knowledge engineering, renan souza knowledge engineering, renan scientist,
     renan research, renan researcher, renan souza researcher, renan souza research, renan souza scientist, renan distributed,
     renan souza distributed, renan souza distributed systems, renan systems, renan distributed systems,
+    hpc, renan hpc, renan souza hpc,
     renan distributed database, renan parallel, renan souza parallel, renan linked open data, renan souza linked data,
     renan semantic web, renan souza semantic web, renan ontologies, renan ontology"
 
@@ -111,7 +116,7 @@ order:
 
 
 about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019) in Computer Science from the \href{https://www.cos.ufrj.br}{Federal University of Rio de Janeiro (UFRJ)}.
-  Since 2022, he has been at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory} as a research scientist in the 
+  Since 2022, he has been a staff research scientist at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory} in the 
   \href{https://www.ornl.gov/group/dlsw}{Data Lifecycle and Scalable Workflows} group.
   Before that (2015--2022), he was a staff research scientist at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research} in the
   \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Intelligent Cloud Technologies} group.
@@ -121,7 +126,7 @@ about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019)
   the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
   During his Ph.D., he was a visiting researcher at \href{https://inria.fr/}{Inria}, France.
   He received the best M.Sc. thesis and an honored mention for the best Ph.D. thesis awards from SBBD, the main conference on data science in Latin America.
-  He researches large-scale data management techniques to support the evolution of Artificial Intelligence systems in the cloud.'
+  He researches large-scale data management techniques to support the evolution of Artificial Intelligence systems in HPC and clouds.'
 
 research_interests:
   - Large-scale Data Science and Data Engineering
