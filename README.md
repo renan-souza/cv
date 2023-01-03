@@ -19,7 +19,7 @@ by using Jinja templates.
 
 ## Requirements
 
-- #### Python 3
+- #### Python 3.8
 
 - #### Docker
 - #### Latexmk
@@ -32,8 +32,8 @@ Ruby is used to generate the website and we use a Docker image to use the right 
 
 - Build the Docker image for the website:
 ```bash
-cd renan-souza.github.io
-docker build -t website .
+cd cv
+make web_build
 ```
 
 
@@ -42,7 +42,7 @@ docker build -t website .
  ```shell
  cd cv
  # Assuming you use conda
- conda create -n cv python=3.6
+ conda create -n cv python=3.8
  conda activate cv
  pip install -r requirements.txt
  ```
