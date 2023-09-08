@@ -7,7 +7,7 @@ personal:
   src: https://github.com/renan-souza/cv
   url: RenanSouza.org
   description: Renan Souza's Website and CV
-  status: Data Science and Engineering Researcher at Oak Ridge National Laboratory
+  status: Data Science and Engineering Research Staff at Oak Ridge National Laboratory
   social:
     github: renan-souza
     #twitter:
@@ -117,10 +117,10 @@ order:
 
 about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019) in Computer Science from the \href{https://www.cos.ufrj.br}{Federal University of Rio de Janeiro (UFRJ)}.
   Since 2022, he has been a staff research scientist at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory} in the 
-  \href{https://www.ornl.gov/group/dlsw}{Data Lifecycle and Scalable Workflows} group.
+  Workflow and Ecosystem Services group.
   Before that (2015--2022), he was a staff research scientist at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research} in the
   \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Intelligent Cloud Technologies} group.
-  He has been working both as a software engineer and a researcher on several projects since 2010.
+  He has been working as a software engineer, researcher, and tech lead on several projects since 2010.
   During his B.Sc., he spent a year at \href{https://www.missouristate.edu/}{Missouri State University} and
   was an intern at \href{https://www.stanford.edu/}{Stanford University} in
   the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
@@ -252,7 +252,7 @@ skills:
   - title: Heterogeneous Data Management
     details: Data Integration, Multi-database Queries, Polystores, Foreign Data Wrappers
   - title: Big Data Frameworks
-    details: "Apache Spark: RDD, DataFrames, Streaming, MLib, GraphX, GraphFrames; Hadoop Ecosystem, Dask"
+    details: "Apache Spark: RDD, DataFrames, Streaming, MLib, GraphX, GraphFrames; Dask; Hadoop Ecosystem"
   - title: Message Brokers
     details: Kafka, RabbitMQ
   - title: Data Science/ML Technologies
@@ -323,6 +323,13 @@ languages:
 
 
 events:
+  - name: IEEE International Conference on e-Science
+    year: 2023
+    place: Limassol, Cyprus
+    page: https://www.escience-conference.org/2023/
+    talks:
+      - title: Towards Lightweight Data Integration using Multi-workflow Provenance and Data Observability
+        kind: Oral presentation
   - name: Brazilian Symposium on Databases (SBBD)
     year: 2021
     place: Rio de Janeiro, RJ (virtual)
@@ -526,6 +533,6 @@ service:
   - The Very Large Databases (VLDB) Journal - Reviewer
   - IEEE Transactions on Big Data - Reviewer
   - Journal of Cloud Computing - Reviewer
-  - Workflows in Support of Large-Scale Science (WORKS'20, 21) - PC
-  - Brazilian Symposium on Databases (SBBD'20) - Technical session coordinator
+  - Workflows in Support of Large-Scale Science (WORKS'20, 21, 23) - PC
+  - Brazilian Symposium on Databases (SBBD'20, SBBD'23) - Technical session coordinator and Reviewer
   - Encontro de Inovação em SI (EISI'19) - Reviewer

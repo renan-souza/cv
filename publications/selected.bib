@@ -1,3 +1,13 @@
+
+@inproceedings{souza2023towards,
+  title={Towards Lightweight Data Integration using Multi-workflow Provenance and Data Observability},
+  author={Souza, Renan and Skluzacek, Tyler J and Wilkinson, Sean R and Ziatdinov, Maxim and da Silva, Rafael Ferreira},
+  booktitle={IEEE International Conference on e-Science},
+  pdf={https://arxiv.org/pdf/2308.09004.pdf},
+  year={2023},
+  abstract={Modern large-scale scientific discovery requires multidisciplinary collaboration across diverse computing facilities, including High Performance Computing (HPC) machines and the Edge-to-Cloud continuum. Integrated data analysis plays a crucial role in scientific discovery, especially in the current AI era, by enabling Responsible AI development, FAIR, Reproducibility, and User Steering. However, the heterogeneous nature of science poses challenges such as dealing with multiple supporting tools, cross-facility environments, and efficient HPC execution. Building on data observability, adapter system design, and provenance, we propose MIDA: an approach for lightweight runtime Multi-workflow Integrated Data Analysis. MIDA defines data observability strategies and adaptability methods for various parallel systems and machine learning tools. With observability, it intercepts the dataflows in the background without requiring instrumentation while integrating domain, provenance, and telemetry data at runtime into a unified database ready for user steering queries. We conduct experiments showing end-to-end multi-workflow analysis integrating data from Dask and MLFlow in a real distributed deep learning use case for materials science that runs on multiple environments with up to 276 GPUs in parallel. We show near-zero overhead running up to 100,000 tasks on 1,680 CPU cores on the Summit supercomputer.}
+}
+
 @article{asouza2020workflow,
       title={Workflow Provenance in the Lifecycle of Scientific Machine Learning},
       author={Souza, Renan and G. Azevedo, Leonardo and Lourenço, Vítor and Soares, Elton and Thiago, Raphael and Brandão, Rafael and Civitarese, Daniel and Vital Brazil, Emilio and Moreno, Marcio and Valduriez, Patrick and Mattoso, Marta and Cerqueira, Renato and A. S. Netto, Marco},
@@ -24,22 +34,6 @@
   volume={7},
   abstract={Complex scientific experiments from various domains are typically modeled as workflows and executed on large-scale machines using a Parallel Workflow Management System (WMS). Since such executions usually last for hours or days, some WMSs provide user steering support, i.e., they allow users to run data analyses and, depending on the results, adapt the workflows at runtime. A challenge in the parallel execution control design is to manage workflow data for efficient executions while enabling user steering support. Data access for high scalability is typically transaction-oriented, while for data analysis, it is online analytical-oriented so that managing such hybrid workloads makes the challenge even harder. In this work, we present SchalaDB, an architecture with a set of design principles and techniques based on distributed in-memory data management for efficient workflow execution control and user steering. We propose a distributed data design for scalable workflow task scheduling and high availability driven by a parallel and distributed in-memory DBMS. To evaluate our proposal, we develop d-Chiron, a WMS designed according to SchalaDB's principles. We carry out an extensive experimental evaluation on an HPC cluster with up to 960 computing cores. Among other analyses, we show that even when running data analyses for user steering, SchalaDB's overhead is negligible for workloads composed of hundreds of concurrent tasks on shared data. Our results encourage workflow engine developers to follow a parallel and distributed data-oriented approach not only for scheduling and monitoring but also for user steering.}
  }
-
-
-
-@inproceedings{souza_efficient_2019,
-	title = {Efficient Runtime Capture of Multiworkflow Data Using Provenance},
-	pdf = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-02265932/document},
-	pages = {1--10},
-	booktitle = {{IEEE} International Conference on e-Science (eScience)},
-	author = {Souza, Renan and Azevedo, Leonardo and Thiago, Raphael and Soares, Elton and Nery, Marcelo and Netto, Marco and Brazil, Emilio Vital and Cerqueira, Renato and Valduriez, Patrick and Mattoso, Marta},
-	year = {2019},
-      pdf = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-02265932/document},
-      url = {https://doi.org/10.1109/eScience.2019.00047},
-	keyword = {Multiworkflow provenance, Multi-Data Lineage, Data Lake Provenance, ProvLake},
-	doi = {10.1109/eScience.2019.00047},
-	abstract = {Computational  Science  and  Engineering  (CSE) projects are typically developed by multidisciplinary teams. Despite being part of the same project, each team manages its own workflows, using  specific  execution  environments  and  data processingtools. Analyzing the data processed by all workflows globally is a core task in a CSE project. However, this analysis is hard because the data generated by these workflows are not integrated. In addition, since these workflows may take a long time to execute, data analysis needs to be done at runtime to reduce cost and time of the CSE project. A typical solution in scientific data analysis is to capture and relate the data in a provenance database while the workflows run, thus allowing for data analysisat runtime. However, the main problem is that such data capture competes with the running workflows, adding significant overhead to their execution. To mitigate this problem, we introduce in this paper a system called ProvLake, which adopts design principles for providing efficientdistributed data capture from the workflows. While capturing the data, ProvLake logically integrates and ingests them into a provenance database ready for analyses at runtime. We validated  ProvLake ina  real  use  case  in  the  O&G  industry encompassing four workflows that process 5TB datasets for a deep learning classifier. Compared with Komadu, the closest solution that meets our goals, our approach enables runtime multiworkflow data analysis with much smaller overhead, such as 0.1\%.}
-}
 
 @article{souza_keeping_2019,
 	title = {Keeping Track of User Steering Actions in Dynamic Workflows},
