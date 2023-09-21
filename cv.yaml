@@ -186,7 +186,7 @@ experience:
     location: Knoxville, United States
     dates: Oct 2022 -- Present
     title: Research Scientist, HPC Workflows, Data \& AI
-    details: "Part of the Data Lifecycle and Scalable Workflows group, working with software research and engineering of large-scale data science and Artificial Intelligence systems to support scientific discovery."
+    details: "Part of the Workflow and Ecosystem Services group, working with software research and engineering of large-scale data science and Artificial Intelligence systems to support scientific discovery."
   - place: IBM Research
     location: Rio de Janeiro, Brazil
     dates: Apr 2015 -- Oct 2022 
@@ -273,11 +273,11 @@ skills:
     details: "Python Flask/UWSGI, Java EE, Tomcat/JBoss, Spring Boot"
 
 honors:
-  - title: 2nd IBM Patent Plateau (>8 patents submitted to USPTO)
+  - title: 2nd IBM Patent Plateau (8+ patents submitted to USPTO)
     year: 2021
   - title: SBBD Honored Mention for the Best Ph.D. Thesis Award
     year: 2021
-  - title: 1st IBM Patent Plateau (>4 patents submitted to USPTO)
+  - title: 1st IBM Patent Plateau (4+ patents submitted to USPTO)
     year: 2020
   - title: SBBD Best M.Sc. Thesis Award
     year: 2017
