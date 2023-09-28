@@ -116,17 +116,15 @@ order:
 
 
 about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019) in Computer Science from the \href{https://www.cos.ufrj.br}{Federal University of Rio de Janeiro (UFRJ)}.
-  Since 2022, he has been a staff research scientist at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory} in the 
-  Workflow and Ecosystem Services group.
-  Before that (2015--2022), he was a staff research scientist at \href{https://www.research.ibm.com/labs/brazil/}{IBM Research} in the
-  \href{https://researcher.watson.ibm.com/researcher/view_group_pubs.php?grp=5113}{Intelligent Cloud Technologies} group.
+  Since 2022, he has been a staff research scientist at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory}.
+  Before that (2015--2022), he was a research scientist and software engineer at \href{https://research.ibm.com/labs/brazil}{IBM Research}.
   He has been working as a software engineer, researcher, and tech lead on several projects since 2010.
   During his B.Sc., he spent a year at \href{https://www.missouristate.edu/}{Missouri State University} and
   was an intern at \href{https://www.stanford.edu/}{Stanford University} in
   the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
   During his Ph.D., he was a visiting researcher at \href{https://inria.fr/}{Inria}, France.
-  He received the best M.Sc. thesis and an honored mention for the best Ph.D. thesis awards from SBBD, the main conference on data science in Latin America.
-  He researches large-scale data management techniques to support the evolution of Artificial Intelligence systems in HPC and clouds.'
+  He received the best M.Sc. thesis and honored mention for the best Ph.D. thesis awards from \href{https://sbbd.org.br/}{SBBD}, the main conference on data science in Latin America.
+  He researches large-scale data management techniques to support the evolution of Artificial Intelligence systems in HPC and cloud.'
 
 research_interests:
   - Large-scale Data Science and Data Engineering
@@ -186,7 +184,7 @@ experience:
     location: Knoxville, United States
     dates: Oct 2022 -- Present
     title: Research Scientist, HPC Workflows, Data \& AI
-    details: "Part of the Workflow and Ecosystem Services group, working with software research and engineering of large-scale data science and Artificial Intelligence systems to support scientific discovery."
+    details: "Part of the Workflows and Ecosystem Services group, working with software research and engineering of large-scale data science and Artificial Intelligence systems to support scientific discovery."
   - place: IBM Research
     location: Rio de Janeiro, Brazil
     dates: Apr 2015 -- Oct 2022 
@@ -268,7 +266,7 @@ skills:
   - title: Cloud and Cluster computing
     details: VMs, Dockers, Kubernetes, OpenShift, HPC Clusters
   - title: DevOps
-    details: Containers, Kubernetes, OpenShift, CI/CD Pipelines, GitHub, GitHub Workflows, Travis, Jenkins
+    details: Containers, Kubernetes, OpenShift, CI/CD Pipelines, GitHub, GitHub Actions, Travis, Jenkins
   - title: Web Development
     details: "Python Flask/UWSGI, Java EE, Tomcat/JBoss, Spring Boot"
 
