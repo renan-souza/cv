@@ -1,4 +1,4 @@
-# Talks, Presentations, and Events Participation
+# Talks, Presentations, and Participation in Events
 
 
 Please, feel free to reach me if you need a presentation not available here.
