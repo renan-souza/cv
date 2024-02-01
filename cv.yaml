@@ -17,7 +17,7 @@ personal:
     lattes: 4414741541160361
     dblp: Souza:Renan
     #ibm: br-rfsouza
-    facebook: renan.francisco.souza
+    #facebook: renan.francisco.souza
   keywords: "renan, renan francisco, renan souza, renan francisco santos souza, renan coppe, renan ibm, renan souza ibm,
     data engineering, data science, provenance, scientific workflows, databases, data management,
     ciencia da computacao, computer science, computer engineering, machine learning, artificial intelligence,
@@ -98,22 +98,26 @@ order:
     display-web: false
     display-pdf: true
     display-short: false
-  - tag: publications
-    title: All Publications and Patents
-    display-web: false
-    display-pdf: true
-    display-short: false
   - tag: badges
     title: "Badges and Certifications"
     display-web: false
     display-pdf: true
     display-short: true
+  - tag: service
+    title: "Scientific Community Service"
+    display-web: false
+    display-pdf: true
+    display-short: false    
   - tag: languages
     title: Languages
     display-web: false
     display-pdf: true
     display-short: true    
-
+  - tag: publications
+    title: All Publications and Patents
+    display-web: false
+    display-pdf: true
+    display-short: false
 
 about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019) in Computer Science from the \href{https://www.cos.ufrj.br}{Federal University of Rio de Janeiro (UFRJ)}.
   Since 2022, he has been a staff research scientist at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory}.
@@ -184,41 +188,35 @@ experience:
     location: Knoxville, United States
     dates: Oct 2022 -- Present
     title: Research Scientist, HPC Workflows, Data \& AI
-    details: "Part of the Workflows and Ecosystem Services group, working with software research and engineering of large-scale data science and Artificial Intelligence systems to support scientific discovery."
+    details: "Part of the Workflows and Ecosystem Services group, working with software research and engineering of large-scale data science and Artificial Intelligence systems to accelerate scientific discovery."
   - place: IBM Research
     location: Rio de Janeiro, Brazil
     dates: Apr 2015 -- Oct 2022 
-    title: Research Scientist, Cloud \& AI Data Management
-    details: "As a Staff Research Scientist (since 2021), he led R\\&D projects in large-scale data science and data engineering to support Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous applications, data, and users. He develops software and do applied research to solve problems in different industries, such as energy, financial, physics, and cheminformatics.\\newline
-    As a Research Software Engineer (2015--2021), he participated in several R\\&D projects with clients in the energy field by developing techniques and systems for large-scale data integration of AI systems running on clusters and clouds. He also led the Cloud DevOps team to develop conversational AI systems.\\newline
-    As a Software Engineering intern (2015), he designed and implemented big data and machine learning solutions to analyze streaming social data."
+    title: Research Scientist and Software Eng., Cloud, Data \& AI
+    details: "As a Staff Research Scientist (2021--2022), he led R\\&D projects in large-scale data science and data engineering to support Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous applications, data, and users. He developed software and conduct applied research to solve problems in different industries, such as energy, financial, physics, and cheminformatics.\\newline
+    As a Research Software Engineer (2015--2021), he participated in several R\\&D projects with clients in the energy field, developing techniques and systems for large-scale data integration of AI systems running on clusters and clouds. He also led the Cloud DevOps team to develop conversational AI systems.\\newline
+    As a Software Engineering intern (2015), he designed and implemented big data and machine learning solutions to analyze streaming social data in real-time."
   - place: SLAC National Accelerator Laboratory, Stanford Univ.
     location: Menlo Park, United States
     title: Research Software Engineering intern
     dates: May 2013 -- Dec 2014
-    details: "Developed a project to build a cloud platform that uses semantic web, big data, and data warehousing
-      techniques to store, retrieve, visualize, and publish structured data about internet performance worldwide,
-      enabling a rich understanding of information about the Internet quality around the world."
+    details: "Led the development of a cloud platform utilizing semantic web, big data, and data warehousing techniques. This platform is designed to store, retrieve, visualize, and publish structured data about internet performance worldwide, enabling a comprehensive understanding of global Internet quality."
   - place: CAPGov COPPE/UFRJ
     location: Rio de Janeiro, Brazil
     title: Software Engineer
     dates: Dec 2011 -- Sep 2014
-    details: "As a lead software engineer (2013--2014), he led the development of a system that helped the Brazilian population to have easy access to information
-    about public services provided by the Federal Government.
-    He also participated in the development of a system to publish linked open data of the Brazilian Federal Register (\"Diário Oficial da União\")
-    on the semantic web using agile methodology, ontology data modeling, and natural language processing.\\newline 
-    As a Software Engineering intern (2011--2013), he participated in several R\\&D web systems for the Brazilian Federal Government."
-  - place: Federal Univ. of Rio de Janeiro
+    details: "As a lead software engineer (2013–-2014), he led the development of a system that facilitated easy access to information about public services provided by the Federal Government for the Brazilian population. Additionally, he played a key role in developing a system to publish linked open data of the Brazilian Federal Register (\"Diário Oficial da União\") on the semantic web, utilizing agile methodology, ontology data modeling, and natural language processing.\\newline 
+    As a full-stack Software Engineering intern (2011--2013), he actively participated in the research \\& development of several web systems for the Brazilian Federal Government."
+  - place: Federal Univ. of Rio de Janeiro 
     location: Rio de Janeiro, Brazil
     title: Software Engineering intern
     dates: Jan 2010 -- Jul 2011
-    details: "Developed a system to integrate data warehouse environments with structured and unstructured data to
-    enable more intelligent and flexible information reports."
+    details: "Developed a system that integrates data warehouse environments with both structured and unstructured data, enabling the generation of more intelligent and flexible information reports."
   - place: Petrobras
     location: Rio de Janeiro, Brazil
     title: IT Intern
     dates: May 2007 -- May 2008
-    details: "Helped to implement features and provided maintenance for web systems to support Petrobras employees."
+    details: "Helped implement features and provided maintenance for web systems to support Petrobras employees."
 
 selected_publications:
   name: "R. Souza"
@@ -321,6 +319,10 @@ languages:
 
 
 events:
+  - name: IEEE/ACM Supercomputing (SC)
+    year: 2023
+    page: https://sc23.supercomputing.org
+    place: Denver, CO
   - name: IEEE International Conference on e-Science
     year: 2023
     place: Limassol, Cyprus
@@ -355,9 +357,9 @@ events:
         kind: Oral presentation
         link: https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=70197
   - name: Open Subsurface Data Universe Development Workshop
-  - name: International Conference on Management of Data (SIGMOD)
+  - name: ACM International Conference on Management of Data (SIGMOD)
     year: 2020
-    place: Portland, OR. (virtual)
+    place: Portland, OR (virtual)
   - name: Brazilian Symposium on Databases (SBBD)
     year: 2020
     place: Rio (virtual)
@@ -522,15 +524,22 @@ teaching:
       description: Co-supervision with Prof. Marta Mattoso
 
 
-
 service:
-  - Journal of Parallel and Distributed Computing - Reviewer
-  - Concurrency Computation Practice and Experience - Reviewer
-  - Computer Physics Communications - Reviewer
+  # journals
+  - IEEE Transactions on Parallel and Distributed Systems - Reviewer
   - Future Generation Computer Systems - Reviewer
-  - The Very Large Databases (VLDB) Journal - Reviewer
-  - IEEE Transactions on Big Data - Reviewer
+  - Concurrency Computation Practice and Experience - Reviewer
+  - Journal of Parallel and Distributed Computing - Reviewer
+  - The Very Large Databases (VLDB) Journal - Reviewer  
+  - IEEE Transactions on Big Data - Reviewer    
   - Journal of Cloud Computing - Reviewer
+  - Computer Physics Communications - Reviewer
+  - Frontiers in High Performance Computing - Editorial Board
+  # confs and workshops
+  - Workflows in Distributed Environments (WiDE'24) - PC
+  - IEEE/ACM Supercomputing (SC'24) - PC
+  - IEEE International Conference on e-Science (eScience'23) - Session Chair, PC
   - Workflows in Support of Large-Scale Science (WORKS'20, 21, 23) - PC
-  - Brazilian Symposium on Databases (SBBD'20, SBBD'23) - Technical session coordinator and Reviewer
-  - Encontro de Inovação em SI (EISI'19) - Reviewer
+  - Brazilian Workshop on Database and Artificial Intelligence Integration (at SBBD'22) - PC
+  - Brazilian Symposium on Databases (SBBD'20, SBBD'23) - Session Chair, PC
+  - Encontro de Inovação em SI (at SBSI'19,20) - PC

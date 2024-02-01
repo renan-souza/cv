@@ -42,9 +42,9 @@ Please, feel free to reach me if you need a presentation not available here.
             {% for talk in event.talks %}
                <li>
                  {{ talk.title }},
-                   {{ talk.kind }}
+                   {{ talk.kind }} 
                    {% if talk.link %}
-                       , <a href="{{ talk.link }}" target="_blank">link</a>                                
+                   , <a href="{{ talk.link }}" target="_blank">link</a>                                
                    {% endif %}
                </li> 
             {% endfor %}            
