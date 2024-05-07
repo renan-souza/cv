@@ -393,7 +393,7 @@ events:
     place: Rio de Janeiro, Brazil
     talks:
       - title: Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering
-        kind: Oral presentation
+        kind: Invited talk
             #link: http://ni.com
   - name: Open Subsurface Data Universe F2F Meeting
     year: 2019
