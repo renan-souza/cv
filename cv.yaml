@@ -135,7 +135,7 @@ research_interests:
   - Parallel Workflows
   - Data Provenance
   - Big Data Analytics
-  - High Performance Computing in Clusters and Clouds
+  - High Performance Computing on Clusters and Clouds
   - Machine Learning
 
 
@@ -356,7 +356,6 @@ events:
       - title: Workflow Provenance in the Lifecycle of Scientific Machine Learning
         kind: Oral presentation
         link: https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=70197
-  - name: Open Subsurface Data Universe Development Workshop
   - name: ACM International Conference on Management of Data (SIGMOD)
     year: 2020
     place: Portland, OR (virtual)
@@ -374,6 +373,9 @@ events:
         kind: Oral presentation
   - name: Open Subsurface Data Universe Development Workshop
     year: 2020
+    place: Houston, TX
+  - name: Open Subsurface Data Universe Development Workshop
+    year: 2019
     place: Houston, TX
   - name: IEEE/ACM Supercomputing (SC)
     year: 2019
@@ -404,7 +406,7 @@ events:
       - title: Efficient Runtime Capture of Multiworkflow Data using Provenance
         kind: Oral presentation
         #link: http://ni.com
-  - name: INRIA Talks
+  - name: Inria Talks
     year: 2019
     place: Montpellier, France
     page: https://team.inria.fr/zenith/zenith-seminar-renan-souza-15-jan-2019/
