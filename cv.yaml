@@ -342,8 +342,8 @@ events:
     year: 2021
     place: Rio de Janeiro, RJ (virtual)
     talks:
-      - title: "A Knowledge-centric Approach to Support Large-scale AI Systems (in PT)"
-        kind: Oral presentation
+      - title: "A Knowledge-centric Approach to Support Large-scale AI Systems"
+        kind: Invited talk (Portuguese)
         link: https://www.youtube.com/watch?v=9U4qtwcQAZU
   - name: SIAM Conference on Computational Science and Engineering
     year: 2021
@@ -351,7 +351,7 @@ events:
     page: https://www.siam.org/conferences/cm/conference/cse21
     talks:
       - title: "AI4Seismic: An AI-Driven Platform to Accelerate Geological Discoveries"  
-        kind: Oral presentation, Highlighted by the SIAM press
+        kind: Invited talk, Highlighted by the SIAM press
         link: https://sinews.siam.org/Details-Page/ai4seismic-platform-combines-artificial-intelligence-and-seismic-data-analysis
       - title: Workflow Provenance in the Lifecycle of Scientific Machine Learning
         kind: Oral presentation
@@ -365,12 +365,12 @@ events:
   - name: High-Performance Data Science workshop
     year: 2020
     place: Rio (virtual)
-  - name: Seminarios de Engenharia e Ciencia Computacional
+  - name: Computational Science and Engineering Seminar at COPPE/UFRJ
     year: 2020
     place: Rio (virtual)
     talks:
       - title: Workflow Provenance in the Lifecycle of Scientific Machine Learning
-        kind: Oral presentation
+        kind: Invited talk
   - name: Open Subsurface Data Universe Development Workshop
     year: 2020
     place: Houston, TX
@@ -388,7 +388,7 @@ events:
           - title: Provenance Data in the Machine Learning Lifecycle in Computational Science and Engineering
             kind: Oral presentation
             #link: http://ni.com
-  - name: SciDISC Workshop
+  - name: Scientific Data Analysis using Data-intensive Scalable Computing Workshop
     year: 2019
     place: Rio de Janeiro, Brazil
     talks:
@@ -412,7 +412,7 @@ events:
     page: https://team.inria.fr/zenith/zenith-seminar-renan-souza-15-jan-2019/
     talks:
       - title: Providing Online Data Analytical Support for Humans in the Loop of Computational Science and Engineering Applications
-        kind: Oral presentation
+        kind: Invited talk
   - name: IBM Regional Technical Exchange
     year: 2019
     place: Rio de Janeiro, Brazil
@@ -446,11 +446,11 @@ events:
           - title: Tracking Hyperparameter Tuning in Deep Learning Training
             kind: Oral presentation
             #link: http://ni.com
-  - name: SBC Brazilian Syposium on Databases (SBBD)
+  - name: Brazilian Syposium on Databases (SBBD)
     year: 2018
     page: http://sbbd.org.br/2018/
     place: Rio de Janeiro, Brazil
-  - name: SBC Brazilian Syposium on Databases (SBBD)
+  - name: Brazilian Syposium on Databases (SBBD)
     year: 2017
     page: http://sbbd.org.br/2017/
     place: Uberlandia, Brazil
@@ -467,7 +467,7 @@ events:
     talks:
       - title: Kubernetes
         kind: Invited talk
-  - name: Hacker at the Smart City Cloud Hackathon OpenStack Rio
+  - name: Smart City Cloud Hackathon OpenStack Rio
     year: 2017
     place: Rio de Janeiro, Brazil
   - name: Computer Science Week at UFRJ
@@ -476,7 +476,7 @@ events:
     talks:
       - title: Kubernetes
         kind: Oral presentation
-  - name: SBC Brazilian Conference on Artificial Intelligence (BRACIS)
+  - name: Brazilian Conference on Artificial Intelligence (BRACIS)
     year: 2017
     place: Recife, Brazil
     talks:
