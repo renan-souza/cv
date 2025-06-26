@@ -7,7 +7,7 @@ personal:
   src: https://github.com/renan-souza/cv
   url: RenanSouza.org
   description: Renan Souza's Website and CV
-  status: Data Science and Engineering Research Staff at Oak Ridge National Laboratory
+  status: Workflows and Data Engineering Research Staff <br/> at Oak Ridge National Laboratory
   social:
     github: renan-souza
     #twitter:
@@ -119,25 +119,24 @@ order:
     display-pdf: true
     display-short: false
 
-about: 'Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc (2009--2019) in Computer Science from the \href{https://www.cos.ufrj.br/index.php/en/}{Federal University of Rio de Janeiro (UFRJ)}.
+about: '
+  Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc. in Computer Science (2009--2019) from the \href{https://www.cos.ufrj.br/index.php/en/}{Federal University of Rio de Janeiro (UFRJ)}.
   Since 2022, he has been a staff research scientist at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory}.
-  Before that (2015--2022), he was a research scientist and software engineer at \href{https://research.ibm.com/labs/brazil}{IBM Research}.
-  He has been working as a software engineer, researcher, and tech lead on several projects since 2010.
-  During his B.Sc., he spent a year at \href{https://www.missouristate.edu/}{Missouri State University} and
-  was an intern at \href{https://www.stanford.edu/}{Stanford University} in
-  the \href{https://www6.slac.stanford.edu/}{SLAC} National Laboratory.
+  From 2015 to 2022, he worked as a research scientist and software engineer at \href{https://research.ibm.com/labs/brazil}{IBM Research}.
   During his Ph.D., he was a visiting researcher at \href{https://inria.fr/}{Inria}, France.
-  He received the best M.Sc. thesis and honored mention for the best Ph.D. thesis awards from \href{https://sbbd.org.br/}{SBBD}, the main conference on data science in Latin America.
-  He researches large-scale data management techniques to support the evolution of Artificial Intelligence systems in HPC and cloud.'
+  During his B.Sc., he spent one year at \href{https://www.missouristate.edu/}{Missouri State University} and interned at the \href{https://www6.slac.stanford.edu/}{SLAC National Laboratory} at \href{https://www.stanford.edu/}{Stanford University}.
+  He has been active as a software engineer, researcher, and technical lead on multiple projects since 2010.
+  He was awarded with the best M.Sc. thesis and an honorable mention for best Ph.D. thesis from \href{https://sbbd.org.br/}{SBBD}, the leading data science and engineering conference in Latin America.
+  His research and development focus on large-scale data management and AI to support the next generation of Edge–Cloud–HPC workflows.
+  '
 
 research_interests:
   - Large-scale Data Science and Data Engineering
-  - Parallel Workflows
-  - Data Provenance
+  - Edge–Cloud–HPC Workflows
+  - Provenance Data
   - Big Data Analytics
-  - High Performance Computing on Clusters and Clouds
-  - Machine Learning
-
+  - Machine Learning Systems
+  - Agentic AI
 
 education:
   - school: Federal Univ. of Rio de Janeiro, Brazil
@@ -188,35 +187,35 @@ experience:
     location: Knoxville, United States
     dates: Oct 2022 -- Present
     title: Research Scientist, HPC Workflows, Data \& AI
-    details: "Part of the Workflows and Ecosystem Services group, working with software research and engineering of large-scale data science and Artificial Intelligence systems to accelerate scientific discovery."
+    details: "As Principal Investigator and lead software developer, he leads the design and development of large-scale data and AI systems within the Workflows and Ecosystem Services group at ORNL, focusing on AI-driven observability, data integration, workflow provenance, and LLM-based agentic workflows to accelerate scientific discovery in Edge–Cloud–HPC environments."
   - place: IBM Research
     location: Rio de Janeiro, Brazil
     dates: Apr 2015 -- Oct 2022 
     title: Research Scientist and Software Eng., Cloud, Data \& AI
-    details: "As a Staff Research Scientist (2021--2022), he led R\\&D projects in large-scale data science and data engineering to support Artificial Intelligence systems running on hybrid cloud and cluster environments with highly distributed and heterogeneous applications, data, and users. He developed software and conduct applied research to solve problems in different industries, such as energy, financial, physics, and cheminformatics.\\newline
-    As a Research Software Engineer (2015--2021), he participated in several R\\&D projects with clients in the energy field, developing techniques and systems for large-scale data integration of AI systems running on clusters and clouds. He also led the Cloud DevOps team to develop conversational AI systems.\\newline
-    As a Software Engineering intern (2015), he designed and implemented big data and machine learning solutions to analyze streaming social data in real-time."
+    details: "As a Staff Research Scientist (2021--2022), he was a lead researcher and developer on projects in large-scale data science and engineering to support AI systems in hybrid cloud and cluster environments with highly distributed and heterogeneous workloads for clients across energy, finance, physics, and cheminformatics domains. Although primarily focused on backend development, data engineering, cloud, and DevOps, he collaborated closely with front-end developers and HCI researchers to design domain-specific applications.\\newline
+              As a Research Software Engineer (2015--2021), he worked with and led R\\&D projects on large-scale data integration for AI systems in the energy sector, targeting cluster and cloud platforms. He also led the Cloud DevOps team responsible for developing and deploying conversational AI systems.\\newline
+              As a Software Engineering Intern (2015), he designed and implemented big data and machine learning solutions for real-time analysis of streaming social data."
   - place: SLAC National Accelerator Laboratory, Stanford Univ.
     location: Menlo Park, United States
     title: Research Software Engineering intern
     dates: May 2013 -- Dec 2014
-    details: "Led the development of a cloud platform utilizing semantic web, big data, and data warehousing techniques. This platform is designed to store, retrieve, visualize, and publish structured data about internet performance worldwide, enabling a comprehensive understanding of global Internet quality."
-  - place: CAPGov COPPE/UFRJ
+    details: "Led the development of a cloud platform utilizing semantic web, big data, and data warehousing techniques. This platform is designed to store, retrieve, visualize, and publish structured data about internet performance worldwide, enabling understanding of global Internet quality."
+  - place: COPPE-UFRJ
     location: Rio de Janeiro, Brazil
     title: Software Engineer
     dates: Dec 2011 -- Sep 2014
-    details: "As a lead software engineer (2013–-2014), he led the development of a system that facilitated easy access to information about public services provided by the Federal Government for the Brazilian population. Additionally, he played a key role in developing a system to publish linked open data of the Brazilian Federal Register (\"Diário Oficial da União\") on the semantic web, utilizing agile methodology, ontology data modeling, and natural language processing.\\newline 
-    As a full-stack Software Engineering intern (2011--2013), he actively participated in the research \\& development of several web systems for the Brazilian Federal Government."
+    details: "As a Lead Software Engineer (2013--2014), he led the development of a system that faciliated access of information about public services offered by the Brazilian Federal Government. Also lead the development of a platform to publish linked open data from the Brazilian Federal Register on the semantic web, applying agile practices, ontology-based data modeling, and natural language processing.\\newline
+              As a Full-Stack Software Engineering Intern (2011--2013), he worked on the R\\&D of various web systems."
   - place: Federal Univ. of Rio de Janeiro 
     location: Rio de Janeiro, Brazil
     title: Software Engineering intern
     dates: Jan 2010 -- Jul 2011
-    details: "Developed a system that integrates data warehouse environments with both structured and unstructured data, enabling the generation of more intelligent and flexible information reports."
+    details: "Developed a system that integrated data warehouse environments with both structured and unstructured data, enabling the generation of more intelligent and flexible information reports."
   - place: Petrobras
     location: Rio de Janeiro, Brazil
     title: IT Intern
     dates: May 2007 -- May 2008
-    details: "Helped implement features and provided maintenance for web systems to support Petrobras employees."
+    details: "Implemented features and provided ongoing maintenance for web systems supporting Petrobras employees."
 
 selected_publications:
   name: "R. Souza"
@@ -241,18 +240,26 @@ publications:
 skills:
   - title: Languages
     details: Python, Java, C, C++, Shell scripting, NodeJS, Scala, Lua
-  - title: Relational DBMS
-    details: PostgreSQL/PostGIS, DB2, DashDB, MySQL, MySQL Cluster, MS SQL Server
-  - title: NoSQL DBMS
-    details: MongoDB, AllegroGraph, Jena, Blazegraph, Virtuoso, Sesame, Cloudant, CouchBase, Redis, Impala, Elasticsearch, HBase, Hive, Apache Ignite
-  - title: Heterogeneous Data Management
-    details: Data Integration, Multi-database Queries, Polystores, Foreign Data Wrappers
+  - title: Data Science/ML Technologies
+    details: Pandas, Polars, Jupyter Notebooks, Numpy, Matplotlib, Seaborn, Plotly, Tensorflow, ScikitLearn, Keras, PyTorch, MLFlow, Airflow, Grafana
+  - title: Agentic AI and LLMs
+    details: MCP Agents, Crew AI (Multi-agent Framework), LangChain, Streamlit for AI Agents, RAG, Prompt Engineering Techniques
   - title: Big Data \& Parallel Processing Frameworks
     details: "Dask; Apache Spark: RDD, DataFrames, Streaming, MLib, GraphX, GraphFrames; Hadoop Ecosystem"
-  - title: Message Queue Systems
+  - title: Cloud and Cluster computing
+    details: VMs, Dockers, Kubernetes, OpenShift, HPC (Slurm, LSF, PBS)
+  - title: DevOps
+    details: Containers, Kubernetes, OpenShift, CI/CD Pipelines, GitHub, GitHub Actions, Travis, Jenkins
+  - title: Message Queueing Systems
     details: Kafka, RabbitMQ, Redis
-  - title: Data Science/ML Technologies
-    details: Pandas, Jupyter Notebooks, Numpy, Matplotlib, Tensorflow, ScikitLearn, Keras, PyTorch, MLFlow, Airflow
+  - title: GPU Programming and Profilling
+    details: NVIDIA and AMD Python APIs for GPU performance analysis
+  - title: Relational DBMS
+    details: PostgreSQL/PostGIS, DB2, SQLite, MySQL, MySQL Cluster, MS SQL Server
+  - title: NoSQL DBMS
+    details: MongoDB, AllegroGraph, Jena, Blazegraph, Virtuoso, Sesame, Cloudant, CouchBase, Redis, Impala, Elasticsearch, HBase, Hive, Apache Ignite, LMDB
+  - title: Heterogeneous Data Management
+    details: Data Integration, Multi-database Queries, Polystores
   - title: Cluster Deployment
     details: YARN, Mesos, Standalone deployment
   - title: Business Intelligence
@@ -261,10 +268,6 @@ skills:
     details: OWL, RDF, SPARQL, Protege
   - title: Distributed and Concurrent Programming
     details: PubSub, MPI, OpenMP, CUDA, Data-centric distributed and parallel programming
-  - title: Cloud and Cluster computing
-    details: VMs, Dockers, Kubernetes, OpenShift, HPC (Slurm, LSF, PBS)
-  - title: DevOps
-    details: Containers, Kubernetes, OpenShift, CI/CD Pipelines, GitHub, GitHub Actions, Travis, Jenkins
   - title: Web Development
     details: "Python Flask/UWSGI, Java EE, Tomcat/JBoss, Spring Boot"
 
@@ -319,6 +322,13 @@ languages:
 
 
 events:
+  - name: IEEE/ACM Supercomputing (SC)
+    year: 2024
+    page: https://sc24.supercomputing.org
+    place: Atlanta, GA
+    talks:
+      - title: Integrating Evolutionary Algorithms with Distributed Deep Learning for Optimizing Hyperparameters on HPC Systems
+        kind: Oral presentation
   - name: IEEE/ACM Supercomputing (SC)
     year: 2023
     page: https://sc23.supercomputing.org
@@ -536,12 +546,15 @@ service:
   - IEEE Transactions on Big Data - Reviewer    
   - Journal of Cloud Computing - Reviewer
   - Computer Physics Communications - Reviewer
+  - Discover Data - Reviewer
   - Frontiers in High Performance Computing - Editorial Board
   # confs and workshops
+  - International Workshop on AI Principles in Science Communication (AISC) - PC
+  - International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD'25) - PC
   - Workflows in Distributed Environments (WiDE'24) - PC
   - IEEE/ACM Supercomputing (SC'24) - PC
   - IEEE International Conference on e-Science (eScience'23) - Session Chair, PC
   - Workflows in Support of Large-Scale Science (WORKS'20, 21, 23, 24) - PC
   - Brazilian Workshop on Database and Artificial Intelligence Integration (at SBBD'22) - PC
-  - Brazilian Symposium on Databases (SBBD'20, SBBD'23, SBBD'24) - Session Chair, PC
+  - Brazilian Symposium on Databases (SBBD'20, SBBD'23, SBBD'24, SBBD'25) - Session Chair, PC
   - Innovation Summit on Information Systems (at SBSI'19,20) - PC
