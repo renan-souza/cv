@@ -16,13 +16,14 @@ personal:
     research_gate: Renan_Souza9
     lattes: 4414741541160361
     dblp: Souza:Renan
-    #ibm: br-rfsouza
+    orcid: 0000-0002-1794-808X
     #facebook: renan.francisco.souza
-  keywords: "renan, renan francisco, renan souza, renan francisco santos souza, renan coppe, renan ibm, renan souza ibm,
+  keywords: "renan, renan francisco, renan souza, renan francisco santos souza, \"renan francisco santos souza\", renan coppe, renan ibm, renan souza ibm,
     data engineering, data science, provenance, scientific workflows, databases, data management,
     ciencia da computacao, computer science, computer engineering, machine learning, artificial intelligence,
     ibm research, ibm, renan ibm research, renan souza ibm research,
     oak ridge, oak ridge national lab, oak ridge national laboratory, ornl,
+    renan ornl, renan souza ornl, renan santos souza ornl, renan francisco ornl, renan francisco santos souza ornl,
     renan oak ridge, renan oak ridge national lab, renan oak ridge national laboratory, renan ornl,
     renan souza oak ridge, renan souza oak ridge national lab, renan souza oak ridge national laboratory, renan souza ornl,
     souza oak ridge, souza oak ridge national lab, souza oak ridge national laboratory, souza ornl,
@@ -120,13 +121,12 @@ order:
     display-short: false
 
 about: '
-  Renan Francisco Santos Souza holds a Ph.D., M.Sc., and B.Sc. in Computer Science (2009--2019) from the \href{https://www.cos.ufrj.br/index.php/en/}{Federal University of Rio de Janeiro (UFRJ)}.
+  Renan Souza holds a Ph.D., M.Sc., and B.Sc. in Computer Science (2009--2019) from the \href{https://www.cos.ufrj.br/index.php/en/}{Federal University of Rio de Janeiro (UFRJ)}.
   Since 2022, he has been a staff research scientist at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory}.
   From 2015 to 2022, he worked as a research scientist and software engineer at \href{https://research.ibm.com/labs/brazil}{IBM Research}.
   During his Ph.D., he was a visiting researcher at \href{https://inria.fr/}{Inria}, France.
   During his B.Sc., he spent one year at \href{https://www.missouristate.edu/}{Missouri State University} and interned at the \href{https://www6.slac.stanford.edu/}{SLAC National Laboratory} at \href{https://www.stanford.edu/}{Stanford University}.
-  He has been active as a software engineer, researcher, and technical lead on multiple projects since 2010.
-  He was awarded with the best M.Sc. thesis and an honorable mention for best Ph.D. thesis from \href{https://sbbd.org.br/}{SBBD}, the leading data science and engineering conference in Latin America.
+  He has been active as a software engineer, researcher, and technical lead on multiple projects since 2010.  
   His research and development focus on large-scale data management and AI to support the next generation of Edge–Cloud–HPC workflows.
   '
 
@@ -322,6 +322,14 @@ languages:
 
 
 events:
+  - name: IEEE International Conference on e-Science
+    year: 2024
+    place: Osaka, Japan (Virtual)
+    page: https://www.escience-conference.org/2024/
+    talks:
+      - title: Workflow Provenance in the Computing Continuum for Responsible, Trustworthy, and Energy-Efficient AI
+        kind: Oral presentation
+        link: https://sites.google.com/view/rewords24/
   - name: IEEE/ACM Supercomputing (SC)
     year: 2024
     page: https://sc24.supercomputing.org
@@ -547,14 +555,14 @@ service:
   - Journal of Cloud Computing - Reviewer
   - Computer Physics Communications - Reviewer
   - Discover Data - Reviewer
-  - Frontiers in High Performance Computing - Editorial Board
+  - Frontiers in High Performance Computing - Reviwer and Editorial Board
   # confs and workshops
   - International Workshop on AI Principles in Science Communication (AISC) - PC
   - International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD'25) - PC
   - Workflows in Distributed Environments (WiDE'24) - PC
   - IEEE/ACM Supercomputing (SC'24) - PC
   - IEEE International Conference on e-Science (eScience'23) - Session Chair, PC
-  - Workflows in Support of Large-Scale Science (WORKS'20, 21, 23, 24) - PC
-  - Brazilian Workshop on Database and Artificial Intelligence Integration (at SBBD'22) - PC
-  - Brazilian Symposium on Databases (SBBD'20, SBBD'23, SBBD'24, SBBD'25) - Session Chair, PC
+  - Workflows in Support of Large-Scale Science (WORKS'20, 21, 23, 24, 25) - PC
+  - Brazilian Workshop on Database and Artificial Intelligence Integration - PC
+  - Brazilian Symposium on Databases (SBBD'20, 23, 24, 25) - Session Chair, PC
   - Innovation Summit on Information Systems (at SBSI'19,20) - PC

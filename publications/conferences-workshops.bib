@@ -1,4 +1,25 @@
+@inproceedings{souza_prov_agent_2025,
+  author    = {Renan Souza and Amal Gueroudji and Stephen DeWitt and Daniel Rosendo and Tirthankar Ghosal and Robert Ross and Prasanna Balaprakash and Rafael Ferreira da Silva},
+  title     = {PROV-AGENT: Unified Provenance for Tracking {AI} Agent Interactions in Agentic Workflows},
+  booktitle = {IEEE International Conference on e-Science},
+  year      = {2025},
+  location  = {Chicago, U.S.A.},
+  pdf = {https://arxiv.org/pdf/2508.02866},
+  publisher = {IEEE},
+  keywords = {Workflows, Agentic Workflows, Provenance, Lineage, Responsible AI, LLM, Agentic AI},
+  abstract = {Large Language Models (LLMs) and other foundation models are increasingly used as the core of AI agents. In agentic workflows, these agents plan tasks, interact with humans and peers, and influence scientific outcomes across federated and heterogeneous environments. However, agents can hallucinate or reason incorrectly, propagating errors when one agent's output becomes another's input. Thus, assuring that agents' actions are transparent, traceable, reproducible, and reliable is critical to assess hallucination risks and mitigate their workflow impacts. While provenance techniques have long supported these principles, existing methods fail to capture and relate agent-centric metadata such as prompts, responses, and decisions with the broader workflow context and downstream outcomes. In this paper, we introduce PROV-AGENT, a provenance model that extends W3C PROV and leverages the Model Context Protocol (MCP) and data observability to integrate agent interactions into end-to-end workflow provenance. Our contributions include: (1) a provenance model tailored for agentic workflows, (2) a near real-time, open-source system for capturing agentic provenance, and (3) a cross-facility evaluation spanning edge, cloud, and HPC environments, demonstrating support for critical provenance queries and agent reliability analysis.}
+}
 
+@inproceedings{amal_2025,
+  author = {Amal Gueroudji and Tanwi Mallick and Renan Souza and Rafael Ferreira da Silva and 
+          Robert Ross and Matthieu Dorier and Philip Carns and Kyle Chard and Ian Foster},
+  title     = {ControlA: Agentic Workflow Control Mechanisms for Reliable Science},
+  booktitle = {IEEE International Conference on e-Science},
+  year      = {2025},
+  location  = {Chicago, U.S.A.},
+  publisher = {IEEE},
+  keywords = {Agentic AI, Agentic workflows, Reliability, Safety, Agentic Systems}
+}
 
 @inproceedings{souza_rtai_2024,
   author    = {Renan Souza and Silvina Caino-Lores and Mark Coletti and Tyler J. Skluzacek and Alexandru Costan and Frederic Suter and Marta Mattoso and Rafael Ferreira da Silva},
@@ -6,7 +27,8 @@
   booktitle = {IEEE International Conference on e-Science},
   year      = {2024},
   location  = {Osaka, Japan},
-  pdf = {https://renansouza.org/data/papers/ProvRespAI_preprint.pdf},
+  doi = {https://doi.org/10.1109/e-Science62913.2024.10678731},
+  pdf = {https://hal.science/hal-04902079v1/document},
   publisher = {IEEE},
   keywords = {Artificial Intelligence, Provenance, Machine Learning, AI workflows, ML workflows, Responsible AI, Trustworthy AI, Reproducibility, AI Lifecycle, Energy-efficient AI},
   abstract = {As Artificial Intelligence (AI) becomes more pervasive in our society, it is crucial to develop, deploy, and assess Responsible and Trustworthy AI (RTAI) models, i.e., those that consider not only accuracy but also other aspects, such as explainability, fairness, and energy efficiency. Workflow provenance data have historically enabled critical capabilities towards RTAI. Provenance data derivation paths contribute to responsible workflows through transparency in tracking artifacts and resource consumption. Provenance data are well-known for their trustworthiness, helping explainability, reproducibility, and accountability. However, there are complex challenges to achieving RTAI, which are further complicated by the heterogeneous infrastructure in the computing continuum (Edge-Cloud-HPC) used to develop and deploy models. As a result, a significant research and development gap remains between workflow provenance data management and RTAI. In this paper, we present a vision of the pivotal role of workflow provenance in supporting RTAI and discuss related challenges. We present a schematic view of the relationship between RTAI and provenance, and highlight open research directions.}
@@ -118,7 +140,7 @@ series = {SBSI '24}
   booktitle={Brazilian Symposium on Databases ({SBBD})},
   year={2021},
   pages = {265-270},
-  pdf = https://sol.sbc.org.br/index.php/sbbd/article/download/17883/17717/}
+  pdf = {https://sol.sbc.org.br/index.php/sbbd/article/download/17883/17717/}
 }
 
 
@@ -186,7 +208,7 @@ series = {SBSI '24}
 	year = {2019},
 	pdf = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-02265932/document},
 	url = {https://doi.org/10.1109/eScience.2019.00047},
-	keyword = {Multiworkflow provenance, Multi-Data Lineage, Data Lake Provenance, ProvLake},
+	keywords = {Multiworkflow provenance, Multi-Data Lineage, Data Lake Provenance, ProvLake},
 	doi = {10.1109/eScience.2019.00047},
 	abstract = {Computational  Science  and  Engineering  (CSE) projects are typically developed by multidisciplinary teams. Despite being part of the same project, each team manages its own workflows, using  specific  execution  environments  and  data processingtools. Analyzing the data processed by all workflows globally is a core task in a CSE project. However, this analysis is hard because the data generated by these workflows are not integrated. In addition, since these workflows may take a long time to execute, data analysis needs to be done at runtime to reduce cost and time of the CSE project. A typical solution in scientific data analysis is to capture and relate the data in a provenance database while the workflows run, thus allowing for data analysisat runtime. However, the main problem is that such data capture competes with the running workflows, adding significant overhead to their execution. To mitigate this problem, we introduce in this paper a system called ProvLake, which adopts design principles for providing efficientdistributed data capture from the workflows. While capturing the data, ProvLake logically integrates and ingests them into a provenance database ready for analyses at runtime. We validated  ProvLake ina  real  use  case  in  the  O&G  industry encompassing four workflows that process 5TB datasets for a deep learning classifier. Compared with Komadu, the closest solution that meets our goals, our approach enables runtime multiworkflow data analysis with much smaller overhead, such as 0.1\%.}
 }
@@ -206,7 +228,7 @@ series = {SBSI '24}
     booktitle = {Workflows in Support of Large-Scale Science ({WORKS}) co-located with the {ACM}/{IEEE} International Conference for High Performance Computing, Networking, Storage, and Analysis ({SC})},
     pdf = {https://arxiv.org/pdf/1910.04223},
     doi = {10.1109/WORKS49585.2019.00006},
-    keyword = {Machine Learning Lifecycle, Workflow Provenance, Computational Science and Engineering},
+    keywords = {Machine Learning Lifecycle, Workflow Provenance, Computational Science and Engineering},
     abstract = {Machine Learning (ML) has become essential in several industries. In Computational Science and Engineering (CSE), the complexity of the ML lifecycle comes from the large variety of data, scientists' expertise, tools, and workflows. If data are not tracked properly during the lifecycle, it becomes unfeasible to recreate a ML model from scratch or to explain to stakeholders how it was created. The main limitation of provenance tracking solutions is that they cannot cope with provenance capture and integration of domain and ML data processed in the multiple workflows in the lifecycle while keeping the provenance capture overhead low. To handle this problem, in this paper we contribute with a detailed characterization of provenance data in the ML lifecycle in CSE; a new provenance data representation, called PROV-ML, built on top of W3C PROV and ML Schema; and extensions to a system that tracks provenance from multiple workflows to address the characteristics of ML and CSE, and to allow for provenance queries with a standard vocabulary. We show a practical use in a real case in the Oil and Gas industry, along with its evaluation using 48 GPUs in parallel.}
 }
 
@@ -269,7 +291,7 @@ series = {SBSI '24}
   volume = {CEUR Workshop Proceedings},
   number = {2170},
   year = {2018},
-  keyword = {HPC ; Scalable Data-Intensive Computing ; Big data ; Scientific data},
+  keywords = {HPC ; Scalable Data-Intensive Computing ; Big data ; Scientific data},
   pdf = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-01867804/file/ldas%202018%20-%20scidisc.pdf}
 }
 
@@ -321,7 +343,7 @@ series = {SBSI '24}
 	booktitle = {Workflows in Support of Large-Scale Science ({WORKS}) workshop  co-located with the {ACM}/{IEEE} International Conference for High Performance Computing, Networking, Storage, and Analysis ({SC})},
 	author = {Silva, Vítor and Neves, Leonardo and Souza, Renan and Coutinho, Alvaro and Oliveira, Daniel De and Mattoso, Marta},
 	year = {2016},
-	keyword = {Provenance, Performance analysis, Scientific Workflow, Debugging}
+	keywords = {Provenance, Performance analysis, Scientific Workflow, Debugging}
 }
 
 
@@ -331,7 +353,7 @@ series = {SBSI '24}
 	url = {https://upcommons.upc.edu/handle/2117/90905},
 	pages = {9--19},
 	author = {Camata, José J. and Cela, José M. and Costa, Danilo and Coutinho, Alvaro L. G. A.  and Fernández-Galisteo, Daniel and Souza, Renan and Jiménez, Carmen and Kourdioumov, Vadim and Mattoso, Marta and Mayo-García, Rafael and Miras, Thomas and Moríñigo, José A. and Navarro, Jose and Oliveira, Daniel de and Rodríguez-Pascual, Manuel and Silva, Vítor and Valduriez, Patrick},
-	keyword = {Algorithms and architectures for advanced scientific computing, Àrees temàtiques de la {UPC}::Energies, Biomass, Energy sources, Exascale, Hidrocarburs, {HPC}, Hydrocarbon, Hydrocarbon processing, Supercomputadors, Wind energy},
+	keywords = {Algorithms and architectures for advanced scientific computing, Àrees temàtiques de la {UPC}::Energies, Biomass, Energy sources, Exascale, Hidrocarburs, {HPC}, Hydrocarbon, Hydrocarbon processing, Supercomputadors, Wind energy},
 	year = {2016},
 	pdf = {https://upcommons.upc.edu/bitstream/handle/2117/90905/Applying%20future%20Exascale%20HPC%20methodologies%20in%20the%20energy%20sector.pdf}
 }

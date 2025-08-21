@@ -24,30 +24,27 @@
       volume={e6544}
 }
 
- @article{souza_distributed_2021,
-  author={Souza, R. and Silva, V. and Lima, A. A. B. and Oliveira, D. and Valduriez, P. and Mattoso, M.},
-  journal={PeerJ Computer Science}, 
-  title={Distributed In-memory Data Management for Workflow Executions},
-  year={2021},
-  pdf={https://arxiv.org/ftp/arxiv/papers/2105/2105.04720.pdf},
-  url={https://peerj.com/articles/cs-527/},
-  doi={10.7717/peerj-cs.527},
-  pages={1--30},
-  volume={7},
-  abstract={Complex scientific experiments from various domains are typically modeled as workflows and executed on large-scale machines using a Parallel Workflow Management System (WMS). Since such executions usually last for hours or days, some WMSs provide user steering support, i.e., they allow users to run data analyses and, depending on the results, adapt the workflows at runtime. A challenge in the parallel execution control design is to manage workflow data for efficient executions while enabling user steering support. Data access for high scalability is typically transaction-oriented, while for data analysis, it is online analytical-oriented so that managing such hybrid workloads makes the challenge even harder. In this work, we present SchalaDB, an architecture with a set of design principles and techniques based on distributed in-memory data management for efficient workflow execution control and user steering. We propose a distributed data design for scalable workflow task scheduling and high availability driven by a parallel and distributed in-memory DBMS. To evaluate our proposal, we develop d-Chiron, a WMS designed according to SchalaDB's principles. We carry out an extensive experimental evaluation on an HPC cluster with up to 960 computing cores. Among other analyses, we show that even when running data analyses for user steering, SchalaDB's overhead is negligible for workloads composed of hundreds of concurrent tasks on shared data. Our results encourage workflow engine developers to follow a parallel and distributed data-oriented approach not only for scheduling and monitoring but also for user steering.}
- }
+@inproceedings{souza_prov_agent_2025,
+  author    = {Renan Souza and Amal Gueroudji and Stephen DeWitt and Daniel Rosendo and Tirthankar Ghosal and Robert Ross and Prasanna Balaprakash and Rafael Ferreira da Silva},
+  title     = {PROV-AGENT: Unified Provenance for Tracking {AI} Agent Interactions in Agentic Workflows},
+  booktitle = {IEEE International Conference on e-Science},
+  year      = {2025},
+  location  = {Chicago, U.S.A.},
+  pdf = {https://arxiv.org/pdf/2508.02866},
+  publisher = {IEEE},
+  keywords = {Artificial Intelligence, Provenance, Machine Learning, AI workflows, ML workflows, Responsible AI, Trustworthy AI, Reproducibility, AI Lifecycle, Energy-efficient AI},
+  abstract = {Large Language Models (LLMs) and other foundation models are increasingly used as the core of AI agents. In agentic workflows, these agents plan tasks, interact with humans and peers, and influence scientific outcomes across federated and heterogeneous environments. However, agents can hallucinate or reason incorrectly, propagating errors when one agent's output becomes another's input. Thus, assuring that agents' actions are transparent, traceable, reproducible, and reliable is critical to assess hallucination risks and mitigate their workflow impacts. While provenance techniques have long supported these principles, existing methods fail to capture and relate agent-centric metadata such as prompts, responses, and decisions with the broader workflow context and downstream outcomes. In this paper, we introduce PROV-AGENT, a provenance model that extends W3C PROV and leverages the Model Context Protocol (MCP) and data observability to integrate agent interactions into end-to-end workflow provenance. Our contributions include: (1) a provenance model tailored for agentic workflows, (2) a near real-time, open-source system for capturing agentic provenance, and (3) a cross-facility evaluation spanning edge, cloud, and HPC environments, demonstrating support for critical provenance queries and agent reliability analysis.}
+}
 
-@article{souza_keeping_2019,
-	title = {Keeping Track of User Steering Actions in Dynamic Workflows},
-	volume = {99},
-	issn = {0167-739X},
-	pdf = {https://hal-lirmm.ccsd.cnrs.fr/lirmm-02127456/document},
-	doi = {10.1016/j.future.2019.05.011},
-      url = {https://doi.org/10.1016/j.future.2019.05.011},
-	pages = {624--643},
-	journal = {Future Generation Computer Systems},
-	author = {Souza, Renan and Silva, Vítor and Camata, Jose J. and Coutinho, Alvaro L. G. A. and Valduriez, Patrick and Mattoso, Marta},
-	year = {2019},
-	keyword = {Dynamic workflows, Computational steering, Provenance data, Parameter tuning},
-	abstract = {In long-lasting scientific workflow executions in HPC machines, computational scientists (the users in this work) often need to fine-tune several workflow parameters. These tunings are done through user steering actions that may significantly improve performance (e.g., reduce execution time) or improve the overall results. However, in executions that last for weeks, users can lose track of what has been adapted if the tunings are not properly registered. In this work, we build on provenance data management to address the problem of tracking online parameter fine-tuning in dynamic workflows steered by users. We propose a lightweight solution to capture and manage provenance of the steering actions online with negligible overhead. The resulting provenance database relates tuning data with data for domain, dataflow provenance, execution, and performance, and is available for analysis at runtime. We show how users may get a detailed view of the execution, providing insights to determine when and how to tune. We discuss the applicability of our solution in different domains and validate its ability to allow for online capture and analyses of parameter fine-tunings in a real workflow in the Oil and Gas industry. In this experiment, the user could determine which tuned parameters influenced simulation accuracy and performance. The observed overhead for keeping track of user steering actions at runtime is less than 1\% of total execution time.}
+@inproceedings{souza_rtai_2024,
+  author    = {Renan Souza and Silvina Caino-Lores and Mark Coletti and Tyler J. Skluzacek and Alexandru Costan and Frederic Suter and Marta Mattoso and Rafael Ferreira da Silva},
+  title     = {Workflow Provenance in the Computing Continuum for Responsible, Trustworthy, and Energy-Efficient {AI}},
+  booktitle = {IEEE International Conference on e-Science},
+  year      = {2024},
+  location  = {Osaka, Japan},
+  doi = {https://doi.org/10.1109/e-Science62913.2024.10678731},
+  pdf = {https://hal.science/hal-04902079v1/document},
+  publisher = {IEEE},
+  keywords = {Artificial Intelligence, Provenance, Machine Learning, AI workflows, ML workflows, Responsible AI, Trustworthy AI, Reproducibility, AI Lifecycle, Energy-efficient AI},
+  abstract = {As Artificial Intelligence (AI) becomes more pervasive in our society, it is crucial to develop, deploy, and assess Responsible and Trustworthy AI (RTAI) models, i.e., those that consider not only accuracy but also other aspects, such as explainability, fairness, and energy efficiency. Workflow provenance data have historically enabled critical capabilities towards RTAI. Provenance data derivation paths contribute to responsible workflows through transparency in tracking artifacts and resource consumption. Provenance data are well-known for their trustworthiness, helping explainability, reproducibility, and accountability. However, there are complex challenges to achieving RTAI, which are further complicated by the heterogeneous infrastructure in the computing continuum (Edge-Cloud-HPC) used to develop and deploy models. As a result, a significant research and development gap remains between workflow provenance data management and RTAI. In this paper, we present a vision of the pivotal role of workflow provenance in supporting RTAI and discuss related challenges. We present a schematic view of the relationship between RTAI and provenance, and highlight open research directions.}
 }

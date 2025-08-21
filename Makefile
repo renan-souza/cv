@@ -74,6 +74,7 @@ web: stage
 	docker run -v $(WEBSITE_INCLUDES):/website/_includes -v $(WEBSITE_DIR)/data:/website/data  -p 4444:4444 -it website
 
 web_build: stage
+	# Run this if you make structural changes in the website (like adding new button or new selected publication)
 	./generate.py $(YAML_FILES) -o $(WEBSITE_DIR)/_config.yml
 	cd $(WEBSITE_DIR) && docker build -t website .
 	docker run -v $(WEBSITE_INCLUDES):/website/_includes -v $(WEBSITE_DIR)/data:/website/data  -p 4444:4444 -it website
