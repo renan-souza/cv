@@ -121,20 +121,20 @@ order:
     display-short: false
 
 about: '
-  Renan Souza holds a Ph.D., M.Sc., and B.Sc. in Computer Science (2009--2019) from the \href{https://www.cos.ufrj.br/index.php/en/}{Federal University of Rio de Janeiro (UFRJ)}.
-  Since 2022, he has been a staff research scientist at the \href{https://www.ornl.gov/}{Oak Ridge National Laboratory}.
-  From 2015 to 2022, he worked as a research scientist and software engineer at \href{https://research.ibm.com/labs/brazil}{IBM Research}.
-  During his Ph.D., he was a visiting researcher at \href{https://inria.fr/}{Inria}, France.
-  During his B.Sc., he spent one year at \href{https://www.missouristate.edu/}{Missouri State University} and interned at the \href{https://www6.slac.stanford.edu/}{SLAC National Laboratory} at \href{https://www.stanford.edu/}{Stanford University}.
-  He has been active as a software engineer, researcher, and technical lead on multiple projects since 2010.  
-  His research and development focus on large-scale data management and AI to support the next generation of Edge–Cloud–HPC workflows.
+  Renan Souza earned his Ph.D., M.Sc., and B.Sc. in Computer Science (2009--2019) from the \href{https://www.cos.ufrj.br/index.php/en/}{Federal University of Rio de Janeiro (UFRJ)}.
+  Since 2022, he has been a researcher and software engineer at \href{https://www.ornl.gov/}{Oak Ridge National Laboratory}, after spending seven years at \href{https://research.ibm.com/labs/brazil}{IBM}.
+  He was a visiting scientist at \href{https://inria.fr/}{INRIA}, France, during his Ph.D. 
+  and, during his B.Sc., studied abroad at \href{https://www.missouristate.edu/}{Missouri State University} and interned at \href{https://www6.slac.stanford.edu/}{SLAC National Laboratory} (\href{https://www.stanford.edu/}{Stanford University}).
+  Active in engineering, research, and technical leadership since 2010, he has authored 50+ peer-reviewed papers in leading venues and holds 10+ USPTO patents. 
+  His work has influenced researchers, industry, and practitioners in fields of AI, distributed systems, and data management across diverse application domains.
+  His current focus is on designing and building scalable systems to support responsible and trustworthy AI workflows.
   '
 
 research_interests:
   - Large-scale Data Science and Data Engineering
   - Edge–Cloud–HPC Workflows
+  - AI Workflows
   - Provenance Data
-  - Big Data Analytics
   - Machine Learning Systems
   - Agentic AI
 
@@ -239,7 +239,7 @@ publications:
 
 skills:
   - title: Languages
-    details: Python, Java, C, C++, Shell scripting, NodeJS, Scala, Lua
+    details: Python, Java, Shell scripting, C, C++, C\#, NodeJS, Scala, Lua
   - title: Data Science/ML Technologies
     details: Pandas, Polars, Jupyter Notebooks, Numpy, Matplotlib, Seaborn, Plotly, Tensorflow, ScikitLearn, Keras, PyTorch, MLFlow, Airflow, Grafana
   - title: Agentic AI and LLMs
