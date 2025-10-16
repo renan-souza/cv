@@ -7,7 +7,7 @@ personal:
   src: https://github.com/renan-souza/cv
   url: RenanSouza.org
   description: Renan Souza's Website and CV
-  status: Workflows and Data Engineering Research Staff <br/> at Oak Ridge National Laboratory
+  status: Workflows, AI, and Data Engineering Research Staff <br/> at Oak Ridge National Laboratory
   social:
     github: renan-souza
     #twitter:
@@ -322,6 +322,25 @@ languages:
 
 
 events:
+  - name: IEEE/ACM Supercomputing (SC)
+    year: 2025
+    page: https://sc25.supercomputing.org
+    place: St. Louis, U.S.A.
+    talks:
+      - title: "LLM Agents for Interactive Workflow Provenance: Reference Architecture and Evaluation Methodology"
+        kind: Oral presentation
+        link: https://works-workshop.org/2025/
+  - name: IEEE International Conference on e-Science
+    year: 2025
+    place: Chicago, U.S.A
+    page: https://www.escience-conference.org/2025/
+    talks:
+      - title: Large-scale Workflow Provenance Data Management in the AI Lifecycle using Flowcept
+        kind: Tutorial
+        link: https://github.com/flowcept/flowcept-escience25-tutorial
+      - title: "PROV-AGENT: Unified Provenance for Tracking AI Agent Interactions in Agentic Workflows"
+        kind: Oral presentation
+        link: https://sites.google.com/view/rewords25/
   - name: IEEE International Conference on e-Science
     year: 2024
     place: Osaka, Japan (Virtual)
